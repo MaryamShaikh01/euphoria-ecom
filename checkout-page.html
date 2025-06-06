@@ -164,10 +164,12 @@
                     <input type="checkbox" name="saveInfo" id="saveInfo">
                 </form>
             </div>
-            <div class="rounded-[4px] shadow-[-2px_-2px_4px_0px_rgba(0,_0,_0,_0.05),_2px_2px_4px_0px_rgba(0,_0,_0,_0.05)] px-5 py-10">
+            <div
+                class="rounded-[4px] shadow-[-2px_-2px_4px_0px_rgba(0,_0,_0,_0.05),_2px_2px_4px_0px_rgba(0,_0,_0,_0.05)] px-5 py-10">
                 <p class="text-2xl text-[var(--dark-black)] font-semibold border-b-1 border-b-[#EDEEF2]">Order Summary
                 </p>
-                <div class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
+                <div
+                    class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
                     <img src="/img/order-1.png" alt="item 1" width="50" height="50" class="w-[63px] h-[63px]">
                     <div class="grid gap-y-1">
 
@@ -179,7 +181,8 @@
                     <p class="text-sm font-semibold text-[var(--light-black)]">$29.00</p>
                 </div>
 
-                <div class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
+                <div
+                    class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
                     <img src="/img/order-2.png" alt="item 1" width="50" height="50" class="w-[63px] h-[63px]">
                     <div class="grid gap-y-1">
 
@@ -191,7 +194,8 @@
                     <p class="text-sm font-semibold text-[var(--light-black)]">$29.00</p>
                 </div>
 
-                <div class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
+                <div
+                    class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
                     <img src="/img/order-3.png" alt="item 1" width="50" height="50" class="w-[63px] h-[63px]">
                     <div class="grid gap-y-1">
 
@@ -232,6 +236,53 @@
                 </table>
             </div>
         </div>
+    </section>
+
+
+
+    <section class="grid lg:grid-cols-[2fr_1fr] gap-x-5 px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+        <div class="col-span-1">
+
+                <p class="text-[22px] text-[var(--dark-black)] font-semibold pb-2">Shipping Address</p>
+                <p class="text-base font-normal pb-5">Select the address that matches your card or payment method.</p>
+                <div class="rounded-xl bg-[var(--light-bg-colour)] py-10 px-5 ">
+
+
+
+                    <label for="billingAddress" class="flex gap-2 items-center pb-5 border-b-1 border-b-[var(--light-border)] cursor-pointer text-lg text-[var(--dark-black)] font-semibold">
+                        <input type="radio" id="billingAddress" name="address"
+                            class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-full relative checked:before:absolute checked:before:top-[50%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[''] checked:before:w-[12px] checked:before:h-[12px] checked:before:rounded-full checked:before:bg-[#807D7E]">
+                        Same as Billing Address</label>
+
+
+                    <label for="differentAddress" class="flex gap-2 items-center pt-5 cursor-pointer text-lg text-[var(--dark-black)] font-semibold">
+                        <input type="radio" id="differentAddress" name="address"
+                            class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-full relative checked:before:absolute checked:before:top-[50%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[''] checked:before:w-[12px] checked:before:h-[12px] checked:before:rounded-full checked:before:bg-[#807D7E]">
+                        Use a different shipping address</label>
+
+                </div>
+            </div>
+
+
+
+             <div class="row-start-2">
+
+                <p class="text-[22px] text-[var(--dark-black)] font-semibold pb-2">Shipping Method</p>
+                <p class="text-base font-normal pb-5">Select the address that matches your card or payment method.</p>
+                <div class="rounded-xl bg-[var(--light-bg-colour)] py-10 px-5 ">
+
+
+
+                   <p class="text-lg text-[var(--dark-black)] font-semibold pb-5 border-b-1 border-b-[var(--light-border)]">Arrives by Monday, June 7</p>
+
+
+                   <p class="text-lg text-[var(--dark-black)] font-semibold pt-5 flex justify-between">Delivery Charges <strong class="text-lg text-[var(--dark-black)] font-semibold">$5.00</strong></p>
+                   <p>Additional fees may apply</p>
+                   
+
+                </div>
+            </div>
+        <div>Right</div>
     </section>
 </body>
 
