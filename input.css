@@ -6,6 +6,11 @@
     --font-poppins: "Poppins", sans-serif;
 } */
 
+:root{
+    --dark-black: #3C4242;
+    --light-black: #807D7E;
+    --purple-colour : #8A33FD;
+}
 
 @layer components {
     body {
@@ -21,5 +26,101 @@
     .object-po{
         object-position: 0px -30px;
     }
-   
+
+    .text-22-18px{
+        font-size: clamp(1.125rem, 1rem + 0.6667vw, 1.375rem);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For Swiper Single Product */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* FOR JS */
+     .content {
+        display: none;
+    }
+
+     .content-active {
+        display: block;
+    }
+
+    .btn-active {
+        color: #1c1c1c;
+    }
+
+    .tab-btn {
+        position: relative;
+        /* padding: 0px 15px;
+        cursor: pointer;
+        font-size: 16px; */
+        transition: color 0.3s ease;
+    }
+
+    .tab-btn.btn-active::after {
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        /* transform: translateX(-50%) scaleX(0); */
+        width:30%;
+        /* wider than text */
+        height: 2px;
+        background-color: #000;
+        /* transition: transform 0.3s ease; */
+        /* transform-origin: center; */
+        border-radius: 2px;
+    }
+
 }

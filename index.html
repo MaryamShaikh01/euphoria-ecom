@@ -28,11 +28,91 @@
             height: 100%;
             object-fit: cover;
         }
+
+
+
+        .swiper-pagination-bullet {
+            width: 60px !important;
+            height: 12px !important;
+            border-radius: 0px !important;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0px;
+            border-radius: 100px;
+        }
+
+
+        .feedbackSwiper img {
+            width: 58px;
+            height: 58px;
+        }
+
+        .feedback-swiper-slide {
+            background-color: white;
+            text-align: start;
+
+        }
+
+        /* details[open] > summary::after {
+  transform: rotate(180deg);
+} */
     </style>
 </head>
 
 <body>
     <main>
+
+         <!-- Navbar Section Starts -->
+
+    <section class="py-[30px] border-b-1 border-b-[#BEBCBD] ">
+        <div class="flex justify-between items-center px-[10px] m-auto xl:w-[90%] 2xl:w-[80%]">
+
+
+            <a href="#">
+
+                <img src="/img/logo.png" alt="euphoria logo">
+            </a>
+            <ul class="flex gap-10 text-[22px] text-[#807D7E] ">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Men</a></li>
+                <li class="text-[#3C4242]"><a href="products.html">Women</a></li>
+                <li><a href="#">Combos</a></li>
+                <li><a href="#">Joggers</a></li>
+            </ul>
+
+            <input type="search" name="search" id="search-cloth" placeholder="Search"
+                class="w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[#F6F6F6] rounded-[8px]">
+            <div class="flex gap-3">
+
+                <button class="p-3 bg-[#F6F6F6] rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z"
+                            stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="p-3 bg-[#F6F6F6] rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M9.99998 11.6667C12.3012 11.6667 14.1666 9.8012 14.1666 7.50001C14.1666 5.19882 12.3012 3.33334 9.99998 3.33334C7.69879 3.33334 5.83331 5.19882 5.83331 7.50001C5.83331 9.8012 7.69879 11.6667 9.99998 11.6667ZM9.99998 11.6667C6.31808 11.6667 3.33331 13.9053 3.33331 16.6667M9.99998 11.6667C13.6819 11.6667 16.6666 13.9053 16.6666 16.6667"
+                            stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <button class="p-3 bg-[#F6F6F6] rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M2.5 3.33334H3.00526C3.85578 3.33334 4.56986 3.97376 4.6621 4.81926L5.3379 11.0141C5.43014 11.8596 6.14422 12.5 6.99474 12.5H14.205C14.9669 12.5 15.6317 11.9834 15.82 11.2452L16.9699 6.73593C17.2387 5.68213 16.4425 4.65742 15.355 4.65742H5.5M5.52063 15.5208H6.14563M5.52063 16.1458H6.14563M14.6873 15.5208H15.3123M14.6873 16.1458H15.3123M6.66667 15.8333C6.66667 16.2936 6.29357 16.6667 5.83333 16.6667C5.3731 16.6667 5 16.2936 5 15.8333C5 15.3731 5.3731 15 5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333ZM15.8333 15.8333C15.8333 16.2936 15.4602 16.6667 15 16.6667C14.5398 16.6667 14.1667 16.2936 14.1667 15.8333C14.1667 15.3731 14.5398 15 15 15C15.4602 15 15.8333 15.3731 15.8333 15.8333Z"
+                            stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navbar Section Ends -->
+
         <!-- Banner Section Starts -->
         <section class=" h-[80vh] pb-[90px]">
             <div class="swiper mySwiper" style="--swiper-theme-color: white;">
@@ -65,7 +145,7 @@
                                 Now</button>
                         </div>
                     </div>
-                    <div class="swiper-slide"><img src="/img/hero-banner-bg.jpg" alt="" height="300" width="100"
+                    <!-- <div class="swiper-slide"><img src="/img/hero-banner-bg.jpg" alt="" height="300" width="100"
                             class="object-center">
                         <div
                             class="absolute left-[10%] flex flex-col justify-center items-start gap-y-[35px] text-white">
@@ -78,8 +158,8 @@
                                 class="bg-white text-[18px] text-[#3C4242] font-semibold rounded-[8px] px-[50px] py-2 w-fit">Shop
                                 Now</button>
                         </div>
-                    </div>
-                    <div class="swiper-slide"><img src="/img/hero-banner-bg.jpg" alt="" height="300" width="100"
+                    </div> -->
+                    <!-- <div class="swiper-slide"><img src="/img/hero-banner-bg.jpg" alt="" height="300" width="100"
                             class="object-center">
                         <div
                             class="absolute left-[10%] flex flex-col justify-center items-start gap-y-[35px] text-white">
@@ -92,9 +172,11 @@
                                 class="bg-white text-[18px] text-[#3C4242] font-semibold rounded-[8px] px-[50px] py-2 w-fit">Shop
                                 Now</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                 <div class="swiper-scrollbar"></div>
+                <!-- <div class="swiper-scrollbar"></div> -->
+                <div class="swiper-pagination"></div>
+
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -154,7 +236,7 @@
                 </div>
 
                 <div class="rounded-[12px] flex flex-col gap-6">
-                    <img src="/img/active-shirt-guy.jpg" alt="" width="100" height="100"
+                    <img src="/img/active-shirt-guy.png" alt="" width="100" height="100"
                         class="w-[250px] h-[250px] rounded-[12px] object-cover">
                     <p class="text-[20px] text-[#3C4242] font-bold">Active T-Shirts</p>
                 </div>
@@ -181,7 +263,7 @@
             <div class="grid grid-cols-6 gap-x-5 gap-y-5 pb-[80px]">
 
                 <div class="col-span-2 rounded-[12px] relative text-white">
-                    <img src="/img/hawaiian-shirt-goy.jpg" alt="" width="200" height="200"
+                    <img src="/img/hawaiian-shirt-goy.png" alt="" width="200" height="200"
                         class="w-[400px] min-w-[100%] h-[393px] object-cover rounded-[12px]">
                     <div class="absolute top-0 px-5 py-[55px] flex flex-col">
                         <p class="text-[28px] font-semibold pb-3 leading-[30px]">Hawaiian <br> Shirts</p>
@@ -848,68 +930,758 @@
 
         <!-- Feedback Section Ends -->
 
-        <!-- Footer Section Starts -->
-        <section>
-            <ul>
-                <li>Need Help</li>
-                <li>Contact Us</li>
-                <li>Track Order</li>
-                <li>Returns & Refunds</li>
-                <li>FAQ's</li>
-                <li>Career</li>
-            </ul>
+        <!-- try -->
+        <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%]">
 
-            <ul>
-                <li>Company</li>
-                <li>About Us</li>
-                <li>Euphoria Blog</li>
-                <li>Euphorisation</li>
-                <li>Collaboration</li>
-                <li>Media</li>
-            </ul>
+            <div class="swiper mySwiper feedbackSwiper ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
 
-            <ul>
-                <li>More Info</li>
-                <li>Terms and Condition</li>
-                <li>Privacy Policy</li>
-                <li>Shipping Policy</li>
-                <li>Sitemap</li>
-            </ul>
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
 
-            <ul>
-                <li>Location</li>
-                <li><a href="mailto:support@euphoria.in">support@euphoria.in</a></li>
-                <li>Eklingpura Chouraha, Ahmedabad Main Road</li>
-                <li>(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
-            </ul>
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
 
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                    <rect width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
-                    <path
-                        d="M22.4367 19.2686L22.9311 16.0472H19.84V13.9568C19.84 13.0755 20.2718 12.2164 21.6562 12.2164H23.0614V9.47374C23.0614 9.47374 21.7862 9.2561 20.567 9.2561C18.0215 9.2561 16.3576 10.799 16.3576 13.5921V16.0472H13.528V19.2686H16.3576V27.0561H19.84V19.2686H22.4367Z"
-                        fill="#2A2F2F" />
-                </svg>
+                                <img src="/img/feedback-user-2.png" alt="" class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                    <rect x="-0.00799561" y="0.000244141" width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
-                    <path
-                        d="M18.4656 14.4757C16.2545 14.4757 14.4711 16.2592 14.4711 18.4703C14.4711 20.6814 16.2545 22.4649 18.4656 22.4649C20.6767 22.4649 22.4602 20.6814 22.4602 18.4703C22.4602 16.2592 20.6767 14.4757 18.4656 14.4757ZM18.4656 21.0673C17.0368 21.0673 15.8686 19.9026 15.8686 18.4703C15.8686 17.0379 17.0333 15.8733 18.4656 15.8733C19.898 15.8733 21.0626 17.0379 21.0626 18.4703C21.0626 19.9026 19.8945 21.0673 18.4656 21.0673ZM23.5553 14.3123C23.5553 14.8303 23.1381 15.244 22.6236 15.244C22.1056 15.244 21.6919 14.8268 21.6919 14.3123C21.6919 13.7978 22.1091 13.3806 22.6236 13.3806C23.1381 13.3806 23.5553 13.7978 23.5553 14.3123ZM26.201 15.2579C26.1419 14.0099 25.8568 12.9043 24.9425 11.9934C24.0316 11.0826 22.9261 10.7975 21.678 10.7349C20.3917 10.6619 16.5362 10.6619 15.2498 10.7349C14.0052 10.794 12.8997 11.0791 11.9853 11.99C11.071 12.9008 10.7894 14.0064 10.7268 15.2545C10.6538 16.5408 10.6538 20.3963 10.7268 21.6826C10.7859 22.9307 11.071 24.0363 11.9853 24.9471C12.8997 25.858 14.0017 26.1431 15.2498 26.2056C16.5362 26.2786 20.3917 26.2786 21.678 26.2056C22.9261 26.1465 24.0316 25.8615 24.9425 24.9471C25.8533 24.0363 26.1384 22.9307 26.201 21.6826C26.274 20.3963 26.274 16.5443 26.201 15.2579ZM24.5392 23.0628C24.268 23.7442 23.7431 24.2692 23.0582 24.5438C22.0326 24.9506 19.599 24.8567 18.4656 24.8567C17.3323 24.8567 14.8952 24.9471 13.8731 24.5438C13.1917 24.2727 12.6667 23.7477 12.3921 23.0628C11.9853 22.0372 12.0792 19.6036 12.0792 18.4703C12.0792 17.3369 11.9888 14.8999 12.3921 13.8777C12.6633 13.1963 13.1882 12.6714 13.8731 12.3967C14.8987 11.99 17.3323 12.0838 18.4656 12.0838C19.599 12.0838 22.0361 11.9934 23.0582 12.3967C23.7396 12.6679 24.2645 13.1929 24.5392 13.8777C24.946 14.9033 24.8521 17.3369 24.8521 18.4703C24.8521 19.6036 24.946 22.0407 24.5392 23.0628Z"
-                        fill="#2A2F2F" />
-                </svg>
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                    <rect x="0.984009" y="0.000244141" width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
-                    <path
-                        d="M28.3464 14.995C28.3577 15.1531 28.3577 15.3113 28.3577 15.4694C28.3577 20.2921 24.6871 25.8489 17.9782 25.8489C15.9113 25.8489 13.9912 25.2503 12.3761 24.2113C12.6698 24.2451 12.9521 24.2564 13.2571 24.2564C14.9625 24.2564 16.5325 23.6804 17.7861 22.6978C16.1823 22.6639 14.8383 21.6135 14.3752 20.1678C14.6011 20.2017 14.827 20.2243 15.0642 20.2243C15.3917 20.2243 15.7193 20.1791 16.0242 20.1001C14.3527 19.7612 13.0989 18.293 13.0989 16.5197V16.4746C13.5846 16.7456 14.1493 16.9151 14.7479 16.9376C13.7653 16.2825 13.1215 15.1644 13.1215 13.8994C13.1215 13.2218 13.3022 12.6006 13.6185 12.0584C15.4143 14.2721 18.1137 15.7178 21.1405 15.876C21.0841 15.6049 21.0502 15.3226 21.0502 15.0402C21.0502 13.0298 22.6766 11.3921 24.6983 11.3921C25.7487 11.3921 26.6974 11.8326 27.3638 12.5441C28.1882 12.386 28.9788 12.081 29.6791 11.6632C29.408 12.5103 28.832 13.2218 28.0753 13.6735C28.8095 13.5945 29.521 13.3912 30.1761 13.1089C29.6792 13.8317 29.058 14.4754 28.3464 14.995Z"
-                        fill="#2A2F2F" />
-                </svg>
+                                <img src="/img/feedback-user-3.png" alt="" class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
 
-                <p class="bg-[#F6F6F6] rounded-[10.68px]"><span class="text-[#2A2F2F]">in</span></p>
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
+
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
+
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
+
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
+
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
+
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback-swiper-slide">
+                        <div class="flex flex-col gap-5 border-[1.8px] border-[#BEBCBD] p-5 rounded-[10px]">
+                            <div class="flex justify-between">
+
+                                <img src="/img/feedback-user-1.png" alt="" width="50" height="50"
+                                    class="w-[58px] h-[58px]">
+                                <span class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
+                                            fill="#EDD146" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <p class="text-[22px] font-medium text-[#3C4242]">Ronald Richards</p>
+                            <p class="text-[14px] text-[#807D7E] line-clamp-6">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Excepturi
+                                necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione
+                                aperiam
+                                possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia
+                                corporis
+                                laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus,
+                                soluta error
+                                aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse
+                                tenetur.
+                                Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente
+                                iste
+                                ad odio,
+                                quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus,
+                                recusandae
+                                quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis
+                                enim
+                                harum
+                                maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem
+                                iste
+                                obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur
+                                repellendus
+                                facilis
+                                nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo
+                                aut
+                                harum
+                                culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination feebbackPage"></div>
             </div>
         </section>
-        <!-- Footer Section Ends -->
+        <!-- try -->
+
+       <!-- Footer Section Starts -->
+    <section class="text-[#F6F6F6] bg-[#3C4242] pt-[59px]">
+
+        <div class=" px-[10px] m-auto xl:w-[80%] 2xl:w-[80%]">
+            <div class="flex  gap-[80px]">
+
+                <ul>
+                    <li class="text-[28px] font-bold">Need Help</li>
+                    <li class="text-[18px] font-medium">Contact Us</li>
+                    <li class="text-[18px] font-medium">Track Order</li>
+                    <li class="text-[18px] font-medium">Returns & Refunds</li>
+                    <li class="text-[18px] font-medium">FAQ's</li>
+                    <li class="text-[18px] font-medium">Career</li>
+                </ul>
+
+                <ul>
+                    <li class="text-[28px] font-bold">Company</li>
+                    <li class="text-[18px] font-medium">About Us</li>
+                    <li class="text-[18px] font-medium">Euphoria Blog</li>
+                    <li class="text-[18px] font-medium">Euphorisation</li>
+                    <li class="text-[18px] font-medium">Collaboration</li>
+                    <li class="text-[18px] font-medium">Media</li>
+                </ul>
+
+                <ul>
+                    <li class="text-[28px] font-bold">More Info</li>
+                    <li class="text-[18px] font-medium">Terms and Condition</li>
+                    <li class="text-[18px] font-medium">Privacy Policy</li>
+                    <li class="text-[18px] font-medium">Shipping Policy</li>
+                    <li class="text-[18px] font-medium">Sitemap</li>
+                </ul>
+
+                <ul>
+                    <li class="text-[28px] font-bold">Location</li>
+                    <li class="text-[18px] font-medium"><a href="mailto:support@euphoria.in">support@euphoria.in</a>
+                    </li>
+                    <li class="text-[18px] font-medium">Eklingpura Chouraha, Ahmedabad Main Road</li>
+                    <li class="text-[18px] font-medium">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
+                </ul>
+            </div>
+
+            <div class="flex justify-between items-end border-b-1 border-b-[#BEBCBD] pb-10">
+
+                <div class="flex gap-[10px]">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
+                        fill="none">
+                        <rect width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
+                        <path
+                            d="M22.4367 19.2686L22.9311 16.0472H19.84V13.9568C19.84 13.0755 20.2718 12.2164 21.6562 12.2164H23.0614V9.47374C23.0614 9.47374 21.7862 9.2561 20.567 9.2561C18.0215 9.2561 16.3576 10.799 16.3576 13.5921V16.0472H13.528V19.2686H16.3576V27.0561H19.84V19.2686H22.4367Z"
+                            fill="#2A2F2F" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <rect x="-0.00799561" y="0.000244141" width="37.024" height="37.024" rx="10.68"
+                            fill="#F6F6F6" />
+                        <path
+                            d="M18.4656 14.4757C16.2545 14.4757 14.4711 16.2592 14.4711 18.4703C14.4711 20.6814 16.2545 22.4649 18.4656 22.4649C20.6767 22.4649 22.4602 20.6814 22.4602 18.4703C22.4602 16.2592 20.6767 14.4757 18.4656 14.4757ZM18.4656 21.0673C17.0368 21.0673 15.8686 19.9026 15.8686 18.4703C15.8686 17.0379 17.0333 15.8733 18.4656 15.8733C19.898 15.8733 21.0626 17.0379 21.0626 18.4703C21.0626 19.9026 19.8945 21.0673 18.4656 21.0673ZM23.5553 14.3123C23.5553 14.8303 23.1381 15.244 22.6236 15.244C22.1056 15.244 21.6919 14.8268 21.6919 14.3123C21.6919 13.7978 22.1091 13.3806 22.6236 13.3806C23.1381 13.3806 23.5553 13.7978 23.5553 14.3123ZM26.201 15.2579C26.1419 14.0099 25.8568 12.9043 24.9425 11.9934C24.0316 11.0826 22.9261 10.7975 21.678 10.7349C20.3917 10.6619 16.5362 10.6619 15.2498 10.7349C14.0052 10.794 12.8997 11.0791 11.9853 11.99C11.071 12.9008 10.7894 14.0064 10.7268 15.2545C10.6538 16.5408 10.6538 20.3963 10.7268 21.6826C10.7859 22.9307 11.071 24.0363 11.9853 24.9471C12.8997 25.858 14.0017 26.1431 15.2498 26.2056C16.5362 26.2786 20.3917 26.2786 21.678 26.2056C22.9261 26.1465 24.0316 25.8615 24.9425 24.9471C25.8533 24.0363 26.1384 22.9307 26.201 21.6826C26.274 20.3963 26.274 16.5443 26.201 15.2579ZM24.5392 23.0628C24.268 23.7442 23.7431 24.2692 23.0582 24.5438C22.0326 24.9506 19.599 24.8567 18.4656 24.8567C17.3323 24.8567 14.8952 24.9471 13.8731 24.5438C13.1917 24.2727 12.6667 23.7477 12.3921 23.0628C11.9853 22.0372 12.0792 19.6036 12.0792 18.4703C12.0792 17.3369 11.9888 14.8999 12.3921 13.8777C12.6633 13.1963 13.1882 12.6714 13.8731 12.3967C14.8987 11.99 17.3323 12.0838 18.4656 12.0838C19.599 12.0838 22.0361 11.9934 23.0582 12.3967C23.7396 12.6679 24.2645 13.1929 24.5392 13.8777C24.946 14.9033 24.8521 17.3369 24.8521 18.4703C24.8521 19.6036 24.946 22.0407 24.5392 23.0628Z"
+                            fill="#2A2F2F" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <rect x="0.984009" y="0.000244141" width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
+                        <path
+                            d="M28.3464 14.995C28.3577 15.1531 28.3577 15.3113 28.3577 15.4694C28.3577 20.2921 24.6871 25.8489 17.9782 25.8489C15.9113 25.8489 13.9912 25.2503 12.3761 24.2113C12.6698 24.2451 12.9521 24.2564 13.2571 24.2564C14.9625 24.2564 16.5325 23.6804 17.7861 22.6978C16.1823 22.6639 14.8383 21.6135 14.3752 20.1678C14.6011 20.2017 14.827 20.2243 15.0642 20.2243C15.3917 20.2243 15.7193 20.1791 16.0242 20.1001C14.3527 19.7612 13.0989 18.293 13.0989 16.5197V16.4746C13.5846 16.7456 14.1493 16.9151 14.7479 16.9376C13.7653 16.2825 13.1215 15.1644 13.1215 13.8994C13.1215 13.2218 13.3022 12.6006 13.6185 12.0584C15.4143 14.2721 18.1137 15.7178 21.1405 15.876C21.0841 15.6049 21.0502 15.3226 21.0502 15.0402C21.0502 13.0298 22.6766 11.3921 24.6983 11.3921C25.7487 11.3921 26.6974 11.8326 27.3638 12.5441C28.1882 12.386 28.9788 12.081 29.6791 11.6632C29.408 12.5103 28.832 13.2218 28.0753 13.6735C28.8095 13.5945 29.521 13.3912 30.1761 13.1089C29.6792 13.8317 29.058 14.4754 28.3464 14.995Z"
+                            fill="#2A2F2F" />
+                    </svg>
+
+                    <p class="bg-[#F6F6F6] rounded-[10.68px] w-[37px] h-[37px] flex justify-center items-center">
+                        <span class="text-[#2A2F2F] text-[17px] font-bold">in</span>
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-x-5">
+
+                    <p class="font-bold text-[28px] col-span-full pb-[20px]">Download The App</p>
+                    <button class="">
+                        <img src="/img/google-pay.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
+                    </button>
+
+                    <button>
+                        <img src="/img/app-store.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
+                    </button>
+                </div>
+
+            </div>
+
+            <details class="bg-transparent z-10 border-b-1 border-b-[#BEBCBD] py-7 relative group ">
+                <summary
+                    class="font-bold text-[28px] block after:absolute after:z-[-1] after:content-[url('/img/arrow-down.png')] after:top-[50%] after:transform after:translate-y-[-50%] after:right-0 after:transition-[0.2s] group-open:after:rotate-[180deg]">
+                    Popular Categories</summary>
+                <p>content here</p>
+            </details>
+
+            <p class="text-[18px] font-bold text-center pt-10 pb-[60px]">Copyright © 2023 Euphoria Folks Pvt Ltd.
+                All rights reserved.</p>
+        </div>
+
+    </section>
+    <!-- Footer Section Ends -->
     </main>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
@@ -919,10 +1691,24 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: true,
-      },
+            //         scrollbar: {
+            //     el: ".swiper-scrollbar",
+            //     hide: false,
+            //   },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+
+        var swiper = new Swiper(".feedbackSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination.feebbackPage",
+                clickable: true,
+            },
         });
     </script>
 </body>
