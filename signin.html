@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Sign In Page</title>
+</head>
+
+<body>
+    <!-- <div class="">0</div> -->
+  <section class=" grid md:grid-cols-[1fr_1fr] ">
+
+    <img src="/img/three-girls-smiling.jpg" alt="three girls smiling" width="200" height="200" class="hidden md:block w-[100%] h-[100vh] object-cover object-top">
+
+    <div class=" px-[10px] m-auto lg:w-[90%] xl:w-[80%] py-[40px] h-[100%]">
+
+      <p class="text-black p-34-25  font-semibold pb-[40px]">Sign In Page</p>
+
+      <button type="button"
+        class="border-[var(--dark-border)] border-1 rounded-lg flex justify-center items-center py-3 w-full gap-2 cursor-pointer hover:bg-[rgba(102,_32,_193,_0.03)]">
+        <img src="/img/Google.svg" alt="google logo" width="20" height="20" class="w-[20px] h-[20px]">
+        <p class="text-[var(--purple-color)] p-22-18 font-medium">Continue with Google</p>
+      </button>
+
+      <button type="button"
+        class="border-[var(--dark-border)] border-1 rounded-lg flex justify-center items-center py-3 w-full gap-2 mt-[20px] cursor-pointer hover:bg-[rgba(102,_32,_193,_0.03)]">
+        <img src="/img/twitter.svg" alt="google logo" width="20" height="20" class="w-[20px] h-[20px]">
+        <p class="text-[var(--purple-color)] p-22-18 font-medium">Continue with Twitter</p>
+      </button>
+
+      <p
+        class="relative text-center text-gray-700 text-lg px-4 m-0 before:absolute before:top-[50%]  before:left-0 before:w-full before:h-0.5 before:bg-gray-300 before:z-0 py-[40px]">
+        <span class="relative z-10 bg-white px-5">OR</span>
+      </p>
+
+      <form action="" method="post">
+
+        
+        <label for="username" class="text-[var(--text-dark)] text-lg cursor-pointer">User name or email address</label>
+        <input type="text" placeholder="" id="username" class="px-[20px] border-1 border-[var(--dark-border)] rounded-lg py-3 w-full mt-[10px] focus:outline-[var(--purple-colour)] focus:bg-[rgba(102,_32,_193,_0.03)]">
+        
+        <div class="grid grid-cols-2 py-[40px]">
+          <label for="password" class="text-[var(--text-dark)] cursor-pointer text-lg">Password</label>
+          <span class="col-start-2 flex items-center gap-3 justify-self-end">
+
+            <img src="/img/Hide view.svg" alt="hide icon" width="20" height="20" class="w-[20px] h-[20px]">
+            <span class="text-[#807D7E]">Hide</span>
+          </span>
+        <input type="password" placeholder="" id="password" class="px-[20px] col-span-2 border-1 border-[var(--dark-border)] rounded-lg py-3 w-full mt-[10px] focus:outline-[var(--purple-colour)] focus:bg-[rgba(102,_32,_193,_0.03)]">
+        <a href="reset-password.html" class="underline text-[var(--text-dark)] cursor-pointer col-span-2 md:col-start-2 justify-self-end mt-[10px]">Forget your password</a>
+      </div>
+      
+              <button type="submit" class=" bg-[var(--purple-color)] text-white text-lg font-medium rounded-lg py-3 px-[60px] w-fit cursor-pointer">Sign In</button>
+              <p class="text-[var(--text-dark)] mt-[10px]">Don't have an account? <a href="signup.html" class="underline text-[var(--text-dark)]">Sign up</a></p>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>

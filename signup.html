@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Sign Up Page</title>
+</head>
+
+<body>
+    <!-- <div class="">0</div> -->
+    <section class=" grid md:grid-cols-[1fr_auto] lg:grid-cols-[1fr_1fr] ">
+
+        <img src="/img/people-selfie.jpg" alt="three girls smiling" width="200" height="200"
+            class="hidden md:block w-[100%] h-[100vh] object-cover object-top">
+
+        <div class=" px-[10px] m-auto w-[90%] xl:w-[80%] py-[40px] h-[100%]">
+
+            <p class="text-black p-34-25  font-semibold ">Sign Up Page</p>
+            <p class="text-[#807D7E] font-medium pb-[40px]">Sign up for free to access to any of our products</p>
+
+            <button type="button"
+                class="border-[var(--dark-border)] border-1 rounded-lg flex justify-center items-center py-3 w-full gap-2 cursor-pointer hover:bg-[rgba(102,_32,_193,_0.03)]">
+                <img src="/img/Google.svg" alt="google logo" width="20" height="20" class="w-[20px] h-[20px]">
+                <p class="text-[var(--purple-color)] p-22-18 font-medium">Continue with Google</p>
+            </button>
+
+            <button type="button"
+                class="border-[var(--dark-border)] border-1 rounded-lg flex justify-center items-center py-3 w-full gap-2 mt-[20px] cursor-pointer hover:bg-[rgba(102,_32,_193,_0.03)]">
+                <img src="/img/twitter.svg" alt="google logo" width="20" height="20" class="w-[20px] h-[20px]">
+                <p class="text-[var(--purple-color)] p-22-18 font-medium">Continue with Twitter</p>
+            </button>
+
+            <p
+                class="relative text-center text-gray-700 text-lg px-4 m-0 before:absolute before:top-[50%]  before:left-0 before:w-full before:h-0.5 before:bg-gray-300 before:z-0 py-[40px]">
+                <span class="relative z-10 bg-white px-5">OR</span>
+            </p>
+
+            <form action="" method="post">
+
+
+                <label for="username" class="text-[var(--text-dark)] cursor-pointer text-lg">Email address</label>
+                <input type="email" placeholder="email@gmail.com" id="username"
+                    class="px-[20px] border-1 border-[var(--dark-border)] rounded-lg py-3 w-full mt-[10px] focus:outline-[var(--purple-colour)] focus:bg-[rgba(102,_32,_193,_0.03)]">
+
+                <p class="text-[#EE1D52] font-normal pt-3">Error Message</p>
+
+                <div class="grid grid-cols-2 py-[40px]">
+                    <label for="password" class="text-[var(--text-dark)] cursor-pointer text-lg">Password</label>
+                    <span class="col-start-2 flex items-center gap-3 justify-self-end">
+
+                        <img src="/img/Hide view.svg" alt="hide icon" width="20" height="20" class="w-[20px] h-[20px]">
+                        <span class="text-[#807D7E]">Hide</span>
+                    </span>
+                    <input type="password" placeholder="" id="password"
+                        class="px-[20px] col-span-2 border-1 border-[var(--dark-border)] rounded-lg py-3 w-full mt-[10px] focus:outline-[var(--purple-colour)] focus:bg-[rgba(102,_32,_193,_0.03)]">
+                    <!-- <a href="#" class="underline text-[var(--text-dark)] cursor-pointer col-span-2 md:col-start-2 justify-self-end mt-[10px]">Forget your password</a> -->
+                    <p class="text-[#807D7E] font-medium col-span-2 pt-3">Use 8 or more characters with a mix of
+                        letters, numbers & symbols</p>
+                </div>
+
+
+                <label for="tnc"
+                    class="text-wrap block gap-2 items-center pb-5 cursor-pointer text-lg text-[var(--light-black)] font-normal ">
+                    <input type="checkbox" id="tnc" name="tnc"
+                        class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-xs relative checked:before:absolute checked:before:top-[50%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[url('/img/check-box.svg')] checked:before:w-[18px] checked:before:h-[18px]  checked:before:bg-white p-18-14">
+                    Agree to <a href="#" class="underline hover:text-[var(--dark-black)]">Terms of use</a> and <a
+                        href="#" class="underline hover:text-[var(--dark-black)]">Privacy Policy</a></label>
+
+                <label for="newsletter"
+                    class=" text-wrap gap-2 items-center cursor-pointer text-lg text-[var(--light-black)] font-normal">
+                    <input type="checkbox" id="newsletter" name="newsletter"
+                        class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-xs relative checked:before:absolute checked:before:top-[50%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[url('/img/check-box.svg')] checked:before:w-[18px] checked:before:h-[18px]  checked:before:bg-white p-18-14">
+                    Subscribe to our monthly newsletter</label>
+
+                <button type="submit"
+                    class="block mt-10 bg-[var(--purple-color)] text-white text-lg font-medium rounded-lg py-3 px-[60px] w-fit cursor-pointer">Sign
+                    In</button>
+                <p class="text-[var(--text-dark)] mt-[10px]">Already have an account? <a href="signin.html"
+                        class="underline text-[var(--text-dark)]">Log In</a></p>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
