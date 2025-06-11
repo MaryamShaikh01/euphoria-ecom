@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <title>Add Address</title>
+    <title>Empty Cart</title>
 
 
 </head>
@@ -49,7 +49,7 @@
                 class="hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
 
-            <div class="flex gap-3">
+           <div class="flex gap-3">
 
                     <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
@@ -95,160 +95,18 @@
 
     <!-- Navbar Section Ends -->
 
-    <!-- Breadcrumb Starts -->
-    <section class="px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
 
-        <ul class="flex flex-wrap gap-x-2 text-[18px] pt-5 pb-10">
-            <li class="text-[#807D7E] whitespace-nowrap  font-normal flex items-center gap-x-2 ">Home <svg
-                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M8.0876 5L6.9126 6.175L10.7293 10L6.9126 13.825L8.0876 15L13.0876 10L8.0876 5Z"
-                        fill="#8B96A5" />
-                </svg></li>
-            <li class="text-[#807D7E] whitespace-nowrap  font-normal flex items-center gap-x-2 ">My Account <svg
-                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M8.0876 5L6.9126 6.175L10.7293 10L6.9126 13.825L8.0876 15L13.0876 10L8.0876 5Z"
-                        fill="#8B96A5" />
-                </svg></li>
-            <li class="text-[var(--dark-black)] whitespace-nowrap flex items-center gap-x-2  font-normal">Check Out
-            </li>
+    <section class="flex flex-col justify-center items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] py-[100px]">
+        <img src="/img/empty-cart.png" alt="order confirmed image" width="200" height="200" class="w-fit h-fit">
 
-        </ul>
-    </section>
+        <p class="text-black text-[30px] font-semibold pt-10">Your cart is empty and sad :(</p>
 
-    <!-- Breadcrumb Ends -->
-    <button type="button" class="lg:hidden" id="userNavBtn"><img src="/img/right-arrow.svg" alt="" width="50" height="50" class="bg-[#d6b8ff] px-3 py-3 rounded-tr-lg rounded-br-lg"></button>
+        <p class="text-[16px] text-[var(--light-black)]">Add something to make it happy!</p>
 
-    <section class="relative grid grid-cols-[auto] lg:grid-cols-[1fr_3fr] gap-x-10 px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
-        <div class="hidden lg:block" id="userNav">
-             <p
-            class="text-[var(--dark-black)] text-[28px] font-semibold relative before:absolute before:top-[8px] before:left-[-20px] before:w-[6px] before:h-[25px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
-            Hello Jhanvi</p>
-            <p class="text-[var(--light-black)] text-sm pb-10">Welcome to your account</p>
-
-
-            <ul>
-                <li class="text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3"><img src="/img/my-orders.svg" alt="orders icon" width="22" height="22"> My orders</li>
-
-                <li class="text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3"><img src="/img/heart.svg" alt="wishlist icon" width="22" height="22"> Wishlist</li>
-
-                <li class="text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3"><img src="/img/user.svg" alt="user icon" width="22" height="22">My info</li>
-
-                <li class="text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3"><img src="/img/sign-out.svg" alt="sign out icon" width="22" height="22">Sign out</li>
-            </ul>
-
-            <button type="button" id="close-btn" class="lg:hidden absolute top-0 right-[-40px]"><img src="/img/right-arrow.svg" alt="" width="50" height="50" class="bg-[#d6b8ff]  px-3 py-3 rounded-tr-lg rounded-br-lg"></button>
-        </div>
-
-
-
-
-        <div class="pb-10">
-            <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold">My Info</p>
-            <p class=" pb-10 text-[22px] text-[var(--dark-black)] font-semibold">Add Address</p>
-
-            <form action="#" method="post" class="grid grid-cols-2 gap-x-10 gap-y-6">
-
-                <label for="fname" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">First Name*
-                    <input type="text" placeholder="First Name" id="fname"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-                </label>
-
-                <label for="lname" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">Last Name*
-                    <input type="text" placeholder="Last Name" id="lname"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-
-                </label>
-
-
-                <label for="country" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">Country / Region*
-                    <input type="text" placeholder="Country / Region" id="country"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-
-                </label>
-
-
-                <label for="companyName" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">Company Name
-                    <input type="text" placeholder="Company(optional)" id="companyName"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-
-                </label>
-
-                <label for="address" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">Street Address*
-                    <input type="text" placeholder="House number and street name" id="address"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-
-                </label>
-
-                <label for="apartment" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">App, suite,
-                    unit
-
-                    <input type="text" placeholder="apartment, suite, unit, etc. (optional)" id="apartment"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-
-                </label>
-
-                <label for="city" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">City*
-                    <input type="text" placeholder="Town / City" id="city"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-                </label>
-
-                <label for="state" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">State*
-                    <select name="state" id="state"
-                        class="font-normal text-base     w-[100%] rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 ">
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Karnataka">Karnataka</option>
-                    </select>
-                </label>
-
-                <label for="phoneNo" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">Phone*
-                    <input type="tel" name="" id="phoneNo" placeholder="Phone"
-                        class="w-[100%]  font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-
-                </label>
-
-                <label for="city" class="text-lg text-[var(--dark-black)] grid gap-2 font-semibold">Postal Code*
-                    <input type="text" placeholder="Postal Code" id="city"
-                        class="w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
-                </label>
-
-                <label for="city"
-                    class="col-span-full text-lg text-[var(--dark-black)] grid gap-2 font-semibold ">Delivery Instruction
-                    <textarea name="instructions" id="instructions" cols="20" rows="3"
-                        placeholder="Delivery Instructions"
-                        class="resize-none w-[100%] font-normal text-base rounded-lg px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base"></textarea>
-                </label>
-
-                <div class="col-span-full flex flex-col gap-2">
-
-                    <label for="shippingAddress"
-                    class="text-wrap flex gap-2 items-center cursor-pointer text-lg text-[var(--light-black)] font-normal ">
-                    <input type="checkbox" id="shippingAddress" name="shippingAddress"
-                    class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-xs relative checked:before:absolute checked:before:top-[40%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[url('/img/check-box.svg')] checked:before:w-[18px] checked:before:h-[18px]  checked:before:bg-white p-18-14">
-                    Set as deafult shipping address</label>
-                    
-                    <label for="billingAddress"
-                    class=" text-wrap flex gap-2 items-center cursor-pointer text-lg text-[var(--light-black)] font-normal">
-                    <input type="checkbox" id="billingAddress" name="billingAddress"
-                    class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-xs relative checked:before:absolute checked:before:top-[40%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[url('/img/check-box.svg')] checked:before:w-[18px] checked:before:h-[18px]  checked:before:bg-white p-18-14">
-                    Set as deafult billing address</label>
-                </div>
-
-                <div class="flex gap-8">
-                     <button type="button"
-                        class=" w-fit mt-5 px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
-                        Save</button>
-
-                         <button type="button"
-                        class="w-fit mt-5 px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
-                        Cancel</button>
-                </div>
-
-
-            </form>
-        </div>
-    </section>
+        <button type="button"
+                        class="mt-10 w-fit px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Continue Shopping</button>
+        </section>
 
 
 

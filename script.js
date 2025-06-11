@@ -13,9 +13,11 @@ buttons.forEach((btn) => {
 
     const clickedBtn = event.currentTarget;
     clickedBtn.classList.add("btn-active");
+
     const btnId = clickedBtn.id;
     console.log(btnId, "id");
     const contentId = btnId.replace("btn-", "content-");
+
     console.log(contentId);
 
     const currentContent = document.getElementById(contentId);
@@ -23,6 +25,37 @@ buttons.forEach((btn) => {
     currentContent.classList.add("content-active");
   });
 });
+
+// my order tab content btns
+
+const ordeButtons = document.querySelectorAll(".tab-order-btn");
+const orderContent = document.querySelectorAll(".content");
+
+ordeButtons.forEach((btn) => {
+  console.log(btn, "current btn");
+
+  btn.addEventListener("click", (event) => {
+    ordeButtons.forEach((btn) => btn.classList.remove("btn-active"));
+    btn.classList.add("btn-active");
+
+    orderContent.forEach((content) => content.classList.remove("content-active"));
+    console.log(event.currentTarget, "current idk");
+
+    const clickedBtn = event.currentTarget;
+    clickedBtn.classList.add("btn-active");
+
+    const btnId = clickedBtn.id;
+    console.log(btnId, "id");
+    const contentId = btnId.replace("btn-", "content-");
+    
+    console.log(contentId);
+
+    const currentContent = document.getElementById(contentId);
+    console.log(currentContent);
+    currentContent.classList.add("content-active");
+  });
+});
+
 
 // Header Product Search
 document
@@ -173,7 +206,7 @@ var swiper7 = new Swiper(".singleProductSwiper2", {
     prevEl: ".swiper-button-prev",
   },
   thumbs: {
-    swiper: swiper9,
+    swiper10: swiper9,
   },
 });
 
