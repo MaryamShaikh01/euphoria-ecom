@@ -14,6 +14,8 @@
   transform: rotate(180deg);
 } */
     </style>
+    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -46,7 +48,7 @@
                     <li class=" lg:hidden absolute right-20"><img src="/img/close-icon.svg" alt="" width="50" height="50"
                             class="w-[50px] h-[50px]" id="close-nav"></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Shop</a></li>
-                    <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Men</a></li>
+                    <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#men-category">Men</a></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="products.html">Women</a></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Combos</a></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Joggers</a></li>
@@ -90,22 +92,13 @@
                     class="w-[100%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
             </div>
-            <!-- <div class="lg:hidden pt-[10px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
-             <ul class="flex  justify-between gap-10 text-[22px] text-[var(--light-black)]">
-                <li class="p-22-18"><a href="#">Shop</a></li>
-                <li class="p-22-18"><a href="#">Men</a></li>
-                <li class="p-22-18 text-[var(--dark-black)]"><a href="products.html">Women</a></li>
-                <li class="p-22-18"><a href="#">Combos</a></li>
-                <li class="p-22-18"><a href="#">Joggers</a></li>
-            </ul>
-        </div> -->
         </header>
 
         <!-- Navbar Section Ends -->
 
 
         <!-- Banner Section Starts -->
-        <section class="h-[60vh] md:h-[70vh] lg:h-[80vh] pb-[90px]">
+        <section class="h-[60vh] md:h-[70vh] lg:h-[80vh] pb-[40px] lg:pb-[90px]">
             <div class="swiper mySwiper bannerSwiper" style="--swiper-theme-color: white;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide relative"><img src="/img/hero-banner-bg.jpg" alt="" height="300"
@@ -151,7 +144,7 @@
         <!-- Two Card Section Starts -->
 
         <section
-            class="flex flex-col sm:flex-row justify-center gap-5 px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[80px]">
+            class="flex flex-col sm:flex-row justify-center gap-y-10 gap-x-5 px-[10px] w-[90vw] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[40px] lg:pb-[80px]">
             <div class="rounded-[12px] text-white relative shadow-[2px_2px_10px_0px_rgba(0,_0,_0,_0.40)] w-[100%]">
                 <img src="/img/high-coziness-girl.png" alt="high coziness girl img" width="300" height="300"
                     class="rounded-[12px] object-cover h-[200px] lg:h-[355px] w-[605px] object-top min-w-[100%] min-h-[100%]">
@@ -177,52 +170,8 @@
         </section>
         <!-- Two Card Section Ends -->
 
+
         <!-- New Arrival Section Starts -->
-        <!-- <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] pb-[60px]">
-            <p
-                class="text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[60px]">
-                New Arrival</p>
-            <div class="px-[40px] flex justify-center items-center gap-x-[38px] m-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
-                    <path
-                        d="M14.5857 7L1.58569 7M6.58569 13L1.2928 7.70711C0.902277 7.31658 0.902277 6.68342 1.2928 6.29289L6.58569 0.999999"
-                        stroke="var(--dark-black)" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-                <div class="rounded-[12px] flex flex-col gap-6">
-                    <img src="/img/joggers.jpg" alt="" width="100" height="100"
-                        class="w-[250px] h-[250px] rounded-[12px] object-cover">
-                    <p class="text-[20px] text-[var(--dark-black)] font-bold">Knitted Joggers</p>
-                </div>
-
-                <div class="rounded-[12px] flex flex-col gap-6">
-                    <img src="/img/full-sleeve-guy.jpg" alt="" width="100" height="100"
-                        class="w-[250px] h-[250px] rounded-[12px] object-cover">
-                    <p class="text-[20px] text-[var(--dark-black)] font-bold">Full Sleeve</p>
-                </div>
-
-                <div class="rounded-[12px] flex flex-col gap-6">
-                    <img src="/img/active-shirt-guy.png" alt="" width="100" height="100"
-                        class="w-[250px] h-[250px] rounded-[12px] object-cover">
-                    <p class="text-[20px] text-[var(--dark-black)] font-bold">Active T-Shirts</p>
-                </div>
-
-                <div class="rounded-[12px] flex flex-col gap-6">
-                    <img src="/img/urban-shirt-girl.jpg" alt="" width="100" height="100"
-                        class="w-[250px] h-[250px] rounded-[12px] object-cover">
-                    <p class="text-[20px] text-[var(--dark-black)] font-bold">Urban Shirts</p>
-                </div>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
-                    <path d="M1 7H14M9 1L14.2929 6.29289C14.6834 6.68342 14.6834 7.31658 14.2929 7.70711L9 13"
-                        stroke="var(--dark-black)" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-            </div>
-        </section> -->
-
-
-        <!-- New Arrival Section Ends -->
-
-        <!-- arrival try -->
         <section class="">
 
             <div class="swiper mySwiper arrivalSwiper px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[60px]">
@@ -231,7 +180,7 @@
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/joggers.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="text-[20px] text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
@@ -239,7 +188,7 @@
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/full-sleeve-guy.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="text-[20px] text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
@@ -247,7 +196,7 @@
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/active-shirt-guy.png" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="text-[20px] text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
@@ -255,7 +204,7 @@
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/urban-shirt-girl.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="text-[20px] text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
@@ -263,7 +212,7 @@
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/joggers.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="text-[20px] text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
@@ -273,16 +222,17 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </section>
-        <!-- arrival try end -->
+          <!-- New Arrival Section Ends -->
+
 
 
         <!-- Saving Zone Section Starts -->
-        <section class="px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pt-[70px] pb-[80px]">
+        <section class="px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pt-[40px] lg:pt-[70px] pb-[40px] lg:pb-[80px]">
             <p
-                class="col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[60px]">
+                class="col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[40px] lg:pb-[60px]">
                 Big Saving Zone</p>
             <div
-                class="grid  lg:grid-cols-6 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-3 lg:gap-x-5 lg:gap-y-5 pb-[80px]">
+                class="grid  lg:grid-cols-6 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-3 lg:gap-x-5 lg:gap-y-5 pb-[40px] lg:pb-[80px]">
 
                 <div class="col-span-2 rounded-[12px] relative text-white h-fit">
                     <img src="/img/hawaiian-shirt-goy.png" alt="" width="200" height="200"
@@ -419,16 +369,16 @@
 
 
         <!-- Men Category Section Starts -->
-        <section
-            class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-x-[36px] gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[80px]">
+        <section id="men-category"
+            class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-2.5 md:gap-x-[36px] gap-y-5 md:gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[40px] lg:pb-[80px]">
             <p
-                class="pb-[34px] col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
+                class=" pb-3 lg:pb-[34px] col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
                 Categories For Men</p>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/shirts-guy.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -444,10 +394,10 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/printed-t-shirt.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -463,10 +413,10 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/plain-t-shirt.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -482,10 +432,10 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/polo-t-shirt.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -501,10 +451,10 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/hoodies-guy.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -521,10 +471,10 @@
             </div>
 
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/jeans.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -541,10 +491,10 @@
             </div>
 
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/activewear.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -561,10 +511,10 @@
             </div>
 
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/boxers-boy.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
@@ -585,18 +535,18 @@
 
         <!-- Women Category Section Starts -->
         <section
-            class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-y-[36px] gap-x-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[80px]">
+            class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-2.5 md:gap-x-[36px] gap-y-5 md:gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[40px] lg:pb-[80px]">
             <p
-                class="pb-[35px] col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
+                class="pb-3 lg:pb-[35px] col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
                 Categories For Women</p>
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/hoodies-girl.png" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1">Hoodies & Sweetshirt</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Hoodies & Sweetshirt</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -608,14 +558,14 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/coats-girl.png" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1">Coats & Parkas</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Coats & Parkas</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -627,14 +577,14 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/tees-girl.jpg" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1">Tees & T-Shirt</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Tees & T-Shirt</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -646,14 +596,14 @@
                 </div>
             </div>
 
-            <div class="relative w-fit ">
+            <div class="relative w-full ">
 
                 <img src="/img/boxers-girl.png" alt="" width="200" height="200"
-                    class="w-[282px] h-[370px] object-cover rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1">Boxers</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Boxers</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -669,12 +619,12 @@
         <!-- Women Category Section Ends -->
 
         <!-- Brands Deal Section Start -->
-        <section class="px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]  pb-[70px]">
+        <section class="px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]  pb-[40px] lg:pb-[70px]">
             <div
                 class="bg-[var(--dark-black)] pt-[10px] pb-[20px] md:pb-[50px] px-[20px] md:px-[30px] text-center rounded-[12px]">
                 <p class="p-50-25 font-extrabold text-white">Top Brands Deal</p>
                 <p class="text-[22px]">Up to <span class="text-[#FBD103] font-bold">60%</span> off on brands</p>
-                <div class=" flex flex-wrap sm:flex-nowrap justify-center gap-y-6 gap-x-6 pt-[30px]">
+                <div class=" flex flex-wrap sm:flex-nowrap justify-center gap-y-2.5 lg:gap-y-6 gap-2.5 lg:gap-x-6 pt-[30px]">
                     <p
                         class="w-[80px] h-[30px] md:w-[177px] md:h-[85px] bg-white flex items-center rounded-[6px] md:rounded-[12px] p-5">
                         <img src="/img/nike-logo.png" alt="nike logo" class="">
@@ -704,18 +654,18 @@
         <!-- Limelight Section Starts -->
 
         <section
-            class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-y-[36px] gap-x-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[80px]">
+            class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-2.5 md:gap-x-[36px] gap-y-5 md:gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[40px] lg:pb-[80px]">
 
             <p
-                class="col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[35px]">
+                class="col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 lg:pb-[35px]">
                 In The Limelight</p>
 
             <!-- <div class="grid grid-cols-4"> -->
-            <div class="relative w-fit flex flex-col gap-6">
+            <div class="relative w-full flex flex-col gap-6">
 
                 <img src="/img/limelight-girl-1.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] h-[370px] object-cover rounded-[12px]">
-                <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                     <p class="text-[var(--dark-black)] font-semibold line-clamp-1">Black Sweatshirt with extra texttt
                     </p>
@@ -737,11 +687,11 @@
                 </svg>
             </div>
 
-            <div class="relative w-fit flex flex-col gap-6">
+            <div class="relative w-full flex flex-col gap-6">
 
                 <img src="/img/limelight-girl-2.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] h-[370px] object-cover rounded-[12px]">
-                <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                     <p class="text-[var(--dark-black)] font-semibold line-clamp-1">Black Sweatshirt with extra texttt
                     </p>
@@ -763,11 +713,11 @@
                 </svg>
             </div>
 
-            <div class="relative w-fit flex flex-col gap-6">
+            <div class="relative w-full flex flex-col gap-6">
 
                 <img src="/img/limelight-girl-3.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] h-[370px] object-cover rounded-[12px]">
-                <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                     <p class="text-[var(--dark-black)] font-semibold line-clamp-1">Black Sweatshirt with extra texttt
                     </p>
@@ -788,11 +738,11 @@
                         stroke-linejoin="round" />
                 </svg>
             </div>
-            <div class="relative w-fit flex flex-col gap-6">
+            <div class="relative w-full flex flex-col gap-6">
 
                 <img src="/img/limeliglight-girl-4.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] h-[370px] object-cover rounded-[12px]">
-                <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                     <p class="text-[var(--dark-black)] font-semibold line-clamp-1">line Pattern Black extra texttt</p>
                     <p class="text-[var(--light-black)] text-[14px] font-medium">AS's Brand</p>
@@ -817,170 +767,13 @@
         </section>
         <!-- Limelight Section Ends -->
 
+    
         <!-- Feedback Section Starts -->
-        <!-- <section class="grid grid-cols-3 gap-x-[23px] px-[10px] m-auto xl:w-[90%] 2xl:w-[80%]">
+
+        <section class="pb-[20px] lg:pb-[70px] gap-x-[23px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
 
             <p
-                class="col-span-full text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[60px]">
-                Feedback</p>
-
-            <div class="flex flex-col gap-5 border-[1.8px] border-[var(--light-border)] p-5 rounded-[10px]">
-                <div class="flex justify-between">
-
-                    <img src="/img/feedback-user-1.png" alt="" class="w-[58px] h-[58px]">
-                    <span class="flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
-                                fill="#EDD146" />
-                        </svg>
-                    </span>
-                </div>
-
-                <p class="text-[22px] font-medium text-[var(--dark-black)]">Ronald Richards</p>
-                <p class="text-[14px] text-[var(--light-black)] line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Excepturi
-                    necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione aperiam
-                    possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia corporis
-                    laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus, soluta error
-                    aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse tenetur.
-                    Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente iste ad odio,
-                    quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus, recusandae
-                    quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis enim harum
-                    maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem iste
-                    obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur repellendus facilis
-                    nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo aut harum
-                    culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
-            </div>
-
-
-            <div class="flex flex-col gap-5 border-[1.8px] border-[var(--light-border)] p-5 rounded-[10px]">
-                <div class="flex justify-between">
-
-                    <img src="/img/feedback-user-2.png" alt="" class="w-[58px] h-[58px]">
-                    <span class="flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
-                                fill="#EDD146" />
-                        </svg>
-                    </span>
-                </div>
-
-                <p class="text-[22px] font-medium text-[var(--dark-black)]">Ronald Richards</p>
-                <p class="text-[14px] text-[var(--light-black)] line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Excepturi
-                    necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione aperiam
-                    possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia corporis
-                    laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus, soluta error
-                    aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse tenetur.
-                    Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente iste ad odio,
-                    quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus, recusandae
-                    quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis enim harum
-                    maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem iste
-                    obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur repellendus facilis
-                    nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo aut harum
-                    culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
-            </div>
-
-            <div class="flex flex-col gap-5 border-[1.8px] border-[var(--light-border)] p-5 rounded-[10px]">
-                <div class="flex justify-between">
-
-                    <img src="/img/feedback-user-3.png" alt="" class="w-[58px] h-[58px]">
-                    <span class="flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M11.8459 16.8835L17.8183 20.4882L16.2334 13.6943L21.51 9.12325L14.5615 8.53374L11.8459 2.12646L9.13035 8.53374L2.18188 9.12325L7.45846 13.6943L5.87356 20.4882L11.8459 16.8835Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M21.6882 9.12325L14.7398 8.52407L12.0242 2.12646L9.30857 8.53374L2.36011 9.12325L7.63669 13.6943L6.05178 20.4882L12.0242 16.8835L17.9966 20.4882L16.4213 13.6943L21.6882 9.12325ZM12.0242 15.0763V6.08873L13.6767 9.99301L17.9096 10.3602L14.7011 13.1435L15.6675 17.2797L12.0242 15.0763Z"
-                                fill="#EDD146" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M21.7476 9.12325L14.7991 8.52407L12.0835 2.12646L9.36789 8.53374L2.41943 9.12325L7.69601 13.6943L6.11111 20.4882L12.0835 16.8835L18.0559 20.4882L16.4806 13.6943L21.7476 9.12325ZM12.0835 15.0763L8.44981 17.2701L9.41621 13.1338L6.20775 10.3506L10.4406 9.98335L12.0835 6.08873L13.7361 9.99301L17.9689 10.3602L14.7604 13.1435L15.7268 17.2797L12.0835 15.0763Z"
-                                fill="#EDD146" />
-                        </svg>
-                    </span>
-                </div>
-
-                <p class="text-[22px] font-medium text-[var(--dark-black)]">Ronald Richards</p>
-                <p class="text-[14px] text-[var(--light-black)] line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Excepturi
-                    necessitatibus fugiat, expedita reprehenderit tempora laborum dolor odio nam, ratione aperiam
-                    possimus ab, vel est blanditiis? Culpa blanditiis, placeat suscipit recusandae, officia corporis
-                    laborum expedita a neque, consectetur in? Nemo voluptatem fugit dolores tempore! Natus, soluta error
-                    aspernatur, voluptatem fuga consequuntur optio vel veritatis, necessitatibus nihil esse tenetur.
-                    Eius nulla dolor numquam repudiandae rem ipsam placeat tempora et, at soluta sapiente iste ad odio,
-                    quo perferendis provident voluptatum aut sed porro? Error obcaecati esse repellendus, recusandae
-                    quis a, porro accusamus tenetur unde alias totam? Est alias vitae minima, vero omnis enim harum
-                    maxime eveniet accusantium officia. Excepturi aperiam cumque magni accusamus non dolorem iste
-                    obcaecati vero earum. Dignissimos neque magni soluta vitae ducimus, consequuntur repellendus facilis
-                    nobis saepe ut corrupti officiis laudantium aliquid, exercitationem nihil quaerat quo aut harum
-                    culpa, temporibus optio! Magnam quas culpa, asperiores fuga rerum sint ab possimus.</p>
-            </div>
-
-        </section> -->
-
-        <!-- Feedback Section Ends -->
-
-        <!-- try -->
-        <section class="pb-[70px] gap-x-[23px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
-
-            <p
-                class=" text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[60px]">
+                class=" text-[var(--dark-black)] text-[34px] font-semibold relative before:absolute before:top-[10px] before:left-[-20px] before:w-[6px] before:h-[30px] before:rounded-[10px] before:bg-[#8A33FD] ml-5 pb-[40px] lg:pb-[60px]">
                 Feedback</p>
 
             <div class="swiper mySwiper feedbackSwiper ">
@@ -1632,7 +1425,8 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <!-- try -->
+               <!-- Feedback Section Ends -->
+
 
         <!-- Footer Section Starts -->
         <section class="text-[var(--light-bg-colour)] bg-[var(--dark-black)] pt-[59px]">
@@ -1737,10 +1531,103 @@
         <!-- Footer Section Ends -->
     </main>
 
+    <script src="script.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+
+    <script>
+
+// FeedBack Swiper
+
+        var swiper2 = new Swiper(".feedbackSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+//   mousewheel: true,
+  // loop:true,
+  freeMode: true,
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+
+// Arrival Swiper
+
+var swiper3 = new Swiper(".arrivalSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 50,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+
+    400: {
+      slidesPerView: 2,
+    },
+    550:{
+        slidesPerView:3
+    },
+   
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+// Banner Swiper
+
+var swiper1 = new Swiper(".bannerSwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  //         scrollbar: {
+  //     el: ".swiper-scrollbar",
+  //     hide: false,
+  //   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+// Header Product Search
+document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+    console.log(e.target, "here");
+    const inputValue = e.target.value;
+    console.log(inputValue);
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const inputValue = e.target.value;
+
+      console.log(inputValue, "here");
+      if (inputValue) {
+        window.location.href = `products.html?search=${encodeURIComponent(
+          inputValue
+        )}`;
+      }
+    }
+  });
+    </script>
 </body>
 
 </html>

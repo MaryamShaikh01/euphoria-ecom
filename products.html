@@ -7,6 +7,24 @@
     <link href="./output.css" rel="stylesheet">
   <title>All Products</title>
 
+  <style>
+    
+        .filter {
+            position: absolute;
+            z-index: 10;
+            top: 0px;
+            left: 0px;
+            width: 70%;
+            /* max-width: 100%; */
+            /* margin: 0px; */
+            background-color: #ffffff;
+            /* border-top-right-radius: 10px; */
+            padding: 0px 20px;
+            display: block;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+  </style>
 </head>
 
 <body>
@@ -96,8 +114,8 @@
         <!-- Navbar Section Ends -->
 
 
-    <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] pb-[80px] grid grid-cols-[25%_1fr] gap-[36px]">
-        <div class="border-1 border-[#eae9ea] border-t-0 rounded-[2px] h-fit ">
+    <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] pb-[40px] lg:pb-[80px] grid lg:grid-cols-[25%_1fr] gap-[36px]">
+        <div class="border-1 border-[#eae9ea] border-t-0 rounded-[2px] h-fit hidden lg:flex lg:flex-col w-[100%]" id="filter">
             <details class="text-[#807D7E] font-semibold " open>
 
 
@@ -254,29 +272,29 @@
                 <div
                     class="grid grid-cols-[repeat(auto-fill,minmax(40px,1fr))] gap-[18px] text-[14px] text-[#8A8989] p-10">
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px]  bg-[#8434E1] rounded-[12px] mb-[18px]"></span>Purple</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px]  bg-[#8434E1] rounded-[12px] mb-[18px] cursor-pointer"></span>Purple</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#252525] rounded-[12px] mb-[18px]"></span>Black</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#252525] rounded-[12px] mb-[18px] cursor-pointer"></span>Black</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#F35528] rounded-[12px] mb-[18px]"></span>Red</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#F35528] rounded-[12px] mb-[18px] cursor-pointer"></span>Red</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#F16F2B] rounded-[12px] mb-[18px]"></span>Orange</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#F16F2B] rounded-[12px] mb-[18px] cursor-pointer"></span>Orange</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#345EFF] rounded-[12px] mb-[18px]"></span>Navy</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#345EFF] rounded-[12px] mb-[18px] cursor-pointer"></span>Navy</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#F4F1F1] rounded-[12px] mb-[18px]"></span>White</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#F4F1F1] rounded-[12px] mb-[18px] cursor-pointer"></span>White</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#D67E3B] rounded-[12px] mb-[18px]"></span>Brown</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#D67E3B] rounded-[12px] mb-[18px] cursor-pointer"></span>Brown</button>
                     <button  type="button" class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#48BC4E] rounded-[12px] mb-[18px]"></span>Green</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#48BC4E] rounded-[12px] mb-[18px] cursor-pointer"></span>Green</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#FDC761] rounded-[12px] mb-[18px]"></span>Yellow</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#FDC761] rounded-[12px] mb-[18px] cursor-pointer"></span>Yellow</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#E4E5E8] rounded-[12px] mb-[18px]"></span>Grey</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#E4E5E8] rounded-[12px] mb-[18px] cursor-pointer"></span>Grey</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#E08D9D] rounded-[12px] mb-[18px]"></span>Pink</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#E08D9D] rounded-[12px] mb-[18px] cursor-pointer"></span>Pink</button>
                     <button type="button"  class="flex flex-col justify-center items-center"><span
-                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#3FDEFF] rounded-[12px] mb-[18px]"></span>Blue</button>
+                            class="max-w-[100%] max-h-[100%] w-[37px] h-[37px] bg-[#3FDEFF] rounded-[12px] mb-[18px] cursor-pointer"></span>Blue</button>
                 </div>
             </details>
 
@@ -287,23 +305,23 @@
                 <div
                     class="grid grid-cols-[repeat(auto-fill,minmax(50px,1fr))] gap-[18px] text-[14px] text-[#8A8989] p-10">
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">XXS</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">XXS</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">XL</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">XL</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">XS</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">XS</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">S</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">S</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">M</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">M</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">L</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">L</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">XXL</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">XXL</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">3XL</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-0 flex justify-center items-center cursor-pointer">3XL</button>
                     <button type="button"
-                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242]">4XL</button>
+                        class="border-[#BEBCBD] border-1 rounded-lg px-[18px] py-2 text-sm text-[#3C4242] hover:bg-[var(--dark-black)] hover:text-white hover:border-1 flex justify-center items-center cursor-pointer">4XL</button>
                 </div>
             </details>
 
@@ -391,19 +409,26 @@
 
 
 
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] pt-[36px] gap-x-[36px] gap-y-[36px] h-fit">
-            <div class="col-span-full flex items-center gap-x-[25px]">
-                <p class="text-22-18px font-semibold text-[#3F4646] mr-auto">Women's Clothing</p>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] pt-[36px] gap-x-5 gap-y-5 md:gap-x-[36px] md:gap-y-[36px] h-fit">
+            <p class="sm:hidden sm:mb-[-20px] text-22-18px font-semibold text-[#3F4646] col-span-full  ">Women's Clothing</p>
+            <div class="col-span-full flex items-center gap-x-2 sm:gap-x-[25px]">
+                <p class="text-22-18px font-semibold text-[#3F4646] mr-auto hidden sm:block">Women's Clothing</p>
+                <p class="lg:hidden flex items-center text-22-18px font-semibold text-[#3F4646]" id="for-filter">Filter <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M16.59 8.29501L12 12.875L7.41 8.29501L6 9.70501L12 15.705L18 9.70501L16.59 8.29501Z"
+                                fill="#8B96A5" />
+                        </svg></p>
                 <p class="text-22-18px text-[#8A33FD] font-semibold">New</p>
                 <p class="text-22-18px font-semibold text-[#3F4646]">Recommended</p>
             </div>
-            <a href="single-product.html">
-
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/card-1.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+            
+            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
+                <img src="/img/card-1.png" alt="" width="200" height="200"
+                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -413,23 +438,24 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-            </a>
-            <a href="single-product.html">
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-2.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-cover object-top rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                        <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -439,23 +465,25 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-3.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                        <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -465,107 +493,115 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
+            <!-- </a> -->
 
-            <a href="single-product.html">
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-4.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                       <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">line Pattern Black extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">AS's Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-5.jpg" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                     <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">line Pattern Black extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">AS's Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-6.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                      <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">line Pattern Black extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">AS's Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-7.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                      <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -575,23 +611,25 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                 <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-8.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                      <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -601,25 +639,27 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-9.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                      <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -629,25 +669,27 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-10.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                    <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -657,24 +699,26 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-11.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                     <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -684,24 +728,26 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-            </a>
-            <a href="single-product.html">
+            <!-- </a> -->
+            <!-- <a href="single-product.html"> -->
 
-                <div class="relative w-fit flex flex-col gap-6">
+                <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
 
                     <img src="/img/card-12.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] h-[370px] object-top object-cover rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                        class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                     <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -711,16 +757,17 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-            </a>
+            <!-- </a> -->
 
         </div>
     </section>
@@ -763,14 +810,14 @@
     </section>
 
 
-    <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] flex flex-col gap-5 pt-[60px] pb-[80px]">
+    <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] flex flex-col gap-5 pt-[40px] lg:pt-[60px] pb-[40px] lg:pb-[80px]">
         <p
             class=" col-span-full text-[#3C4242] text-[28px] font-semibold relative before:absolute before:top-[8px] before:left-[-20px] before:w-[6px] before:h-[25px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
             Buy Women's Clothing at Best Price</p>
 
-        <table class="text-left text-[22px] text-[#807D7E] bg-[#F6F6F6] rounded-[12px]">
+        <table class="text-left text-[#807D7E] bg-[#F6F6F6] rounded-[12px]">
             <tr class="border-b-1 border-b-[#e2e1e2]">
-                <th class="py-10 pl-20 text-[24px] text-[#3C4242] font-semibold">Women's Clothing</th>
+                <th class="lg:py-10 py-2.5 px-2.5 lg:pl-20 text-[24px] text-[#3C4242] font-semibold">Women's Clothing</th>
                 <th
                     class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center text-[24px] text-[#3C4242] font-semibold">
                     Best Prices</th>
@@ -778,71 +825,71 @@
             </tr>
 
             <tr>
-                <td class="pt-5 pl-20">Pick Any 4- Womens Plain T-shirt Combo</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Pick Any 4- Womens Plain T-shirt Combo</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
             </tr>
             <tr>
-                <td class="pt-5 pl-20">Pick Any 4- Plain Womens Boxer Combo</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
-
-
-            </tr>
-
-            <tr>
-                <td class="pt-5 pl-20">Pick Any 4 - Women Plain Full Sleeve T-shirt Combo</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
-
-
-            </tr>
-            <tr>
-                <td class="pt-5 pl-20">Multicolor Checkered Long Casual Shirts for Women</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
-
-            </tr>
-            <tr>
-                <td class="pt-5 pl-20">Pick Any 2: Plain Boxy Casual Shirts for Women Combo</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Pick Any 4- Plain Womens Boxer Combo</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
 
             </tr>
 
             <tr>
-                <td class="pt-5 pl-20">Blue Floral Anarkali Kurti</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Pick Any 4 - Women Plain Full Sleeve T-shirt Combo</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
 
             </tr>
             <tr>
-                <td class="pt-5 pl-20">Jade Black Narrow Cut Flexible Women Jeggings</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Multicolor Checkered Long Casual Shirts for Women</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
             </tr>
             <tr>
-                <td class="pt-5 pl-20">Mustard-yellow Solid Straight-Fit Women Pant</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Pick Any 2: Plain Boxy Casual Shirts for Women Combo</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
 
             </tr>
-            <tr>
-                <td class="pt-5 pl-20">Women Pants Combo - Pick Any 2</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
-
-            </tr>
             <tr>
-                <td class="pt-5 pl-20">Pista Green Solid Boxy Casual Shirts for Women</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Blue Floral Anarkali Kurti</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
 
             </tr>
             <tr>
-                <td class="pt-5 pl-20">Plain Burgundy Womens Boxer</td>
-                <td class="py-5 px-5 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Jade Black Narrow Cut Flexible Women Jeggings</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+
+            </tr>
+            <tr>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Mustard-yellow Solid Straight-Fit Women Pant</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
 
 
             </tr>
             <tr>
-                <td class="pt-5 pl-20 pb-[40px]">Striped Front Tie Casual Shirts for Women</td>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Women Pants Combo - Pick Any 2</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+
+
+            </tr>
+            <tr>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Pista Green Solid Boxy Casual Shirts for Women</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+
+
+            </tr>
+            <tr>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20">Plain Burgundy Womens Boxer</td>
+                <td class="px-2.5 py-2.5 lg:py-5 lg:px-5 p-22-18 border-l-1 border-l-[#e2e1e2] text-center">Combo</td>
+
+
+            </tr>
+            <tr>
+                <td class="p-2.5 lg:pt-5 p-22-18 lg:pl-20 pb-[40px]">Striped Front Tie Casual Shirts for Women</td>
                 <td class="py-5 px-5 border-l-1 pb-[40px] border-l-[#e2e1e2] text-center">Combo</td>
 
 
@@ -953,6 +1000,30 @@
 
         </section>
         <!-- Footer Section Ends -->
+
+  <script>
+
+        // for filter side bar
+        const filterContent = document.getElementById('filter');
+        const backdrop = document.getElementById('backdrop');
+        const filterBtn = document.getElementById('for-filter');
+        // const closeBtn = document.getElementById('close-filter');
+
+        function openFilter() {
+            filterContent.classList.add('filter');
+            backdrop.classList.remove('hidden');
+        }
+
+        function closeFilter() {
+            filterContent.classList.remove('filter');
+            backdrop.classList.add('hidden');
+            console.log('fjdgfj')
+        }
+
+        filterBtn.addEventListener('click', openFilter);
+        // closeBtn.addEventListener('click', closeFilter);
+        backdrop.addEventListener('click', closeFilter);
+    </script>
 
 </body>
 

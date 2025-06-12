@@ -58,9 +58,9 @@ ordeButtons.forEach((btn) => {
 
 
 // Header Product Search
-document
-  .getElementById("search-cloth")
-  .addEventListener("keydown", function (e) {
+const searchProduct = document.getElementById("search-cloth")
+
+searchProduct.addEventListener("keydown", function (e) {
     console.log(e.target, "here");
     const inputValue = e.target.value;
     console.log(inputValue);
@@ -214,15 +214,21 @@ var swiper7 = new Swiper(".singleProductSwiper2", {
 
 function unHidePassword() {
   const unhide = document.getElementById("unhide");
+  const password = document.getElementById("pass1")
+  console.log(password , "pass1")
   console.log(unhide, "unhide");
   const img = unhide.querySelector("img");
   console.log(img, "img");
   if (img.src.includes('/img/hide.svg')) {
     console.log("hjg");
     img.src = "/img/search.svg";
+    password.type = "text"
   }
   else{
     img.src = '/img/hide.svg'
+    password.type = "password"
 
   }
+
+
 }

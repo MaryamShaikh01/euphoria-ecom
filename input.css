@@ -24,7 +24,12 @@
         font-family: "Poppins", sans-serif;
     }
 
-   /* .custom-select {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 70px;
+    }
+
+    /* .custom-select {
         min-width: fit-content;
         background-color: transparent;
         z-index: 1;
@@ -53,8 +58,8 @@
         box-shadow: 9px 0px 10px -5px rgba(97, 97, 97, 0.75);
     }
 
-    .user-nav{
-         display: flex !important;
+    .user-nav {
+        display: flex !important;
         flex-direction: column;
         row-gap: 10px;
         position: absolute;
@@ -98,6 +103,10 @@
 
     .p-22-18 {
         font-size: clamp(1.125rem, 1.0288rem + 0.3846vw, 1.375rem);
+    }
+
+    .p-24-20 {
+        font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem);
     }
 
     .p-20-16 {
@@ -243,6 +252,7 @@
         bottom: 15px !important;
     }
 
+
     .feedbackSwiper {
         padding-bottom: 50px !important;
     }
@@ -250,7 +260,7 @@
     /* For Swiper Single Product */
 
 
-    .swiper {
+    /* .swiper {
         width: 100%;
         height: 100%;
     }
@@ -288,17 +298,81 @@
         height: 80%;
         width: 100%;
     }
-
     .mySwiper.thumbSwiper {
         height: 100%;
         box-sizing: border-box;
         padding: 10px 0;
     }
-
     .mySwiper.thumbSwiper .swiper-slide {
         width: 85% !important;
         margin: auto;
         height: 100% ;
+        opacity: 0.4;
+    }
+    .mySwiper.thumbSwiper .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+.mySwiper.thumbSwiper .swiper-wrapper{
+    /* display: grid !important; */
+    /* grid-template-columns: auto; */
+    /* } */
+    */
+    /* For Swiper Single Product */
+
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper.thumbSwiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mySwiper2.singleProductSwiper2 {
+        height: 80%;
+        width: 100%;
+    }
+
+    .mySwiper.thumbSwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+
+    .mySwiper.thumbSwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
         opacity: 0.4;
     }
 
@@ -312,11 +386,6 @@
         height: 100%;
         object-fit: cover;
     }
-.mySwiper.thumbSwiper .swiper-wrapper{
-    display: grid !important;
-    grid-template-columns: auto;
-}
-
 
 
 
@@ -342,12 +411,12 @@
         transition: color 0.3s ease;
     }
 
-    .tab-order-btn{
+    .tab-order-btn {
         position: relative;
         transition: color 0.3s ease;
     }
 
-    .tab-order-btn.btn-active{
+    .tab-order-btn.btn-active {
         background-color: var(--light-bg-colour);
         padding-left: 53px;
         padding-right: 53px;

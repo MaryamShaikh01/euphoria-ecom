@@ -105,9 +105,9 @@
 
     <!-- Single Product Section Starts -->
 
-    <section class="grid sm:grid sm:grid-cols-2">
+    <section class="flex flex-col sm:grid sm:grid-cols-2">
 
-        <div class="">
+        <div class=" flex flex-row-reverse">
 
             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                 class="swiper mySwiper2 singleProductSwiper2">
@@ -323,13 +323,13 @@
 
 
 
-    <section class="grid  lg:grid lg:grid-cols-[1fr_auto]  gap-x-16 px-[10px] pt-[80px] m-auto xl:w-[90%] 2xl:w-[80%] ">
+    <section class="grid  lg:grid lg:grid-cols-[1fr_auto]  gap-x-16 pt-[80px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[80px]">
         <p
             class="col-span-full text-[#3C4242] text-[28px] font-semibold relative before:absolute before:top-[8px] before:left-[-20px] before:w-[6px] before:h-[25px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
             Product Description</p>
-        <div>
+        <div class="grid">
 
-            <ul class="flex gap-5 py-5">
+            <ul class="flex gap-5 py-5 whitespace-nowrap overflow-x-auto">
                 <li class="text-[18px] tab-btn btn-active" id="btn-one">Description</li>
                 <li class="text-[18px] text-[#807D7E] flex items-center justify-center gap-[15px]  tab-btn "
                     id="btn-two">User comments <span
@@ -347,33 +347,33 @@
                     ribbed crew neck. Precisely
                     stitched with no pilling & no fading. Provide all-time comfort. Anytime, anywhere. Infinite range of
                     matte-finish HD prints.</p>
-                <div class="grid grid-cols-[auto_auto_auto] bg-[#F6F6F6] rounded-[12px]">
+                <div class="grid sm:grid-cols-2 md:grid-cols-[auto_auto_auto] bg-[#F6F6F6] rounded-[12px]">
 
-                    <div class="py-6 px-12 border-r-1 border-r-[#e5e4e5] border-b-1 border-b-[#e5e4e5]">
+                    <div class="py-6 px-12 sm:border-r-1 sm:border-r-[#e5e4e5] border-b-1 border-b-[#e5e4e5]">
                         <p class="text-[#807D7E] ">Fabric</p>
                         <p class=" font-medium text-[#3C4242]">Bio-washed Cloth</p>
                     </div>
 
 
-                    <div class="py-6 px-12 border-r-1 border-r-[#e5e4e5] border-b-1 border-b-[#e5e4e5]">
+                    <div class="py-6 px-12 md:border-r-1 md:border-r-[#e5e4e5] border-b-1 border-b-[#e5e4e5] ">
                         <p class="text-[#807D7E]">Pattern</p>
                         <p class=" font-medium text-[#3C4242]">Bio-washed</p>
                     </div>
 
 
-                    <div class="py-6 px-12  border-b-1 border-b-[#e5e4e5]">
+                    <div class="py-6 px-12 sm:border-r-1 sm:border-r-[#e5e4e5] md:border-r-0 border-b-1 border-b-[#e5e4e5]">
                         <p class="text-[#807D7E]">Pattern</p>
                         <p class=" font-medium text-[#3C4242]">Bio-washed </p>
                     </div>
 
 
-                    <div class="py-6 px-12 border-r-1 border-r-[#e5e4e5]">
+                    <div class="py-6 px-12 md:border-r-1 md:border-r-[#e5e4e5] border-b-1 border-b-[#e5e4e5] md:border-b-0">
                         <p class="text-[#807D7E]">Pattern</p>
                         <p class=" font-medium text-[#3C4242]">Bio-washed </p>
                     </div>
 
 
-                    <div class="py-6 px-12 border-r-1 border-r-[#e5e4e5]">
+                    <div class="py-6 px-12 sm:border-r-1 sm:border-r-[#e5e4e5]  border-b-1 border-b-[#e5e4e5] sm:border-b-0">
                         <p class="text-[#807D7E]">Pattern</p>
                         <p class=" font-medium text-[#3C4242]">Bio-washed </p>
                     </div>
@@ -401,8 +401,8 @@
 
         <div class="relative flex justify-center items-center">
 
-            <iframe src="/img/behind-iframe.png" name="iframe_a" height="400" width="400" title="Iframe Example"
-                class="w-[540px] h-[330px]">
+            <iframe src="/img/behind-iframe.png" name="iframe_a" height="200" width="200" title="Iframe Example"
+                class="w-[200px] h-[150px] lg:w-[540px] lg:h-[330px] object-cover">
 
             </iframe>
             <a href="https://www.pexels.com/video/video-of-a-puppy-on-the-grass-5764223/"
@@ -430,48 +430,20 @@
 
     <!-- Similar Products Sectiomn Starts -->
 
-    <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] ">
-        <div
-            class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] pt-[80px] pb-[36px] gap-x-[36px] gap-y-[36px] h-fit">
+    <!-- <section class="px-[10px] m-auto xl:w-[90%] 2xl:w-[80%] "> -->
+        <section
+            class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-2.5 md:gap-x-[36px] gap-y-5 md:gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[40px] lg:pb-[80px]">
 
             <p
                 class=" col-span-full text-[#3C4242] text-[28px] font-semibold relative before:absolute before:top-[8px] before:left-[-20px] before:w-[6px] before:h-[25px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
                 Similar Products</p>
 
-            <a href="single-product.html">
+         <div class="relative w-full flex flex-col gap-6">
 
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-1.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
-
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
-
-                        <button type="button"
-                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                                class="text-[#3C4242] font-bold">$123.00</span></button>
-                    </div>
-
-
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
-                        height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </a>
-
-            <a href="single-product.html">
-
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-2.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-1.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                   <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -481,24 +453,23 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
+            </div>
 
-            <a href="single-product.html">
+              <div class="relative w-full flex flex-col gap-6">
 
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-3.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-2.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                   <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -508,24 +479,23 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
+            </div>
 
-            <a href="single-product.html">
+              <div class="relative w-full flex flex-col gap-6">
 
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-4.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-3.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                  <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -535,24 +505,23 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
+            </div>
 
-            <a href="single-product.html">
+              <div class="relative w-full flex flex-col gap-6">
 
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-5.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-4.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                  <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -562,25 +531,22 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
+            </div>
+               <div class="relative w-full flex flex-col gap-6">
 
-
-            <a href="single-product.html">
-
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-6.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-5.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                  <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -590,24 +556,24 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
+            </div>
 
-            <a href="single-product.html">
 
-                <div class="relative w-fit flex flex-col gap-6">
+            <div class="relative w-full flex flex-col gap-6">
 
-                    <img src="/img/product-7.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-6.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                   <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -617,24 +583,23 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
+            </div>
 
-            <a href="single-product.html">
+             <div class="relative w-full flex flex-col gap-6">
 
-                <div class="relative w-fit flex flex-col gap-6">
-
-                    <img src="/img/product-8.png" alt="" width="200" height="200"
-                        class="w-[282px] min-w-[100%] object-cover object-top h-[370px] rounded-[12px]">
-                    <div class=" grid grid-cols-[1fr_auto] gap-x-5">
+                <img src="/img/product-7.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                  <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
                         <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
                         <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
@@ -644,123 +609,192 @@
                                 class="text-[#3C4242] font-bold">$123.00</span></button>
                     </div>
 
+                </a>
 
-                    <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34"
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
                         height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-            </a>
-        </div>
+            </div>
+
+              <div class="relative w-full flex flex-col gap-6">
+
+                <img src="/img/product-8.png" alt="" width="200" height="200"
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                  <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
+
+                        <button type="button"
+                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                    </div>
+
+                </a>
+
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+                        height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+            </div>
+        <!-- </div> -->
 
     </section>
 
     <!-- Similar Products Sectiomn Emds -->
 
 
-    <!-- Footer Section Starts -->
-    <section class="text-[#F6F6F6] bg-[#3C4242] pt-[59px]">
+   <!-- Footer Section Starts -->
+        <section class="text-[var(--light-bg-colour)] bg-[var(--dark-black)] pt-[59px]">
 
-        <div class=" px-[10px] m-auto xl:w-[80%] 2xl:w-[80%]">
-            <div class="flex  gap-[80px]">
+            <div class=" px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-y-[30px]  gap-x-[80px]">
 
-                <ul>
-                    <li class="text-[28px] font-bold">Need Help</li>
-                    <li class="text-[18px] font-medium">Contact Us</li>
-                    <li class="text-[18px] font-medium">Track Order</li>
-                    <li class="text-[18px] font-medium">Returns & Refunds</li>
-                    <li class="text-[18px] font-medium">FAQ's</li>
-                    <li class="text-[18px] font-medium">Career</li>
-                </ul>
+                    <ul>
+                        <p class="p-28-20 font-bold">Need Help</p>
+                        <li class="p-18-16 font-medium">Contact Us</li>
+                        <li class="p-18-16 font-medium">Track Order</li>
+                        <li class="p-18-16 font-medium">Returns & Refunds</li>
+                        <li class="p-18-16 font-medium">FAQ's</li>
+                        <li class="p-18-16 font-medium">Career</li>
+                    </ul>
 
-                <ul>
-                    <li class="text-[28px] font-bold">Company</li>
-                    <li class="text-[18px] font-medium">About Us</li>
-                    <li class="text-[18px] font-medium">Euphoria Blog</li>
-                    <li class="text-[18px] font-medium">Euphorisation</li>
-                    <li class="text-[18px] font-medium">Collaboration</li>
-                    <li class="text-[18px] font-medium">Media</li>
-                </ul>
+                    <ul>
+                        <p class="p-28-20 font-bold">Company</p>
+                        <li class="p-18-16 font-medium">About Us</li>
+                        <li class="p-18-16 font-medium">Euphoria Blog</li>
+                        <li class="p-18-16 font-medium">Euphorisation</li>
+                        <li class="p-18-16 font-medium">Collaboration</li>
+                        <li class="p-18-16 font-medium">Media</li>
+                    </ul>
 
-                <ul>
-                    <li class="text-[28px] font-bold">More Info</li>
-                    <li class="text-[18px] font-medium">Terms and Condition</li>
-                    <li class="text-[18px] font-medium">Privacy Policy</li>
-                    <li class="text-[18px] font-medium">Shipping Policy</li>
-                    <li class="text-[18px] font-medium">Sitemap</li>
-                </ul>
+                    <ul>
+                        <p class="p-28-20 font-bold">More Info</p>
+                        <li class="p-18-16 font-medium">Terms and Condition</li>
+                        <li class="p-18-16 font-medium">Privacy Policy</li>
+                        <li class="p-18-16 font-medium">Shipping Policy</li>
+                        <li class="p-18-16 font-medium">Sitemap</li>
+                    </ul>
 
-                <ul>
-                    <li class="text-[28px] font-bold">Location</li>
-                    <li class="text-[18px] font-medium"><a href="mailto:support@euphoria.in">support@euphoria.in</a>
-                    </li>
-                    <li class="text-[18px] font-medium">Eklingpura Chouraha, Ahmedabad Main Road</li>
-                    <li class="text-[18px] font-medium">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
-                </ul>
-            </div>
-
-            <div class="flex justify-between items-end border-b-1 border-b-[#BEBCBD] pb-10">
-
-                <div class="flex gap-[10px]">
-                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
-                        fill="none">
-                        <rect width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
-                        <path
-                            d="M22.4367 19.2686L22.9311 16.0472H19.84V13.9568C19.84 13.0755 20.2718 12.2164 21.6562 12.2164H23.0614V9.47374C23.0614 9.47374 21.7862 9.2561 20.567 9.2561C18.0215 9.2561 16.3576 10.799 16.3576 13.5921V16.0472H13.528V19.2686H16.3576V27.0561H19.84V19.2686H22.4367Z"
-                            fill="#2A2F2F" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                        <rect x="-0.00799561" y="0.000244141" width="37.024" height="37.024" rx="10.68"
-                            fill="#F6F6F6" />
-                        <path
-                            d="M18.4656 14.4757C16.2545 14.4757 14.4711 16.2592 14.4711 18.4703C14.4711 20.6814 16.2545 22.4649 18.4656 22.4649C20.6767 22.4649 22.4602 20.6814 22.4602 18.4703C22.4602 16.2592 20.6767 14.4757 18.4656 14.4757ZM18.4656 21.0673C17.0368 21.0673 15.8686 19.9026 15.8686 18.4703C15.8686 17.0379 17.0333 15.8733 18.4656 15.8733C19.898 15.8733 21.0626 17.0379 21.0626 18.4703C21.0626 19.9026 19.8945 21.0673 18.4656 21.0673ZM23.5553 14.3123C23.5553 14.8303 23.1381 15.244 22.6236 15.244C22.1056 15.244 21.6919 14.8268 21.6919 14.3123C21.6919 13.7978 22.1091 13.3806 22.6236 13.3806C23.1381 13.3806 23.5553 13.7978 23.5553 14.3123ZM26.201 15.2579C26.1419 14.0099 25.8568 12.9043 24.9425 11.9934C24.0316 11.0826 22.9261 10.7975 21.678 10.7349C20.3917 10.6619 16.5362 10.6619 15.2498 10.7349C14.0052 10.794 12.8997 11.0791 11.9853 11.99C11.071 12.9008 10.7894 14.0064 10.7268 15.2545C10.6538 16.5408 10.6538 20.3963 10.7268 21.6826C10.7859 22.9307 11.071 24.0363 11.9853 24.9471C12.8997 25.858 14.0017 26.1431 15.2498 26.2056C16.5362 26.2786 20.3917 26.2786 21.678 26.2056C22.9261 26.1465 24.0316 25.8615 24.9425 24.9471C25.8533 24.0363 26.1384 22.9307 26.201 21.6826C26.274 20.3963 26.274 16.5443 26.201 15.2579ZM24.5392 23.0628C24.268 23.7442 23.7431 24.2692 23.0582 24.5438C22.0326 24.9506 19.599 24.8567 18.4656 24.8567C17.3323 24.8567 14.8952 24.9471 13.8731 24.5438C13.1917 24.2727 12.6667 23.7477 12.3921 23.0628C11.9853 22.0372 12.0792 19.6036 12.0792 18.4703C12.0792 17.3369 11.9888 14.8999 12.3921 13.8777C12.6633 13.1963 13.1882 12.6714 13.8731 12.3967C14.8987 11.99 17.3323 12.0838 18.4656 12.0838C19.599 12.0838 22.0361 11.9934 23.0582 12.3967C23.7396 12.6679 24.2645 13.1929 24.5392 13.8777C24.946 14.9033 24.8521 17.3369 24.8521 18.4703C24.8521 19.6036 24.946 22.0407 24.5392 23.0628Z"
-                            fill="#2A2F2F" />
-                    </svg>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                        <rect x="0.984009" y="0.000244141" width="37.024" height="37.024" rx="10.68" fill="#F6F6F6" />
-                        <path
-                            d="M28.3464 14.995C28.3577 15.1531 28.3577 15.3113 28.3577 15.4694C28.3577 20.2921 24.6871 25.8489 17.9782 25.8489C15.9113 25.8489 13.9912 25.2503 12.3761 24.2113C12.6698 24.2451 12.9521 24.2564 13.2571 24.2564C14.9625 24.2564 16.5325 23.6804 17.7861 22.6978C16.1823 22.6639 14.8383 21.6135 14.3752 20.1678C14.6011 20.2017 14.827 20.2243 15.0642 20.2243C15.3917 20.2243 15.7193 20.1791 16.0242 20.1001C14.3527 19.7612 13.0989 18.293 13.0989 16.5197V16.4746C13.5846 16.7456 14.1493 16.9151 14.7479 16.9376C13.7653 16.2825 13.1215 15.1644 13.1215 13.8994C13.1215 13.2218 13.3022 12.6006 13.6185 12.0584C15.4143 14.2721 18.1137 15.7178 21.1405 15.876C21.0841 15.6049 21.0502 15.3226 21.0502 15.0402C21.0502 13.0298 22.6766 11.3921 24.6983 11.3921C25.7487 11.3921 26.6974 11.8326 27.3638 12.5441C28.1882 12.386 28.9788 12.081 29.6791 11.6632C29.408 12.5103 28.832 13.2218 28.0753 13.6735C28.8095 13.5945 29.521 13.3912 30.1761 13.1089C29.6792 13.8317 29.058 14.4754 28.3464 14.995Z"
-                            fill="#2A2F2F" />
-                    </svg>
-
-                    <p class="bg-[#F6F6F6] rounded-[10.68px] w-[37px] h-[37px] flex justify-center items-center">
-                        <span class="text-[#2A2F2F] text-[17px] font-bold">in</span>
-                    </p>
-                </div>
-                <div class="grid grid-cols-2 gap-x-5">
-
-                    <p class="font-bold text-[28px] col-span-full pb-[20px]">Download The App</p>
-                    <button type="button" class="">
-                        <img src="/img/google-pay.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
-                    </button>
-
-                    <button type="button">
-                        <img src="/img/app-store.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
-                    </button>
+                    <ul>
+                        <p class="p-28-20 font-bold">Location</p>
+                        <li class="p-18-16 font-medium"><a href="mailto:support@euphoria.in">support@euphoria.in</a>
+                        </li>
+                        <li class="p-18-16 font-medium">Eklingpura Chouraha, Ahmedabad Main Road</li>
+                        <li class="p-18-16 font-medium">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
+                    </ul>
                 </div>
 
+                <div class="flex flex-col items-start gap-y-5  md:flex-row  justify-between lg:items-end border-b-1 border-b-[var(--light-border)] pt-10  pb-10">
+
+                    <div class="flex gap-[10px]">
+                        <svg class="" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
+                            fill="none">
+                            <rect width="37.024" height="37.024" rx="10.68" fill="var(--light-bg-colour)" />
+                            <path
+                                d="M22.4367 19.2686L22.9311 16.0472H19.84V13.9568C19.84 13.0755 20.2718 12.2164 21.6562 12.2164H23.0614V9.47374C23.0614 9.47374 21.7862 9.2561 20.567 9.2561C18.0215 9.2561 16.3576 10.799 16.3576 13.5921V16.0472H13.528V19.2686H16.3576V27.0561H19.84V19.2686H22.4367Z"
+                                fill="#2A2F2F" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                            <rect x="-0.00799561" y="0.000244141" width="37.024" height="37.024" rx="10.68"
+                                fill="var(--light-bg-colour)" />
+                            <path
+                                d="M18.4656 14.4757C16.2545 14.4757 14.4711 16.2592 14.4711 18.4703C14.4711 20.6814 16.2545 22.4649 18.4656 22.4649C20.6767 22.4649 22.4602 20.6814 22.4602 18.4703C22.4602 16.2592 20.6767 14.4757 18.4656 14.4757ZM18.4656 21.0673C17.0368 21.0673 15.8686 19.9026 15.8686 18.4703C15.8686 17.0379 17.0333 15.8733 18.4656 15.8733C19.898 15.8733 21.0626 17.0379 21.0626 18.4703C21.0626 19.9026 19.8945 21.0673 18.4656 21.0673ZM23.5553 14.3123C23.5553 14.8303 23.1381 15.244 22.6236 15.244C22.1056 15.244 21.6919 14.8268 21.6919 14.3123C21.6919 13.7978 22.1091 13.3806 22.6236 13.3806C23.1381 13.3806 23.5553 13.7978 23.5553 14.3123ZM26.201 15.2579C26.1419 14.0099 25.8568 12.9043 24.9425 11.9934C24.0316 11.0826 22.9261 10.7975 21.678 10.7349C20.3917 10.6619 16.5362 10.6619 15.2498 10.7349C14.0052 10.794 12.8997 11.0791 11.9853 11.99C11.071 12.9008 10.7894 14.0064 10.7268 15.2545C10.6538 16.5408 10.6538 20.3963 10.7268 21.6826C10.7859 22.9307 11.071 24.0363 11.9853 24.9471C12.8997 25.858 14.0017 26.1431 15.2498 26.2056C16.5362 26.2786 20.3917 26.2786 21.678 26.2056C22.9261 26.1465 24.0316 25.8615 24.9425 24.9471C25.8533 24.0363 26.1384 22.9307 26.201 21.6826C26.274 20.3963 26.274 16.5443 26.201 15.2579ZM24.5392 23.0628C24.268 23.7442 23.7431 24.2692 23.0582 24.5438C22.0326 24.9506 19.599 24.8567 18.4656 24.8567C17.3323 24.8567 14.8952 24.9471 13.8731 24.5438C13.1917 24.2727 12.6667 23.7477 12.3921 23.0628C11.9853 22.0372 12.0792 19.6036 12.0792 18.4703C12.0792 17.3369 11.9888 14.8999 12.3921 13.8777C12.6633 13.1963 13.1882 12.6714 13.8731 12.3967C14.8987 11.99 17.3323 12.0838 18.4656 12.0838C19.599 12.0838 22.0361 11.9934 23.0582 12.3967C23.7396 12.6679 24.2645 13.1929 24.5392 13.8777C24.946 14.9033 24.8521 17.3369 24.8521 18.4703C24.8521 19.6036 24.946 22.0407 24.5392 23.0628Z"
+                                fill="#2A2F2F" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                            <rect x="0.984009" y="0.000244141" width="37.024" height="37.024" rx="10.68"
+                                fill="var(--light-bg-colour)" />
+                            <path
+                                d="M28.3464 14.995C28.3577 15.1531 28.3577 15.3113 28.3577 15.4694C28.3577 20.2921 24.6871 25.8489 17.9782 25.8489C15.9113 25.8489 13.9912 25.2503 12.3761 24.2113C12.6698 24.2451 12.9521 24.2564 13.2571 24.2564C14.9625 24.2564 16.5325 23.6804 17.7861 22.6978C16.1823 22.6639 14.8383 21.6135 14.3752 20.1678C14.6011 20.2017 14.827 20.2243 15.0642 20.2243C15.3917 20.2243 15.7193 20.1791 16.0242 20.1001C14.3527 19.7612 13.0989 18.293 13.0989 16.5197V16.4746C13.5846 16.7456 14.1493 16.9151 14.7479 16.9376C13.7653 16.2825 13.1215 15.1644 13.1215 13.8994C13.1215 13.2218 13.3022 12.6006 13.6185 12.0584C15.4143 14.2721 18.1137 15.7178 21.1405 15.876C21.0841 15.6049 21.0502 15.3226 21.0502 15.0402C21.0502 13.0298 22.6766 11.3921 24.6983 11.3921C25.7487 11.3921 26.6974 11.8326 27.3638 12.5441C28.1882 12.386 28.9788 12.081 29.6791 11.6632C29.408 12.5103 28.832 13.2218 28.0753 13.6735C28.8095 13.5945 29.521 13.3912 30.1761 13.1089C29.6792 13.8317 29.058 14.4754 28.3464 14.995Z"
+                                fill="#2A2F2F" />
+                        </svg>
+
+                        <p
+                            class="bg-[var(--light-bg-colour)] rounded-[10.68px] w-[37px] h-[37px] flex justify-center items-center">
+                            <span class="text-[#2A2F2F] text-[17px] font-bold">in</span>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-5">
+
+                        <p class="font-bold p-28-20 col-span-full pb-[20px]">Download The App</p>
+                        <button type="button" class="">
+                            <img src="/img/google-pay.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
+                        </button>
+
+                        <button type="button">
+                            <img src="/img/app-store.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
+                        </button>
+                    </div>
+
+                </div>
+
+                <details class="bg-transparent z-10 border-b-1 border-b-[var(--light-border)] py-7 relative group ">
+                    <summary
+                        class="font-bold p-28-20 block after:absolute after:z-[-1] after:content-[url('/img/arrow-down.png')] after:top-[50%] after:transform after:translate-y-[-50%] after:right-0 after:transition-[0.2s] group-open:after:rotate-[180deg]">
+                        Popular Categories</summary>
+                    <p>content here</p>
+                </details>
+
+                <p class="text-[18px] font-bold text-center pt-10 pb-[60px]">Copyright © 2023 Euphoria Folks Pvt Ltd.
+                    All rights reserved.</p>
             </div>
 
-            <details class="bg-transparent z-10 border-b-1 border-b-[#BEBCBD] py-7 relative group ">
-                <summary
-                    class="font-bold text-[28px] block after:absolute after:z-[-1] after:content-[url('/img/arrow-down.png')] after:top-[50%] after:transform after:translate-y-[-50%] after:right-0 after:transition-[0.2s] group-open:after:rotate-[180deg]">
-                    Popular Categories</summary>
-                <p>content here</p>
-            </details>
+        </section>
+        <!-- Footer Section Ends -->
 
-            <p class="text-[18px] font-bold text-center pt-10 pb-[60px]">Copyright © 2023 Euphoria Folks Pvt Ltd.
-                All rights reserved.</p>
-        </div>
-
-    </section>
-    <!-- Footer Section Ends -->
+        
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        var swiper9 = new Swiper(".thumbSwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper7 = new Swiper(".singleProductSwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper9,
+      },
+    });
+
+
+//     var swiper9 = new Swiper(".thumbSwiper", {
+//   // spaceBetween: 10,
+//   slidesPerView: 4,
+//   freeMode: true,
+//   watchSlidesProgress: true,
+// });
+// var swiper7 = new Swiper(".singleProductSwiper2", {
+//   spaceBetween: 0,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   thumbs: {
+//     swiper10: swiper9,
+//   },
+// });
+    </script>
 </body>
 
 </html>
