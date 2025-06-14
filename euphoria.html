@@ -7,6 +7,8 @@
     <link href="./output.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
     <title>Home Page</title>
 
     <style>
@@ -14,7 +16,6 @@
   transform: rotate(180deg);
 } */
     </style>
-    <script src="script.js"></script>
 
 </head>
 
@@ -37,7 +38,7 @@
                     </svg>
                 </span>
 
-                <a href="#">
+                <a href="euphoria.html">
 
                     <img src="/img/logo.png" alt="euphoria logo" width="100" height="100" class="w-[100%]">
                 </a>
@@ -55,7 +56,7 @@
                 </ul>
 
                 <input type="search" name="search" id="search-cloth" placeholder="Search"
-                    class="hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
+                    class="search-cloth hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
              
                 <div class="flex gap-3">
@@ -89,13 +90,16 @@
                 class="sm:hidden flex justify-between items-center px-[10px] pt-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
 
                 <input type="search" name="search" id="search-cloth" placeholder="Search"
-                    class="w-[100%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
+                    class="search-cloth w-[100%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
             </div>
         </header>
 
         <!-- Navbar Section Ends -->
+  <section id="text"
+        class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-2.5 md:gap-x-[36px] gap-y-5 md:gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] py-10 pb-[40px] lg:pb-[80px] ">
 
+    </section>
 
         <!-- Banner Section Starts -->
         <section class="h-[60vh] md:h-[70vh] lg:h-[80vh] pb-[40px] lg:pb-[90px]">
@@ -661,107 +665,108 @@
                 In The Limelight</p>
 
             <!-- <div class="grid grid-cols-4"> -->
-            <div class="relative w-full flex flex-col gap-6">
-
+               <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
                 <img src="/img/limelight-girl-1.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
-                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                    <p class="text-[var(--dark-black)] font-semibold line-clamp-1">Black Sweatshirt with extra texttt
-                    </p>
-                    <p class="text-[var(--light-black)] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
-                    <button type="button"
-                        class="bg-[var(--light-bg-colour)] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                            class="text-[var(--dark-black)] font-bold">$123.00</span></button>
+                        <button type="button"
+                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                    </div>
+
+                </a>
+
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+                        height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
 
-
-                <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-                    viewBox="0 0 34 34" fill="none">
-                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                        stroke="var(--dark-black)" stroke-width="1.26066" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </div>
-
-            <div class="relative w-full flex flex-col gap-6">
-
+            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
                 <img src="/img/limelight-girl-2.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
-                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                    <p class="text-[var(--dark-black)] font-semibold line-clamp-1">Black Sweatshirt with extra texttt
-                    </p>
-                    <p class="text-[var(--light-black)] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
-                    <button type="button"
-                        class="bg-[var(--light-bg-colour)] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                            class="text-[var(--dark-black)] font-bold">$123.00</span></button>
+                        <button type="button"
+                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                    </div>
+
+                </a>
+
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+                        height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
 
-
-                <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-                    viewBox="0 0 34 34" fill="none">
-                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                        stroke="var(--dark-black)" stroke-width="1.26066" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </div>
-
-            <div class="relative w-full flex flex-col gap-6">
-
+          <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
                 <img src="/img/limelight-girl-3.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
-                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                    <p class="text-[var(--dark-black)] font-semibold line-clamp-1">Black Sweatshirt with extra texttt
-                    </p>
-                    <p class="text-[var(--light-black)] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
-                    <button type="button"
-                        class="bg-[var(--light-bg-colour)] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                            class="text-[var(--dark-black)] font-bold">$123.00</span></button>
+                        <button type="button"
+                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                    </div>
+
+                </a>
+
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+                        height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
-
-
-                <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-                    viewBox="0 0 34 34" fill="none">
-                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                        stroke="var(--dark-black)" stroke-width="1.26066" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </div>
-            <div class="relative w-full flex flex-col gap-6">
-
+          <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
                 <img src="/img/limeliglight-girl-4.jpg" alt="" width="200" height="200"
-                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
-                <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <a href="single-product.html">
+                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                    <p class="text-[var(--dark-black)] font-semibold line-clamp-1">line Pattern Black extra texttt</p>
-                    <p class="text-[var(--light-black)] text-[14px] font-medium">AS's Brand</p>
+                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
+                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
-                    <button type="button"
-                        class="bg-[var(--light-bg-colour)] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                            class="text-[var(--dark-black)] font-bold">$123.00</span></button>
+                        <button type="button"
+                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                    </div>
+
+                </a>
+
+                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+                        height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
-
-
-                <svg class="absolute top-[20px] right-[20px]" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-                    viewBox="0 0 34 34" fill="none">
-                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                        stroke="var(--dark-black)" stroke-width="1.26066" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </div>
 
             <!-- </div> -->
         </section>
@@ -1528,12 +1533,14 @@
             </div>
 
         </section>
+
+       
         <!-- Footer Section Ends -->
     </main>
-
+    
     <script src="script.js"></script>
-
-
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
@@ -1611,22 +1618,22 @@ var swiper1 = new Swiper(".bannerSwiper", {
 
 
 // Header Product Search
-document.getElementById("search-cloth").addEventListener("keydown", function (e) {
-    console.log(e.target, "here");
-    const inputValue = e.target.value;
-    console.log(inputValue);
-    if (e.key === "Enter") {
-      e.preventDefault();
-      const inputValue = e.target.value;
+// document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+//     console.log(e.target, "here");
+//     const inputValue = e.target.value;
+//     console.log(inputValue);
+//     if (e.key === "Enter") {
+//       e.preventDefault();
+//       const inputValue = e.target.value;
 
-      console.log(inputValue, "here");
-      if (inputValue) {
-        window.location.href = `products.html?search=${encodeURIComponent(
-          inputValue
-        )}`;
-      }
-    }
-  });
+//       console.log(inputValue, "here");
+//       if (inputValue) {
+//         window.location.href = `products.html?search=${encodeURIComponent(
+//           inputValue
+//         )}`;
+//       }
+//     }
+//   });
     </script>
 </body>
 

@@ -29,10 +29,11 @@
                     </svg>
                 </span>
 
-                <a href="#">
+                 <a href="euphoria.html">
 
                     <img src="/img/logo.png" alt="euphoria logo" width="100" height="100" class="w-[100%]">
                 </a>
+
 
 
 
@@ -47,7 +48,7 @@
                 </ul>
 
                 <input type="search" name="search" id="search-cloth" placeholder="Search"
-                    class="hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
+                    class="search-cloth hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
              
               <div class="flex gap-3">
@@ -81,7 +82,7 @@
                 class="sm:hidden flex justify-between items-center px-[10px] pt-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
 
                 <input type="search" name="search" id="search-cloth" placeholder="Search"
-                    class="w-[100%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
+                    class="search-cloth w-[100%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
             </div>
             <!-- <div class="lg:hidden pt-[10px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
@@ -227,8 +228,8 @@
     
 
     <section class="bg-[var(--dark-black)] py-5 mb-[50px]">
-        <div class="px-[10px] m-auto lg:w-[85vw] 2xl:w-[80vw] flex justify-between">
-            <p class="uppercase text-white font-semibold text-lg">product Details</p>
+        <div class="px-[10px] m-auto lg:w-[85vw] 2xl:w-[80vw] grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr] justify-items-center">
+            <p class="uppercase text-white font-semibold text-lg justify-self-start">product Details</p>
             <p class="uppercase text-white font-semibold text-lg">Price</p>
             <p class="uppercase text-white font-semibold text-lg">Quantity</p>
             <p class="uppercase text-white font-semibold text-lg">Shipping</p>
@@ -241,8 +242,8 @@
 
     <section class="px-[10px] m-auto lg:w-[85vw] 2xl:w-[80vw]">
 
-        <div class="flex justify-between items-center border-b-1 border-b-[var(--light-border)] pb-10">
-            <div class="grid grid-cols-[auto_1fr] gap-x-5">
+        <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr]  justify-items-center items-center border-b-1 border-b-[var(--light-border)] pb-10">
+            <div class="flex flex-col md:grid md:grid-cols-[auto_1fr] gap-x-5 justify-self-start">
                 <img class="w-[105px] h-[120px] row-span-4" src="/img/cart-product-1.png" alt="cart product" width="100"
                     height="100">
                 <p class="text-[var(--dark-black)] text-lg font-semibold">Blue Flower Print Crop Top</p>
@@ -250,7 +251,7 @@
                 <span class="text-[var(--light-black)] text-sm">Size : M</span>
             </div>
             <p class="text-[var(--dark-black)] text-lg font-semibold">$29.00</p>
-            <button class="flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
+            <button class="w-fit flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
                 <span
                     class="rounded-tl-xl rounded-bl-xl bg-[var(--light-bg-colour)] pr-2 pl-5 py-2.5 cursor-pointer text-xs hover:bg-purple-300">-</span>
                 <span>30</span>
@@ -264,8 +265,8 @@
         </div>
 
 
-        <div class="flex justify-between items-center border-b-1 border-b-[var(--light-border)] py-10">
-            <div class="grid grid-cols-[auto_1fr] gap-x-5">
+        <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr] justify-items-center items-center border-b-1 border-b-[var(--light-border)] py-10">
+            <div class="flex flex-col md:grid md:grid-cols-[auto_1fr] gap-x-5 justify-self-start">
                 <img class="w-[105px] h-[120px] row-span-4" src="/img/cart-product-2.png" alt="cart product" width="100"
                     height="100">
                 <p class="text-[var(--dark-black)] text-lg font-semibold">Lavender Hoodie</p>
@@ -273,7 +274,7 @@
                 <span class="text-[var(--light-black)] text-sm">Size : XXL</span>
             </div>
             <p class="text-[var(--dark-black)] text-lg font-semibold">$29.00</p>
-            <button class="flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
+            <button class="w-fit flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
                 <span
                     class="rounded-tl-xl rounded-bl-xl bg-[var(--light-bg-colour)] pr-2 pl-5 py-2.5 cursor-pointer text-xs hover:bg-purple-300">-</span>
                 <span>30</span>
@@ -286,8 +287,8 @@
             <button><img src="/img/delete-icon.svg" alt="delete icon"></button>
         </div>
 
-        <div class="flex justify-between items-center  py-10">
-            <div class="grid grid-cols-[auto_1fr] gap-x-5">
+        <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr] justify-items-center items-center  py-10">
+            <div class="flex flex-col md:grid md:grid-cols-[auto_1fr] gap-x-5 justify-self-start">
                 <img class="w-[105px] h-[120px] row-span-4" src="/img/cart-product-3.png" alt="cart product" width="100"
                     height="100">
                 <p class="text-[var(--dark-black)] text-lg font-semibold">Black Sweatshirt</p>
@@ -295,7 +296,7 @@
                 <span class="text-[var(--light-black)] text-sm">Size : M</span>
             </div>
             <p class="text-[var(--dark-black)] text-lg font-semibold">$29.00</p>
-            <button class="flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
+            <button class="w-fit flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
                 <span
                     class="rounded-tl-xl rounded-bl-xl bg-[var(--light-bg-colour)] pr-2 pl-5 py-2.5 cursor-pointer text-xs hover:bg-purple-300">-</span>
                 <span>30</span>
@@ -343,7 +344,7 @@
                 <span class="text-[var(--light-black)] text-sm">Size : M</span>
             </div>
             <p class="text-[var(--dark-black)] text-lg font-semibold">$29.00</p>
-            <button class="flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
+            <button class="w-fit flex items-center gap-1 rounded-xl bg-[var(--light-bg-colour)] text-xs">
                 <span
                     class="rounded-tl-xl rounded-bl-xl bg-[var(--light-bg-colour)] pr-2 pl-5 py-2.5 cursor-pointer text-xs hover:bg-purple-300">-</span>
                 <span>30</span>

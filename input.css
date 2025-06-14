@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+
 /* @theme{
     --font-poppins: "Poppins", sans-serif;
 } */
@@ -322,7 +323,7 @@
     /* display: grid !important; */
     /* grid-template-columns: auto; */
     /* } */
-    */
+    /* */ */
     /* For Swiper Single Product */
 
 
@@ -331,20 +332,24 @@
         height: 100%;
     }
 
-    .swiper-slide {
+    .thumbSwiper  .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #444;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 5px;
     }
 
-    .swiper-slide img {
+    .thumbSwiper .swiper-slide img {
         display: block;
+        background-color: white;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 5px;
+
     }
 
     .swiper.thumbSwiper {
@@ -354,30 +359,82 @@
         margin-right: auto;
     }
 
+.mySwiper.thumbSwiper .swiper-wrapper{
+    /* margin: 0px !important; */
+}
+
+@media screen and (max-width:500px) {
+    .mySwiper.thumbSwiper {
+        /* height: 20% !important; */
+        /* height: fit-content; */
+        height: 200px !important;
+        box-sizing: border-box;
+        padding: 10px ;
+        flex-basis: 60%;
+    }
+
+
+ .mySwiper.thumbSwiper .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        /* height: fit-content !important; */
+        /* overflow-x: auto; */
+        width: fit-content !important;
+        /* gap: 20px; */
+        place-items: center;
+    }
+}
+
+    /* } */
+
     .swiper-slide {
         background-size: cover;
         background-position: center;
     }
 
     .mySwiper2.singleProductSwiper2 {
-        height: 80%;
+        height: 100%;
         width: 100%;
     }
 
     .mySwiper.thumbSwiper {
-        height: 20%;
+        /* height: 20% !important; */
+        /* height: fit-content; */
+        height: 300px ;
         box-sizing: border-box;
-        padding: 10px 0;
+        padding: 10px ;
+        flex-basis: 60%;
+    }
+
+    .mySwiper.thumbSwiper .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        /* height: fit-content !important; */
+        /* overflow-x: auto; */
+        width: fit-content !important;
+        /* gap: 20px; */
+        place-items: center;
+    }
+
+    .mySwiper.thumbSwiper .swiper-slide-thumb-active{
+        background-color: white;
+        border: 1px solid black;
+         border-radius: 10px;
+        padding: 5px;
     }
 
     .mySwiper.thumbSwiper .swiper-slide {
-        width: 25%;
+        min-width: 60px ;
         height: 100%;
         opacity: 0.4;
+        height: 60px !important;
+        /* border: 1px solid black; */
+        /* border-radius: 10px; */
     }
 
     .mySwiper.thumbSwiper .swiper-slide-thumb-active {
         opacity: 1;
+
     }
 
     .swiper-slide img {
