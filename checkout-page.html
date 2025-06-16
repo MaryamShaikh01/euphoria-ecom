@@ -196,7 +196,7 @@
 
                     </label>
 
-                    <button type="button"
+                    <button type="button" id="deliveryBtn"
                         class="col-span-6 row-start-7 col-start-1 w-fit mt-5 px-6 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
                         Continue to delivery</button>
                     <p class="col-span-6 flex items-center gap-2 pb-6">
@@ -213,6 +213,10 @@
                 class="rounded-[4px] shadow-[-2px_-2px_4px_0px_rgba(0,_0,_0,_0.05),_2px_2px_4px_0px_rgba(0,_0,_0,_0.05)] px-5 py-5 sm:py-10 h-fit">
                 <p class="text-2xl text-[var(--dark-black)] font-semibold border-b-1 border-b-[#EDEEF2] pb-5">Order Summary
                 </p>
+
+                <div id="cart-container">
+<!-- 
+
                 <div
                     class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
                     <img src="/img/order-1.png" alt="item 1" width="50" height="50" class="w-[63px] h-[63px]">
@@ -250,6 +254,7 @@
                                 class="text-[var(--light-black)] font-normal">: Yellow</span></p>
                     </div>
                     <p class="text-sm font-semibold text-[var(--light-black)]">$29.00</p>
+                </div> -->
                 </div>
 
                 <table class="w-full">
@@ -511,6 +516,62 @@
     <!-- Footer Section Ends -->
 
     <script src="script.js"></script>
+
+    <script>
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const cartContainer = document.getElementById('cart-container');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+
+            cart.forEach(item => {
+                const cartItemDisplay = `
+   
+   <div
+                    class="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-x-5 border-b-1 border-b-[#EDEEF2] py-5">
+                    <img src="${item.image}" alt="item 1" width="50" height="50" class="w-[63px] h-[63px] object-cover object-top rounded-[4px]">
+                    <div class="grid gap-y-1">
+
+                        <p class="text-sm font-semibold text-[var(--dark-black)]">${item.name}<span
+                                class="text-[var(--light-black)]">x 1</span></p>
+                        <p class="text-sm font-semibold text-[var(--dark-black)]">Color <span
+                                class="text-[var(--light-black)] font-normal">: ${item.color}</span></p>
+                    </div>
+                    <p class="text-sm font-semibold text-[var(--light-black)]">${item.price}</p>
+                </div>
+
+
+
+
+    `;
+                cartContainer.innerHTML += cartItemDisplay;
+            });
+
+            deleteCartItem();
+        });
+
+
+        const deliveryBtn = document.getElementById('deliveryBtn')
+        deliveryBtn.addEventListener('click',function(){
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+    window.location.href = `empty-cart.html`;
+
+                alert("Your Cart is Empty!")
+                return;
+            }
+
+    window.location.href = `add-address.html`;
+
+        })
+
+    </script>
 </body>
 
 </html>

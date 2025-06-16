@@ -105,8 +105,8 @@
 
         <p class="text-[16px] text-[var(--light-black)]">Add something to make it happy!</p>
 
-        <button type="button"
-                        class="cursor-pointer mt-10 w-fit px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+        <button type="button" 
+                        class="continueShoppingBtn cursor-pointer mt-10 w-fit px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
                         Continue Shopping</button>
         </section>
 
@@ -217,6 +217,21 @@
     <!-- Footer Section Ends -->
 
     <script src="script.js"></script>
+
+<script>
+        const continueShoppingBtn = document.querySelector('.continueShoppingBtn')
+        continueShoppingBtn.addEventListener('click' , function(){
+          
+     
+
+    window.location.href = `products.html`;
+
+        })
+</script>
+    
+    <script>
+        
+    </script>
 </body>
 
 </html>

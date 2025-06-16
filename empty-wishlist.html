@@ -169,8 +169,8 @@
                 <p class="text-center text-[var(--light-black)]">You don’t have any products in the wishlist yet. You will find a lot
                     of interesting products on our Shop page.</p>
                     
-                    <button type="button"
-                    class="mt-10 w-fit px-3 md:px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                    <button type="button" 
+                    class="continueShoppingBtn mt-10 w-fit px-3 md:px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white  cursor-pointer">
                     Continue Shopping</button>
                     
                 </div>
@@ -413,7 +413,16 @@
 
     </section>
     <!-- Footer Section Ends -->
+<script>
+     const continueShoppingBtn = document.querySelector('.continueShoppingBtn')
+        continueShoppingBtn.addEventListener('click' , function(){
+          
+     
 
+    window.location.href = `products.html`;
+
+        })
+</script>
     <script src="script.js"></script>
 </body>
 

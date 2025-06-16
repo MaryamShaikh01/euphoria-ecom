@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <title>Single Product Page</title>
+    <title>Product Three</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <style>
@@ -222,7 +222,7 @@
             <div thumbsSlider="" class="swiper mySwiper thumbSwiper">
                 <div class="swiper-wrapper ">
                     <div class="swiper-slide">
-                        <img id="singleProductImage" src="img/product-4.png" />
+                        <img id="singleProductImage" src="img/product-3.png" />
                     </div>
                     <div class="swiper-slide">
                         <img src="img/product-1.png" />
@@ -231,7 +231,7 @@
                         <img src="img/product-2.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/product-3.png" />
+                        <img src="img/product-4.png" />
                     </div>
                     <div class="swiper-slide">
                         <img src="img/product-5.png" />
@@ -258,7 +258,7 @@
                 class="swiper mySwiper2 singleProductSwiper2 col-span-2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="img/product-4.png" />
+                        <img src="img/product-3.png" />
                     </div>
                     <div class="swiper-slide">
                         <img src="img/product-1.png" />
@@ -267,7 +267,7 @@
                         <img src="img/product-2.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/product-3.png" />
+                        <img src="img/product-4.png" />
                     </div>
                     <div class="swiper-slide">
                         <img src="img/product-5.png" />
@@ -315,7 +315,7 @@
                 <li class="text-[#807D7E] whitespace-nowrap">Top</li>
             </ul>
 
-            <p class="p-34-25 font-semibold" id="productName">Raven Hoodie With Black Colored Design</p>
+            <p class="p-34-25 font-semibold" id="productName">Product Three Hoodie</p>
 
 
             <ul class="flex flex-wrap items-center gap-x-4">
@@ -376,7 +376,7 @@
                 <p class="text-[var(--dark-black)] text-lg font-semibold pb-[10px] md:pb-[18px]">Colours Available</p>
 
 
-                <ul class="flex gap-3">
+               <ul class="flex gap-3">
                     <li id="Black"
                         class="color-btn w-[22px] h-[22px] bg-[#3F4646] rounded-full relative hover:before:absolute hover:before:top-[50%] hover:before:left-[50%] hover:before:w-[30px] hover:before:h-[30px] hover:before:bg-transparent hover:before:border-2 hover:before:border-[var(--dark-black)]  hover:before:rounded-full hover:before:transform hover:before:translate-x-[-50%] hover:before:translate-y-[-50%]">
                     </li>
@@ -414,7 +414,7 @@
 
                 <button type="button" id="add-to-cart-btn"
                     class="flex justify-center items-center gap-2 px-5 sm:px-10 py-3 rounded-lg bg-[var(--purple-colour)] text-white">
-                    <img src="/img/shopping cart.svg" alt="">Add to cart</button>
+                    <img src="/img/shopping cart.svg" alt="" >Add to cart</button>
                 <span class=" px-5 py-3 border-2 rounded-lg text-[var(--dark-black)]">$63.00</span>
             </div>
 
@@ -753,7 +753,7 @@
 
         <div class="relative w-full flex flex-col gap-6">
 
-            <img src="/img/product-6.png" alt="" width="200" height="200"singleProductImage
+            <img src="/img/product-6.png" alt="" width="200" height="200"
                 class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
             <a href="single-product.html">
                 <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
@@ -989,7 +989,61 @@
         });
 
 
-   
+        // Инициализация превью слайдера
+const sliderThumbs = new Swiper(".slider__thumbs .swiper-container", {
+  // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: "vertical", // вертикальная прокрутка
+  slidesPerView: 3, // показывать по 3 превью
+  spaceBetween: 24, // расстояние между слайдами
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: ".slider__next", // кнопка Next
+    prevEl: ".slider__prev" // кнопка Prev
+  },
+  freeMode: true, // при перетаскивании превью ведет себя как при скролле
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: "horizontal" // горизонтальная прокрутка
+    },
+    768: {
+      // при 768px и выше
+      direction: "vertical" // вертикальная прокрутка
+    }
+  }
+});
+// Инициализация слайдера изображений
+const sliderImages = new Swiper(".slider__images .swiper-container", {
+  // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: "vertical", // вертикальная прокрутка
+  slidesPerView: 1, // показывать по 1 изображению
+  spaceBetween: 32, // расстояние между слайдами
+  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: ".slider__next", // кнопка Next
+    prevEl: ".slider__prev" // кнопка Prev
+  },
+  grabCursor: true, // менять иконку курсора
+  thumbs: {
+    // указываем на превью слайдер
+    swiper: sliderThumbs // указываем имя превью слайдера
+  },
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: "horizontal" // горизонтальная прокрутка
+    },
+    768: {
+      // при 768px и выше
+      direction: "vertical" // вертикальная прокрутка
+    }
+  }
+});
 
 // const sizeBtn = document.querySelectorAll('.size-btn')
 // sizeBtn.forEach((curretSizeBtn)=>{
@@ -1021,8 +1075,6 @@
 //     size: curretSizeBtn.textContent,
 //     color: currentColorBtn.id
 // }))
-
-let singleProductImage = document.getElementById('singleProductImage')
 
 
 let selectedSize = null;
@@ -1076,7 +1128,7 @@ const productImage = image;
 const productPrice = 59.99;
 
 addToCartBtn.addEventListener('click', () => {
-const selectedSizeBtn = document.querySelector('.size-btn.selected-size-btn');
+  const selectedSizeBtn = document.querySelector('.size-btn.selected-size-btn');
 const selectedColorBtn = document.querySelector('.color-btn.selected-color-btn');
 
 if (!selectedSizeBtn || !selectedColorBtn) {
@@ -1111,7 +1163,7 @@ const selectedOptions = {
 //   } else {
     cart.push(cartItem);
 //   }
-
+  
   localStorage.setItem('cart', JSON.stringify(cart));
 
   window.location.href = '/cart.html'; 

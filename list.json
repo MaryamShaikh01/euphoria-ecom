@@ -1,57 +1,60 @@
 {
   "products": [
     {
-      "img":"/img/product-1.png" ,
-      "description" : "Product One",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-1.png",
+      "description": "Product One",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "product-one.html"
     },
     {
-     "img":"/img/product-2.png" ,
-      "description" : "Product One",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-2.png",
+      "description": "Product Two",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "product-two.html"
     },
     {
-      "img":"/img/product-3.png" ,
-      "description" : "Product Three",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-3.png",
+      "description": "Product Three",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "product-three.html"
     },
     {
-      "img":"/img/product-4.png" ,
-      "description" : "Product Four",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-4.png",
+      "description": "Product Four",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "single-product.html"
     },
     {
-      "img":"/img/product-5.png" ,
-      "description" : "Product Five",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-5.png",
+      "description": "Product Four",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "single-product.html"
     },
     {
-      "img":"/img/product-6.png" ,
-      "description" : "Product Six",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-6.png",
+      "description": "Product Six",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "single-product.html"
     },
     {
-     "img":"/img/product-7.png" ,
-      "description" : "Product Seven",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-7.png",
+      "description": "Product Seven",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "single-product.html"
     },
     {
-      "img":"/img/product-8.png" ,
-      "description" : "Product Eight",
-      "brand":"Jhanvi's Brand",
-      "price": "$123.00"
+      "img": "/img/product-8.png",
+      "description": "Product Eight",
+      "brand": "Jhanvi's Brand",
+      "price": "$123.00",
+      "link": "single-product.html"
     }
   ]
 }
-
-
-
-
-

@@ -7,7 +7,7 @@
     <link href="./output.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 
     <title>Home Page</title>
 
@@ -15,12 +15,23 @@
         /* details[open] > summary::after {
   transform: rotate(180deg);
 } */
+
+
+        .selected-heart-btn>circle {
+            fill: red;
+        }
+
+        .selected-heart-btn path {
+            stroke: red;
+            fill: white;
+        }
     </style>
 
 </head>
 
 <body>
     <main>
+
 
         <!-- Navbar Section Starts -->
 
@@ -32,7 +43,7 @@
         <header class="py-[15px] lg:py-[30px] ">
             <div class="flex justify-between gap-x-3.5 items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
 
-                   <span class="lg:hidden" id="hamburger" onclick="sideNav()">
+                <span class="lg:hidden" id="hamburger" onclick="sideNav()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
                         <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
                     </svg>
@@ -46,8 +57,8 @@
 
 
                 <ul id="side-nav" class="hidden p-10 lg:p-0 lg:flex lg:gap-10 text-[22px] text-[var(--light-black)]">
-                    <li class=" lg:hidden absolute right-20"><img src="/img/close-icon.svg" alt="" width="50" height="50"
-                            class="w-[50px] h-[50px]" id="close-nav"></li>
+                    <li class=" lg:hidden absolute right-20"><img src="/img/close-icon.svg" alt="" width="50"
+                            height="50" class="w-[50px] h-[50px]" id="close-nav"></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Shop</a></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#men-category">Men</a></li>
                     <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="products.html">Women</a></li>
@@ -58,25 +69,29 @@
                 <input type="search" name="search" id="search-cloth" placeholder="Search"
                     class="search-cloth hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
 
-             
+
                 <div class="flex gap-3">
 
-                    <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
+                    <button type="button"
+                        class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            class="">
                             <path class=" group-hover:stroke-white" fill-rule="evenodd" clip-rule="evenodd"
                                 d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z"
                                 stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                    <button type="button"
+                        class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path class=" group-hover:stroke-white"
                                 d="M9.99998 11.6667C12.3012 11.6667 14.1666 9.8012 14.1666 7.50001C14.1666 5.19882 12.3012 3.33334 9.99998 3.33334C7.69879 3.33334 5.83331 5.19882 5.83331 7.50001C5.83331 9.8012 7.69879 11.6667 9.99998 11.6667ZM9.99998 11.6667C6.31808 11.6667 3.33331 13.9053 3.33331 16.6667M9.99998 11.6667C13.6819 11.6667 16.6666 13.9053 16.6666 16.6667"
                                 stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </button>
-                    <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                    <button type="button"
+                        class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path class=" group-hover:stroke-white"
                                 d="M2.5 3.33334H3.00526C3.85578 3.33334 4.56986 3.97376 4.6621 4.81926L5.3379 11.0141C5.43014 11.8596 6.14422 12.5 6.99474 12.5H14.205C14.9669 12.5 15.6317 11.9834 15.82 11.2452L16.9699 6.73593C17.2387 5.68213 16.4425 4.65742 15.355 4.65742H5.5M5.52063 15.5208H6.14563M5.52063 16.1458H6.14563M14.6873 15.5208H15.3123M14.6873 16.1458H15.3123M6.66667 15.8333C6.66667 16.2936 6.29357 16.6667 5.83333 16.6667C5.3731 16.6667 5 16.2936 5 15.8333C5 15.3731 5.3731 15 5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333ZM15.8333 15.8333C15.8333 16.2936 15.4602 16.6667 15 16.6667C14.5398 16.6667 14.1667 16.2936 14.1667 15.8333C14.1667 15.3731 14.5398 15 15 15C15.4602 15 15.8333 15.3731 15.8333 15.8333Z"
@@ -96,10 +111,6 @@
         </header>
 
         <!-- Navbar Section Ends -->
-  <section id="text"
-        class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-2.5 md:gap-x-[36px] gap-y-5 md:gap-y-[36px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] py-10 pb-[40px] lg:pb-[80px] ">
-
-    </section>
 
         <!-- Banner Section Starts -->
         <section class="h-[60vh] md:h-[70vh] lg:h-[80vh] pb-[40px] lg:pb-[90px]">
@@ -180,35 +191,35 @@
 
             <div class="swiper mySwiper arrivalSwiper px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-[60px]">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="categoryCard">
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/joggers.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p id="categoryTitle" class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="categoryCard">
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/full-sleeve-guy.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p id="categoryTitle" class="p-20-16 text-[var(--dark-black)] font-bold">Full Sleeve</p>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="categoryCard">
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/active-shirt-guy.png" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p id="categoryTitle" class="p-20-16 text-[var(--dark-black)] font-bold">Active T-Shirts</p>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="categoryCard">
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/urban-shirt-girl.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p id="categoryTitle" class="p-20-16 text-[var(--dark-black)] font-bold">Urban Shirts</p>
                         </div>
                     </div>
 
@@ -216,7 +227,7 @@
                         <div class="rounded-[12px] flex flex-col gap-6">
                             <img src="/img/joggers.jpg" alt="" width="100" height="100"
                                 class="w-[100%] h-[150px] lg:h-[250px] rounded-[12px] object-cover object-top">
-                            <p class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
+                            <p id="categoryTitle" class="p-20-16 text-[var(--dark-black)] font-bold">Knitted Joggers</p>
                         </div>
                     </div>
 
@@ -226,7 +237,7 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </section>
-          <!-- New Arrival Section Ends -->
+        <!-- New Arrival Section Ends -->
 
 
 
@@ -238,11 +249,12 @@
             <div
                 class="grid  lg:grid-cols-6 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-3 lg:gap-x-5 lg:gap-y-5 pb-[40px] lg:pb-[80px]">
 
-                <div class="col-span-2 rounded-[12px] relative text-white h-fit">
+                <div class="col-span-2 rounded-[12px] relative text-white h-fit cursor-pointer" id="categoryCard">
                     <img src="/img/hawaiian-shirt-goy.png" alt="" width="200" height="200"
                         class="w-[400px] min-w-[100%] h-[250px] lg:h-[393px]  object-cover rounded-[12px]">
                     <div class="absolute top-0 px-5 py-[20px] lg:py-[55px] flex flex-col">
-                        <p class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[36px]">Hawaiian <br> Shirts</p>
+                        <p id="categoryTitle" class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[36px]">Hawaiian <br>
+                            Shirts</p>
                         <p class="text-[14px] font-semibold">Dress up in summer vibe</p>
                         <p class="text-[18px] font-bold">UPTO 50% OFF</p>
                         <svg class="mb-3 mt-2 lg:mb-8 lg:mt-5 h-fit ml-[43px]" xmlns="http://www.w3.org/2000/svg"
@@ -251,12 +263,14 @@
                                 d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958"
                                 stroke="white" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        <button type="button" class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
+                        <button type="button"
+                            class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
                             NOW</button>
                     </div>
                 </div>
 
-                <div class=" col-span-2 min-[500px]:col-auto lg:col-span-2 rounded-[12px] relative text-white">
+                <div class=" col-span-2 min-[500px]:col-auto lg:col-span-2 rounded-[12px] relative text-white cursor-pointer"
+                    id="categoryCard">
                     <img src="/img/printed-shirt-girl.jpg" alt="" width="200" height="200"
                         class="w-[400px] min-w-[100%] h-[250px] lg:h-[393px] object-cover object-right rounded-[12px]">
 
@@ -264,7 +278,7 @@
                         <button type="button"
                             class=" w-fit text-[12px] font-medium rounded-[4px] px-[18px] py-2 text-center bg-[var(--dark-black)]">Limited
                             Stock</button>
-                        <p class="p-28-20 font-semibold lg:pt-5 pb-3 leading-[34px]">Printed <br>
+                        <p id="categoryTitle" class="p-28-20 font-semibold lg:pt-5 pb-3 leading-[34px]">Printed <br>
                             T-Shirt</p>
                         <p class="text-[14px] font-semibold">New Designs Every Week</p>
                         <p class="text-[18px] font-bold">UPTO 40% OFF</p>
@@ -274,18 +288,19 @@
                                 d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958"
                                 stroke="white" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        <button type="button" class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
+                        <button type="button"
+                            class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
                             NOW</button>
                     </div>
                 </div>
 
-                <div
-                    class="col-span-2 min-[500px]:col-auto lg:col-span-2 rounded-[12px] relative text-[var(--dark-black)]">
+                <div class="col-span-2 min-[500px]:col-auto lg:col-span-2 rounded-[12px] relative text-[var(--dark-black)] cursor-pointer"
+                    id="categoryCard">
                     <img src="/img/cargo-girl.jpg" alt="" width="200" height="200"
                         class="w-[400px] min-w-[100%] h-[250px] lg:h-[393px] object-cover  rounded-[12px]">
 
                     <div class="absolute top-0 right-0 px-5 py-[20px] lg:py-[55px] flex flex-col items-start">
-                        <p class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[36px]">Cargo <br>
+                        <p id="categoryTitle" class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[36px]">Cargo <br>
                             Joggers</p>
                         <p class="text-[14px] font-semibold">Move with style & comfort</p>
                         <p class="text-[18px] font-bold">UPTO 40% OFF</p>
@@ -295,17 +310,19 @@
                                 d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958"
                                 stroke="var(--dark-black)" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        <button type="button" class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
+                        <button type="button"
+                            class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
                             NOW</button>
                     </div>
                 </div>
 
-                <div class="col-span-2 lg:col-span-3 rounded-[12px] relative text-[var(--dark-black)]">
+                <div class="col-span-2 lg:col-span-3 rounded-[12px] relative text-[var(--dark-black)] cursor-pointer"
+                    id="categoryCard">
                     <img src="/img/urban-shirt-guy.jpg" alt="" width="200" height="200"
                         class="w-[400px] min-w-[100%] h-[250px] lg:h-[393px] object-cover object-top  rounded-[12px]">
 
                     <div class="absolute top-0 right-0 px-5 py-[20px] lg:py-[55px] flex flex-col items-start w-[50%]">
-                        <p class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[35px]">Urban <br>
+                        <p id="categoryTitle" class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[35px]">Urban <br>
                             Shirts</p>
                         <p class="text-[14px] font-semibold">Live in comfort</p>
                         <p class="text-[18px] font-bold">FLAt 60% OFF</p>
@@ -315,17 +332,19 @@
                                 d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958"
                                 stroke="var(--dark-black)" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        <button type="button" class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
+                        <button type="button"
+                            class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
                             NOW</button>
                     </div>
                 </div>
 
-                <div class="col-span-2 md:col-span-3 lg:col-span-3 rounded-[12px] relative text-[var(--dark-black)]">
+                <div class="col-span-2 md:col-span-3 lg:col-span-3 rounded-[12px] relative text-[var(--dark-black)] cursor-pointer"
+                    id="categoryCard">
                     <img src="/img/oversized-shirt-guy.jpg" alt="" width="200" height="200"
                         class="w-[400px] min-w-[100%] h-[250px] lg:h-[393px] object-cover  object-top rounded-[12px]">
 
                     <div class="absolute top-0 right-0 px-5 py-[20px] lg:py-[55px] flex flex-col items-start w-[50%]">
-                        <p class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[35px]">Oversized <br>
+                        <p id="categoryTitle" class="p-28-20 font-semibold lg:pt-3 pb-3 leading-[35px]">Oversized <br>
                             T-Shirts</p>
                         <p class="text-[14px] font-semibold">Street Style Icon</p>
                         <p class="text-[18px] font-bold">FLAt 60% OFF</p>
@@ -335,7 +354,8 @@
                                 d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958"
                                 stroke="var(--dark-black)" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        <button type="button" class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
+                        <button type="button"
+                            class="w-fit text-[12px] font-medium rounded-[4px] border-1 px-5 py-2 text-center">SHOP
                             NOW</button>
                     </div>
                 </div>
@@ -383,19 +403,22 @@
 
                 <img src="/img/shirts-guy.jpg" alt="" width="200" height="200"
                     class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                <a href="/products.html">
 
-                <div class="grid grid-cols-[1fr_50px] pt-[15px]">
+                    <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1">Shirts</p>
-                    <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
+                        <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1">Shirts</p>
+                        <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
-                    <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
-                            <path
-                                d="M18.9571 7.71749C19.2843 7.39027 19.2843 6.85973 18.9571 6.53251L13.6247 1.2001C13.2975 0.87288 12.7669 0.87288 12.4397 1.2001C12.1125 1.52733 12.1125 2.05786 12.4397 2.38508L17.1796 7.125L12.4397 11.8649C12.1125 12.1921 12.1125 12.7227 12.4397 13.0499C12.7669 13.3771 13.2975 13.3771 13.6247 13.0499L18.9571 7.71749ZM0.489258 7.96291L18.3646 7.96291V6.28709L0.489258 6.28709L0.489258 7.96291Z"
-                                fill="#797979" />
-                        </svg></button>
-                </div>
+                        <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
+                                fill="none">
+                                <path
+                                    d="M18.9571 7.71749C19.2843 7.39027 19.2843 6.85973 18.9571 6.53251L13.6247 1.2001C13.2975 0.87288 12.7669 0.87288 12.4397 1.2001C12.1125 1.52733 12.1125 2.05786 12.4397 2.38508L17.1796 7.125L12.4397 11.8649C12.1125 12.1921 12.1125 12.7227 12.4397 13.0499C12.7669 13.3771 13.2975 13.3771 13.6247 13.0499L18.9571 7.71749ZM0.489258 7.96291L18.3646 7.96291V6.28709L0.489258 6.28709L0.489258 7.96291Z"
+                                    fill="#797979" />
+                            </svg></button>
+                    </div>
+                </a>
             </div>
 
             <div class="relative w-full ">
@@ -550,7 +573,8 @@
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Hoodies & Sweetshirt</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Hoodies &
+                        Sweetshirt</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -569,7 +593,8 @@
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Coats & Parkas</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Coats &
+                        Parkas</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -588,7 +613,8 @@
 
                 <div class="grid grid-cols-[1fr_50px] pt-[15px]">
 
-                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Tees & T-Shirt</p>
+                    <p class="text-[#191919] font-medium text-[18px] font-poppins col-span-1 line-clamp-1">Tees &
+                        T-Shirt</p>
                     <p class="text-[#7F7F7F] text-[13px] font-medium col-span-1">Explore Now!</p>
 
                     <button type="button" class="col-start-2 row-start-1 row-span-2 justify-self-end"><svg
@@ -628,7 +654,8 @@
                 class="bg-[var(--dark-black)] pt-[10px] pb-[20px] md:pb-[50px] px-[20px] md:px-[30px] text-center rounded-[12px]">
                 <p class="p-50-25 font-extrabold text-white">Top Brands Deal</p>
                 <p class="text-[22px]">Up to <span class="text-[#FBD103] font-bold">60%</span> off on brands</p>
-                <div class=" flex flex-wrap sm:flex-nowrap justify-center gap-y-2.5 lg:gap-y-6 gap-2.5 lg:gap-x-6 pt-[30px]">
+                <div
+                    class=" flex flex-wrap sm:flex-nowrap justify-center gap-y-2.5 lg:gap-y-6 gap-2.5 lg:gap-x-6 pt-[30px]">
                     <p
                         class="w-[80px] h-[30px] md:w-[177px] md:h-[85px] bg-white flex items-center rounded-[6px] md:rounded-[12px] p-5">
                         <img src="/img/nike-logo.png" alt="nike logo" class="">
@@ -665,114 +692,118 @@
                 In The Limelight</p>
 
             <!-- <div class="grid grid-cols-4"> -->
-               <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
+            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6" id="limelight-product-one">
+
                 <img src="/img/limelight-girl-1.jpg" alt="" width="200" height="200"
-                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
                 <a href="single-product.html">
                     <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="limelight-product-name text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt
+                            with</p>
+                        <p class="brand text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                                class="text-[#3C4242] font-bold price">$123.00</span></button>
                     </div>
 
                 </a>
+                <svg class="addToWishlist absolute top-[20px] right-[20px] cursor-pointer group"
+                    xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600" />
+                    <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                        stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
 
-                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
-                        height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
-                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
+            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6" id="limelight-product-two">
 
-            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
                 <img src="/img/limelight-girl-2.jpg" alt="" width="200" height="200"
-                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
                 <a href="single-product.html">
                     <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="limelight-product-name text-[#3C4242] font-semibold line-clamp-1">Line Pattern Black Hat</p>
+                        <p class="brand text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                                class="text-[#3C4242] font-bold price">$123.00</span></button>
                     </div>
 
                 </a>
 
-                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
-                        height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
-                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
+                <svg class="addToWishlist absolute top-[20px] right-[20px] cursor-pointer group"
+                    xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600" />
+                    <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                        stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
 
-          <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
+            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6" id="limelight-product-three">
+
                 <img src="/img/limelight-girl-3.jpg" alt="" width="200" height="200"
-                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
                 <a href="single-product.html">
                     <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="limelight-product-name text-[#3C4242] font-semibold line-clamp-1">Black Shorts</p>
+                        <p class="brand text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                                class="text-[#3C4242] font-bold price">$123.00</span></button>
                     </div>
 
                 </a>
 
-                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
-                        height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
-                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-          <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
+                <svg class="addToWishlist absolute top-[20px] right-[20px] cursor-pointer group"
+                    xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600" />
+                    <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                        stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6" id="limelight-product-four">
+
                 <img src="/img/limeliglight-girl-4.jpg" alt="" width="200" height="200"
-                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+                    class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
                 <a href="single-product.html">
                     <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
 
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">Black Sweatshirt with extra texttt</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
+                        <p class="limelight-product-name text-[#3C4242] font-semibold line-clamp-1">Lavender Hoodie with White Jeans</p>
+                        <p class="brand text-[#807D7E] text-[14px] font-medium">Jhanvi’s Brand</p>
 
                         <button type="button"
                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                                class="text-[#3C4242] font-bold">$123.00</span></button>
+                                class="text-[#3C4242] font-bold price">$123.00</span></button>
                     </div>
 
                 </a>
 
-                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
-                        height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
-                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
+                <svg class="addToWishlist absolute top-[20px] right-[20px] cursor-pointer group"
+                    xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600" />
+                    <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+                        stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
 
             <!-- </div> -->
         </section>
         <!-- Limelight Section Ends -->
 
-    
+
         <!-- Feedback Section Starts -->
 
         <section class="pb-[20px] lg:pb-[70px] gap-x-[23px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
@@ -1430,7 +1461,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-               <!-- Feedback Section Ends -->
+        <!-- Feedback Section Ends -->
 
 
         <!-- Footer Section Starts -->
@@ -1534,106 +1565,241 @@
 
         </section>
 
-       
+
         <!-- Footer Section Ends -->
     </main>
-    
+
     <script src="script.js"></script>
-    
-    
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
 
-// FeedBack Swiper
+        // FeedBack Swiper
 
         var swiper2 = new Swiper(".feedbackSwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-//   mousewheel: true,
-  // loop:true,
-  freeMode: true,
-  breakpoints: {
-    500: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            //   mousewheel: true,
+            // loop:true,
+            freeMode: true,
+            breakpoints: {
+                500: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
 
 
-// Arrival Swiper
+        // Arrival Swiper
 
-var swiper3 = new Swiper(".arrivalSwiper", {
-  slidesPerView: 1,
-  spaceBetween: 50,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,
-  //   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
+        var swiper3 = new Swiper(".arrivalSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            //   pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            //   },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
 
-    400: {
-      slidesPerView: 2,
-    },
-    550:{
-        slidesPerView:3
-    },
-   
-    1024: {
-      slidesPerView: 4,
-    },
-  },
-});
+                400: {
+                    slidesPerView: 2,
+                },
+                550: {
+                    slidesPerView: 3
+                },
 
-// Banner Swiper
+                1024: {
+                    slidesPerView: 4,
+                },
+            },
+        });
 
-var swiper1 = new Swiper(".bannerSwiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  //         scrollbar: {
-  //     el: ".swiper-scrollbar",
-  //     hide: false,
-  //   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+        // Banner Swiper
+
+        var swiper1 = new Swiper(".bannerSwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            //         scrollbar: {
+            //     el: ".swiper-scrollbar",
+            //     hide: false,
+            //   },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
 
 
-// Header Product Search
-// document.getElementById("search-cloth").addEventListener("keydown", function (e) {
-//     console.log(e.target, "here");
-//     const inputValue = e.target.value;
-//     console.log(inputValue);
-//     if (e.key === "Enter") {
-//       e.preventDefault();
-//       const inputValue = e.target.value;
+        // Header Product Search
+        // document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+        //     console.log(e.target, "here");
+        //     const inputValue = e.target.value;
+        //     console.log(inputValue);
+        //     if (e.key === "Enter") {
+        //       e.preventDefault();
+        //       const inputValue = e.target.value;
 
-//       console.log(inputValue, "here");
-//       if (inputValue) {
-//         window.location.href = `products.html?search=${encodeURIComponent(
-//           inputValue
-//         )}`;
-//       }
-//     }
-//   });
+        //       console.log(inputValue, "here");
+        //       if (inputValue) {
+        //         window.location.href = `products.html?search=${encodeURIComponent(
+        //           inputValue
+        //         )}`;
+        //       }
+        //     }
+        //   });
+
+
+
+        // Category Name JS
+        const categoryCard = document.querySelectorAll('#categoryCard')
+        categoryCard.forEach((card) => {
+            console.log(card, "card")
+            card.addEventListener('click', function (event) {
+
+                console.log(event.currentTarget, "eventTarget")
+                const title = card.querySelector('#categoryTitle').textContent
+
+                const forUrl = title.replace(" ", "-")
+                console.log(forUrl)
+                console.log(categoryCard, "categoryCard")
+                if (forUrl) {
+                    window.location.href = `products.html?search=${forUrl}`;
+                }
+            })
+        })
+        // const categoryTitle = document.getElementById('categoryTitle')
+
+        let wishList = []
+        // console.log(wishList , "wishList")
+        const wishListBtn = document.querySelectorAll('.addToWishlist');
+        wishListBtn.forEach((heartBtn) => {
+
+            heartBtn.addEventListener('click', function (event) {
+                console.log(event, "event.currentTarget")
+                // wishListBtn.forEach((btn)=>{
+                console.log(heartBtn, "wishListBtn")
+                //     // btn.classList.remove('selected-heart-btn');
+
+                // })
+                heartBtn.classList.toggle('selected-heart-btn');
+                closestDiv = heartBtn.closest('div')
+                id = closestDiv.id
+                console.log(id, "id")
+
+                wishList.push(id)
+                updateWishList(heartBtn);
+
+            })
+
+
+            function updateWishList(heartBtn) {
+                if (wishList) {
+                    closestDiv = heartBtn.closest('div')
+                    console.log(closestDiv, "closestDiv")
+
+                    // const productName = closestDiv.querySelector('.limelight-product-name')
+                    const productName = closestDiv.querySelector('.limelight-product-name').textContent.trim()
+                    console.log(productName, "productName")
+                    const productImage = closestDiv.querySelector('img').src
+                    console.log(productImage, "productImage")
+                    // console.log(image)
+                    const productBrand = closestDiv.querySelector('.brand').textContent.trim();
+
+                    console.log(productBrand, "productBrand")
+
+                    const productPrice = closestDiv.querySelector('.price').textContent.trim();
+
+                    console.log(productPrice, "productPrice")
+
+
+                    const wishList = {
+                        // liked: id,
+                        name: productName,
+                        image: productImage,
+                        brand: productBrand,
+                        price: productPrice,
+                    };
+
+
+                    // const wish = localStorage.setItem('wishList', JSON.stringify(wishList));
+                    // wish.push(wishList)
+
+                    // console.log("liked:", wishList);
+
+
+                    const wish = JSON.parse(localStorage.getItem('wish')) || [];
+
+                    //   const existingIndex = cart.findIndex(item =>
+                    //     item.size === cartItem.size &&
+                    //     item.color === cartItem.color
+                    //   );
+
+                    //   if (existingIndex !== -1) {
+                    //     cart[existingIndex].quantity += 1;
+                    //   } else {
+                    wish.push(wishList);
+                    //   }
+
+                    localStorage.setItem('wish', JSON.stringify(wish));
+                }
+            }
+
+        })
+
+
+
+        
+        // const sizeBtn = document.querySelectorAll('.size-btn');
+        // sizeBtn.forEach((currentSizeBtn) => {
+        //     currentSizeBtn.addEventListener('click', function () {
+        //         sizeBtn.forEach((btn) => {
+        //             btn.classList.remove('selected-size-btn');
+        //         });
+        //         currentSizeBtn.classList.add('selected-size-btn');
+        //         selectedSize = currentSizeBtn.textContent.trim();
+
+        //         updateSelectedOptions();
+        //     });
+        // });
+
+
+        // <svg id="addToWishlist" class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg"
+        //         width="34" height="34" viewBox="0 0 34 34" fill="none">
+        //         <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600" />
+        //         <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd"
+        //             clip-rule="evenodd"
+        //             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+        //             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+        //     </svg>
+        // wishListBtn.forEach((favBtn) => {
+        //     favBtn.addEventListener('click', function () {
+        //         wishListBtn.forEach((btn) => {
+        //             btn.classList.remove('selected-heart-btn');
+        //         });
+        //         favBtn.classList.add('selected-heart-btn');
+        //         // selectedSize = currentSizeBtn.textContent.trim();
+
+        //         // updateSelectedOptions();
+        //     });
+        // });
     </script>
 </body>
 

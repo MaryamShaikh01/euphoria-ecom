@@ -108,150 +108,184 @@ ordeButtons.forEach((btn) => {
 
 // axiosFunct();
 
-// working below
-
-document.addEventListener("DOMContentLoaded", async function(){
-
-async function inputVal() {
-  let data = await axios("./list.json");
-  // console.log(data.data.products, "data consoled");
-  let allProducts = data.data.products;
-
-  // const descriptions = allProducts.map((item) => item.description);
-  return allProducts;
-}
-
 const searchProduct = document.querySelectorAll(".search-cloth");
 
 searchProduct.forEach((input) => {
-  input.addEventListener("keydown", async function (e) {
-    // console.log(e.target, "here");
-
-    const allProducts = await inputVal();
-    // console.log(allProducts, "all products");
-
-    const inputValue = e.target.value.trim();
-    // console.log(inputValue);
-
-    const filtered = allProducts.filter((items) => {
-      console.log(items);
-      const onlyDescription = items.description;
-
-      // console.log(onlyDescription, "onlydesc");
-      const lower = onlyDescription.toLowerCase();
-      console.log(lower, "lowercased");
-      const itemHere = lower.includes(inputValue);
-      console.log(itemHere, "item here");
-
-      if (lower.includes(inputValue.toLowerCase())) {
-        // console.log("got ");
-        return items;
-      }
-    });
-
-    console.log(filtered, "filtered");
-
-    // console.log(items);
-  //   let space = " ";
-  //   filtered.forEach((i) => {
-  //     console.log(i);
-  //     space += `
-
-  // <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
-  //               <img src="${i.img}" alt="" width="200" height="200"
-  //               class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
-  //               <a href="single-product.html">
-  //                   <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
-
-  //                       <p class="text-[#3C4242] font-semibold line-clamp-1">${i.description}</p>
-  //                       <p class="text-[#807D7E] text-[14px] font-medium">${i.brand}</p>
-
-  //                       <button type="button"
-  //                           class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-  //                               class="text-[#3C4242] font-bold">$123.00</span></button>
-  //                   </div>
-
-  //               </a>
-
-  //                   <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
-  //                       height="34" viewBox="0 0 34 34" fill="none">
-  //                       <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
-  //                       <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
-  //                           d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-  //                           stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-  //                   </svg>
-  //               </div>
-
-
-  //                `;
-
-  //     // console.log(space)
-  //     document.getElementById("text").innerHTML = space;
-
-  //     const element = document.getElementById('text')
-  //     console.log(element)
-  //   });
-
+  input.addEventListener("keydown", function (e) {
+    
     if (e.key === "Enter") {
       e.preventDefault();
-      const inputValue = e.target.value.trim();
-      console.log(inputValue, "here");
-      if (inputValue) {
-        console.log('new page')
-        window.location.href = `new.html?search=${inputValue}`;
-            const element = document.getElementById('text')
-      console.log(element)
-    let space = " ";
-
-    filtered.forEach((i) => {
-      console.log(i);
-      space += `
-
-  <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
-                <img src="${i.img}" alt="" width="200" height="200"
-                class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
-                <a href="single-product.html">
-                    <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
-
-                        <p class="text-[#3C4242] font-semibold line-clamp-1">${i.description}</p>
-                        <p class="text-[#807D7E] text-[14px] font-medium">${i.brand}</p>
-
-                        <button type="button"
-                            class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
-                                class="text-[#3C4242] font-bold">$123.00</span></button>
-                    </div>
-
-                </a>
-
-                    <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
-                        height="34" viewBox="0 0 34 34" fill="none">
-                        <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
-                        <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
-                            stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-
-
-                 `;
-
-      // console.log(space)
-      
-      // const element = document.getElementById('text')
-      // console.log(element)
-    });
-    document.getElementById("text").innerHTML = space;
-
-      }
-    }
-  });
-
+  const inputValue = e.target.value.trim();
+  if (inputValue) {
+    window.location.href = `searched-product-page.html?search=${inputValue}`;
+  }
 }
-)
-;
+})})
+
+const saveAddressCheckout = document.getElementById('saveAddressCheckout')
+saveAddressCheckout.addEventListener('click' , function(){
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+    window.location.href = `empty-cart.html`;
+
+                alert("Your Cart is Empty!")
+                return;
+            }
+
+
+    window.location.href = `order-confirmed.html`;
+
 })
+
+
+
+
+// working below
+
+// document.addEventListener("DOMContentLoaded", async function(){
+
+// async function inputVal() {
+//   let data = await axios("./list.json");
+//   // console.log(data.data.products, "data consoled");
+//   let allProducts = data.data.products;
+
+//   // const descriptions = allProducts.map((item) => item.description);
+//   return allProducts;
+// }
+
+// const searchProduct = document.querySelectorAll(".search-cloth");
+
+// searchProduct.forEach((input) => {
+//   input.addEventListener("keydown", async function (e) {
+//     // console.log(e.target, "here");
+
+//     const allProducts = await inputVal();
+//     // console.log(allProducts, "all products");
+
+//     const inputValue = e.target.value.trim();
+//     // console.log(inputValue);
+
+//     const filtered = allProducts.filter((items) => {
+//       console.log(items);
+//       const onlyDescription = items.description;
+
+//       // console.log(onlyDescription, "onlydesc");
+//       const lower = onlyDescription.toLowerCase();
+//       console.log(lower, "lowercased");
+//       const itemHere = lower.includes(inputValue);
+//       console.log(itemHere, "item here");
+
+//       if (lower.includes(inputValue.toLowerCase())) {
+//         // console.log("got ");
+//         return items;
+//       }
+//     });
+
+//     console.log(filtered, "filtered");
+
+//     // console.log(items);
+//   //   let space = " ";
+//   //   filtered.forEach((i) => {
+//   //     console.log(i);
+//   //     space += `
+
+//   // <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
+//   //               <img src="${i.img}" alt="" width="200" height="200"
+//   //               class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+//   //               <a href="single-product.html">
+//   //                   <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+
+//   //                       <p class="text-[#3C4242] font-semibold line-clamp-1">${i.description}</p>
+//   //                       <p class="text-[#807D7E] text-[14px] font-medium">${i.brand}</p>
+
+//   //                       <button type="button"
+//   //                           class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+//   //                               class="text-[#3C4242] font-bold">$123.00</span></button>
+//   //                   </div>
+
+//   //               </a>
+
+//   //                   <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+//   //                       height="34" viewBox="0 0 34 34" fill="none">
+//   //                       <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+//   //                       <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+//   //                           d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+//   //                           stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+//   //                   </svg>
+//   //               </div>
+
+
+//   //                `;
+
+//   //     // console.log(space)
+//   //     document.getElementById("text").innerHTML = space;
+
+//   //     const element = document.getElementById('text')
+//   //     console.log(element)
+//   //   });
+
+//     if (e.key === "Enter") {
+//       e.preventDefault();
+//       const inputValue = e.target.value.trim();
+//       console.log(inputValue, "here");
+//       if (inputValue) {
+//         console.log('new page')
+//         window.location.href = `new.html?search=${inputValue}`;
+//             const element = document.getElementById('text')
+//       console.log(element)
+//     let space = " ";
+
+//     filtered.forEach((i) => {
+//       console.log(i);
+//       space += `
+
+//   <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
+                
+//                 <img src="${i.img}" alt="" width="200" height="200"
+//                 class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
+//                 <a href="single-product.html">
+//                     <div class=" md:grid md:grid-cols-[1fr_auto] gap-x-5">
+
+//                         <p class="text-[#3C4242] font-semibold line-clamp-1">${i.description}</p>
+//                         <p class="text-[#807D7E] text-[14px] font-medium">${i.brand}</p>
+
+//                         <button type="button"
+//                             class="bg-[#F6F6F6] rounded-[8px] py-[10px] px-[20px] col-start-2 row-start-1 row-span-2 justify-self-end self-center"><span
+//                                 class="text-[#3C4242] font-bold">$123.00</span></button>
+//                     </div>
+
+//                 </a>
+
+//                     <svg class="absolute top-[20px] right-[20px] cursor-pointer group" xmlns="http://www.w3.org/2000/svg" width="34"
+//                         height="34" viewBox="0 0 34 34" fill="none">
+//                         <circle cx="17.1291" cy="16.9111" r="16.1796" fill="white" class="group-hover:fill-red-600"/>
+//                         <path class="group-hover:stroke-red-600 group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+//                             d="M16.7198 12.7121C15.345 11.1099 13.0523 10.6789 11.3298 12.146C9.60723 13.6131 9.36472 16.0661 10.7174 17.8013C11.8422 19.244 15.2459 22.2867 16.3615 23.2716C16.4863 23.3817 16.5487 23.4368 16.6215 23.4585C16.685 23.4774 16.7545 23.4774 16.8181 23.4585C16.8909 23.4368 16.9533 23.3817 17.0781 23.2716C18.1936 22.2867 21.5974 19.244 22.7221 17.8013C24.0748 16.0661 23.8619 13.5977 22.1098 12.146C20.3576 10.6943 18.0946 11.1099 16.7198 12.7121Z"
+//                             stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
+//                     </svg>
+//                 </div>
+
+
+//                  `;
+
+//       // console.log(space)
+      
+//       // const element = document.getElementById('text')
+//       // console.log(element)
+//     });
+//     document.getElementById("text").innerHTML = space;
+
+//       }
+//     }
+//   });
+
+// }
+// )
+// ;
+// })
 
 // working above
 
@@ -446,26 +480,3 @@ function unHidePassword() {
   }
 }
 
-// show products
-
-// async function axiosFunct() {
-//     let data = await axios('https://dummyjson.com/quotes/')
-
-//     console.log(data.data.quotes)
-//     let random = Math.floor(Math.random() * 30);
-//     console.log(random)
-//     let space = " ";
-//     data.data.quotes.forEach(i => {
-
-//         space += `<p><strong> Author Name: </strong>${i.author}</p>
-//         <p><strong> Id : </strong>${i.id}</p>
-//                  <p class="quote"><strong>Quote : </strong>${i.quote}</p>`
-
-//         // console.log(space)
-//         document.getElementById('text').innerHTML = space
-
-//     }
-//     );
-// }
-
-// axiosFunct();
