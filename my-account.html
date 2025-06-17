@@ -1,0 +1,1144 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>My Order</title>
+    <style>
+        .account-tab-active {
+            background-color: var(--light-bg-colour);
+            border-left: 4px solid var(--dark-black);
+        }
+
+        .account-content-active {
+            display: block !important;
+
+        }
+
+        .account-content {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Section Starts -->
+
+    <!-- Navbar Section Starts -->
+    <!-- <div id="backdrop" class="bg-gray-400 absolute w-[100vw] h-[100vh] z-10 opacity-[0.6]" onclick="close()"></div> -->
+
+    <div id="backdrop" class="hidden fixed top-0 left-0 w-full h-full bg-black opacity-50 z-5"></div>
+
+    <header class="py-[15px] lg:py-[30px] border-b-1 border-b-[var(--light-border)]">
+        <div class="flex justify-between gap-x-3.5 items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+
+            <span class="lg:hidden" id="hamburger" onclick="sideNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
+                </svg>
+            </span>
+
+            <a href="euphoria.html">
+
+                <img src="/img/logo.png" alt="euphoria logo" width="100" height="100" class="w-[100%]">
+            </a>
+
+
+
+
+            <ul id="side-nav" class="hidden p-10 lg:p-0 lg:flex lg:gap-10 text-[22px] text-[var(--light-black)]">
+                <li class=" lg:hidden absolute right-20"><img src="/img/close-icon.svg" alt="" width="50" height="50"
+                        class="w-[50px] h-[50px]" id="close-nav"></li>
+                <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Shop</a></li>
+                <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Men</a></li>
+                <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="products.html">Women</a></li>
+                <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Combos</a></li>
+                <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Joggers</a></li>
+            </ul>
+
+            <input type="search" name="search" id="search-cloth" placeholder="Search"
+                class="search-cloth hidden sm:block w-[60%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] mr-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
+
+
+            <div class="flex gap-3">
+                <a href="/my-account.html#my-wishlist">
+
+                <button type="button"
+                    class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        class="">
+                        <path class=" group-hover:stroke-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z"
+                            stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                </a>
+                <a href="/my-account.html#my-order">
+
+                    <button type="button" class="p-3 rounded-lg group bg-[var(--purple-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path class="stroke-white"
+                                d="M9.99998 11.6667C12.3012 11.6667 14.1666 9.8012 14.1666 7.50001C14.1666 5.19882 12.3012 3.33334 9.99998 3.33334C7.69879 3.33334 5.83331 5.19882 5.83331 7.50001C5.83331 9.8012 7.69879 11.6667 9.99998 11.6667ZM9.99998 11.6667C6.31808 11.6667 3.33331 13.9053 3.33331 16.6667M9.99998 11.6667C13.6819 11.6667 16.6666 13.9053 16.6666 16.6667"
+                                stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </button>
+
+                </a>
+
+                <a href="/cart.html">
+
+                    <button type="button"
+                        class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path class=" group-hover:stroke-white"
+                                d="M2.5 3.33334H3.00526C3.85578 3.33334 4.56986 3.97376 4.6621 4.81926L5.3379 11.0141C5.43014 11.8596 6.14422 12.5 6.99474 12.5H14.205C14.9669 12.5 15.6317 11.9834 15.82 11.2452L16.9699 6.73593C17.2387 5.68213 16.4425 4.65742 15.355 4.65742H5.5M5.52063 15.5208H6.14563M5.52063 16.1458H6.14563M14.6873 15.5208H15.3123M14.6873 16.1458H15.3123M6.66667 15.8333C6.66667 16.2936 6.29357 16.6667 5.83333 16.6667C5.3731 16.6667 5 16.2936 5 15.8333C5 15.3731 5.3731 15 5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333ZM15.8333 15.8333C15.8333 16.2936 15.4602 16.6667 15 16.6667C14.5398 16.6667 14.1667 16.2936 14.1667 15.8333C14.1667 15.3731 14.5398 15 15 15C15.4602 15 15.8333 15.3731 15.8333 15.8333Z"
+                                stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="sm:hidden flex justify-between items-center px-[10px] pt-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+
+            <input type="search" name="search" id="search-cloth" placeholder="Search"
+                class="search-cloth w-[100%] lg:w-[20%] pl-10  py-2.5 bg-[url('/img/search.svg')] bg-no-repeat bg-position-[10px] bg-[var(--light-bg-colour)] rounded-[8px]">
+
+        </div>
+        <!-- <div class="lg:hidden pt-[10px] px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+             <ul class="flex  justify-between gap-10 text-[22px] text-[var(--light-black)]">
+                <li class="p-22-18"><a href="#">Shop</a></li>
+                <li class="p-22-18"><a href="#">Men</a></li>
+                <li class="p-22-18 text-[var(--dark-black)]"><a href="products.html">Women</a></li>
+                <li class="p-22-18"><a href="#">Combos</a></li>
+                <li class="p-22-18"><a href="#">Joggers</a></li>
+            </ul>
+        </div> -->
+    </header>
+
+    <!-- Navbar Section Ends -->
+
+    <!-- Breadcrumb Starts -->
+    <section class="px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+
+        <ul class="flex flex-wrap gap-x-2 text-[18px] pt-5 pb-10">
+            <li class="text-[#807D7E] whitespace-nowrap  font-normal flex items-center gap-x-2 ">Home <svg
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M8.0876 5L6.9126 6.175L10.7293 10L6.9126 13.825L8.0876 15L13.0876 10L8.0876 5Z"
+                        fill="#8B96A5" />
+                </svg></li>
+            <li class="text-[#807D7E] whitespace-nowrap  font-normal flex items-center gap-x-2 ">My Account
+                <!-- <svg
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M8.0876 5L6.9126 6.175L10.7293 10L6.9126 13.825L8.0876 15L13.0876 10L8.0876 5Z"
+                        fill="#8B96A5" />
+                </svg> -->
+            </li>
+            <!-- <li class="text-[var(--dark-black)] whitespace-nowrap flex items-center gap-x-2  font-normal">Check Out
+            </li> -->
+
+        </ul>
+    </section>
+
+    <!-- Breadcrumb Ends -->
+    <button type="button" class="lg:hidden" id="userNavBtn"><img src="/img/right-arrow.svg" alt="" width="50"
+            height="50" class="bg-[#d6b8ff] px-3 py-3 rounded-tr-lg rounded-br-lg"></button>
+
+    <section
+        class="relative grid grid-cols-[auto] lg:grid-cols-[1fr_3fr] gap-x-10 px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw] pb-10">
+        <div class="hidden lg:block" id="userNav">
+            <p
+                class="text-[var(--dark-black)] text-[28px] font-semibold relative before:absolute before:top-[8px] before:left-[-20px] before:w-[6px] before:h-[25px] before:rounded-[10px] before:bg-[#8A33FD] ml-5">
+                Hello Jhanvi</p>
+            <p class="text-[var(--light-black)] text-sm pb-10">Welcome to your account</p>
+
+
+            <ul class="allListItems">
+                <li id="account-tab-one" data-tab-id="my-order"
+                    class="account-tab-btn account-tab-active text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3 cursor-pointer">
+                    <img src="/img/my-orders.svg" alt="orders icon" width="22" height="22"> My orders
+                </li>
+
+                <li id="account-tab-two" data-tab-id="my-wishlist"
+                    class="account-tab-btn text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3 cursor-pointer">
+                    <img src="/img/heart.svg" alt="wishlist icon" width="22" height="22"> Wishlist
+                </li>
+
+                <li id="account-tab-three" data-tab-id="my-info"
+                    class="account-tab-btn text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3 cursor-pointer">
+                    <img src="/img/user.svg" alt="user icon" width="22" height="22">My info
+                </li>
+
+
+                <li id="account-tab-four" data-tab-id="sign-out-tab"
+                    class="account-tab-btn text-[var(--light-black)] text-lg font-semibold flex gap-5 border-l-4 rounded-tr-lg rounded-br-lg border-l-transparent hover:bg-[var(--light-bg-colour)] hover:border-l-4 hover:border-l-[var(--dark-black)] px-8 py-3 cursor-pointer">
+                    <img src="/img/sign-out.svg" alt="sign out icon" width="22" height="22">Sign out
+                </li>
+
+            </ul>
+
+            <button type="button" id="close-btn" class="lg:hidden absolute top-0 right-[-40px]"><img
+                    src="/img/right-arrow.svg" alt="" width="50" height="50"
+                    class="bg-[#d6b8ff]  px-3 py-3 rounded-tr-lg rounded-br-lg"></button>
+
+        </div>
+
+
+
+
+        <div class="main-order-detail-container pb-[40px] sm:pb-[90px] grid account-content account-content-active"
+            id="account-content-one" data-tab-id="my-order">
+            <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold">My Order</p>
+
+            <ul class="flex justify-between items-start  py-5 overflow-x-auto">
+                <li class="text-[18px] tab-order-btn btn-active px-[20px] md:px-[53px] py-[6px] md:py-[12px] rounded-tr-lg rounded-tl-lg cursor-pointer"
+                    id="btn-one">Active</li>
+                <li class="text-[18px] text-[#807D7E] tab-order-btn px-[20px] md:px-[53px] py-[6px] md:py-[12px] rounded-tr-lg rounded-tl-lg cursor-pointer"
+                    id="btn-two">Cancelled
+                </li>
+                <li class="text-[18px] text-[#807D7E]  tab-order-btn px-[20px] md:px-[53px] py-[6px] md:py-[12px] rounded-tr-lg rounded-tl-lg cursor-pointer"
+                    id="btn-three">Completed
+                </li>
+            </ul>
+
+            <div class="content content-active" id="content-one">
+
+                <div class=" border-b-1 grid gap-x-4">
+
+                    <div
+                        class="flex flex-col min-[500px]:grid min-[500px]:grid-cols-2 gap-y-2 bg-[var(--light-bg-colour)] py-7 px-5 md:px-12 rounded-lg">
+                        <strong class="col-span-full text-xl font-semibold text-[var(--dark-black)] pb-2">Order no:
+                            <span class=" text-xl text-[var(--dark-black)]">#123456789</span></strong>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Order Date : <span
+                                class="text-sm text-[var(--light-border)]"> 2 June 2023 2:40 PM </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Order Status : <span
+                                class="text-sm text-[var(--light-border)]"> Inprogress </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Estimated Delivery Date : <span
+                                class="text-sm text-[var(--light-border)]">8 June 2023 </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Payment Method : <span
+                                class="text-sm text-[var(--light-border)]"> Cash on delivery </span></p>
+                    </div>
+
+                    <div
+                        class="relative flex flex-col sm:flex-row justify-between gap-5 md:gap-10 sm:items-center border-b-1 border-b-[#EDEEF2] py-5">
+                        <div
+                            class=" grid grid-cols-1  min-[360px]:grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-y-2 gap-x-5 ">
+
+                            <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                                class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                            <div class="grid max-[400px]:grid-cols-2 gap-y-1">
+
+                                <p class=" font-semibold text-[var(--dark-black)] text-base col-span-full">Blue Flower
+                                    Print Crop Top</p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Color : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> Yellow</span></p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Quantity : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> 1</span></p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Total : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> $23.00</span></p>
+                            </div>
+                        </div>
+                        <button type="button" onclick="viewDetails(event)"
+                            class="whitespace-nowrap cursor-pointer w-fit px-4 sm:px-7 py-1.5 sm:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                            View Details</button>
+                    </div>
+
+
+                </div>
+
+                <div class="pt-5 border-b-1 grid gap-x-4">
+
+                    <div
+                        class="flex flex-col min-[500px]:grid min-[500px]:grid-cols-2 gap-y-2 bg-[var(--light-bg-colour)] py-7 px-5 md:px-12 rounded-lg">
+                        <strong class="col-span-full text-xl font-semibold text-[var(--dark-black)] pb-2">Order no:
+                            <span class=" text-xl text-[var(--dark-black)]">#123456789</span></strong>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Order Date : <span
+                                class="text-sm text-[var(--light-border)]"> 2 June 2023 2:40 PM </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Order Status : <span
+                                class="text-sm text-[var(--light-border)]"> Inprogress </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Estimated Delivery Date : <span
+                                class="text-sm text-[var(--light-border)]">8 June 2023 </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Payment Method : <span
+                                class="text-sm text-[var(--light-border)]"> Cash on delivery </span></p>
+                    </div>
+
+                    <div
+                        class="relative flex flex-col sm:flex-row justify-between gap-5 md:gap-10 sm:items-center border-b-1 border-b-[#EDEEF2] py-5">
+                        <div
+                            class=" grid grid-cols-1  min-[360px]:grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-y-2 gap-x-5 ">
+
+                            <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                                class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                            <div class="grid max-[400px]:grid-cols-2 gap-y-1">
+
+                                <p class=" font-semibold text-[var(--dark-black)] text-base col-span-full">Blue Flower
+                                    Print Crop Top</p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Color : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> Yellow</span></p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Quantity : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> 1</span></p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Total : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> $23.00</span></p>
+                            </div>
+                        </div>
+                        <button type="button"
+                            class="whitespace-nowrap cursor-pointer w-fit px-4 sm:px-7 py-1.5 sm:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                            View Details</button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="pt-5 border-b-1 grid gap-x-4">
+
+                    <div
+                        class="flex flex-col min-[500px]:grid min-[500px]:grid-cols-2 gap-y-2 bg-[var(--light-bg-colour)] py-7 px-5 md:px-12 rounded-lg">
+                        <strong class="col-span-full text-xl font-semibold text-[var(--dark-black)] pb-2">Order no:
+                            <span class=" text-xl text-[var(--dark-black)]">#123456789</span></strong>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Order Date : <span
+                                class="text-sm text-[var(--light-border)]"> 2 June 2023 2:40 PM </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Order Status : <span
+                                class="text-sm text-[var(--light-border)]"> Inprogress </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Estimated Delivery Date : <span
+                                class="text-sm text-[var(--light-border)]">8 June 2023 </span></p>
+                        <p class="text-[var(--light-black)] text-sm font-medium">Payment Method : <span
+                                class="text-sm text-[var(--light-border)]"> Cash on delivery </span></p>
+                    </div>
+
+                    <div
+                        class="relative flex flex-col sm:flex-row justify-between gap-5 md:gap-10 sm:items-center border-b-1 border-b-[#EDEEF2] py-5">
+                        <div
+                            class=" grid grid-cols-1  min-[360px]:grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-y-2 gap-x-5 ">
+
+                            <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                                class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                            <div class="grid max-[400px]:grid-cols-2 gap-y-1">
+
+                                <p class=" font-semibold text-[var(--dark-black)] text-base col-span-full">Blue Flower
+                                    Print Crop Top</p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Color : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> Yellow</span></p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Quantity : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> 1</span></p>
+                                <p class=" font-semibold text-[var(--dark-black)] text-sm">Total : <span
+                                        class="text-[var(--light-black)] font-normal text-sm"> $23.00</span></p>
+                            </div>
+                        </div>
+                        <button type="button"
+                            class="whitespace-nowrap cursor-pointer w-fit px-4 sm:px-7 py-1.5 sm:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                            View Details</button>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="content" id="content-two">Cancelled Content</div>
+            <div class="content" id="content-three">Completed Content</div>
+
+
+        </div>
+
+
+        <div data-tab-id="my-wishlist" id="account-content-two" class="account-content">
+            <div class="pb-[0px] main-wish-list-container">
+                <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold">Wishlist</p>
+
+                <div class="wish-cart-container">
+
+
+                    <!-- <div
+                    class="relative grid grid-cols-1 md:grid-cols-[auto_3fr_1fr_1fr] gap-5 lg:gap-10 items-center border-b-1 border-b-[#EDEEF2] py-5">
+                    <button type="button" class=" absolute md:static top-[20px] right-0 md:block cursor-pointer">
+                        <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                            class="w-[22px] h-[22px]">
+
+                    </button>
+                    <div
+                        class=" grid grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-x-5 ">
+
+                        <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                            class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                        <div class="grid gap-y-1">
+
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Blue Flower Print Crop Top</p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Color <span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: Yellow</span></p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Quantity<span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: 1</span></p>
+                        </div>
+                    </div>
+                    <p class=" font-semibold text-[var(--light-black)] p-20-16">$29.00</p>
+                    <button type="button"
+                        class="whitespace-nowrap cursor-pointer w-fit px-4 md:px-7 py-1.5 md:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Add to Cart</button>
+                </div> -->
+
+                    <!-- <div
+                    class="relative grid grid-cols-1 md:grid-cols-[auto_3fr_1fr_1fr] gap-5 lg:gap-10 items-center border-b-1 border-b-[#EDEEF2] py-5">
+                    <button type="button" class=" absolute md:static top-[20px] right-0 md:block cursor-pointer">
+                        <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                            class="w-[22px] h-[22px]">
+
+                    </button>
+                    <div
+                        class=" grid grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-x-5 ">
+
+                        <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                            class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                        <div class="grid gap-y-1">
+
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Blue Flower Print Crop Top</p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Color <span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: Yellow</span></p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Quantity<span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: 1</span></p>
+                        </div>
+                    </div>
+                    <p class=" font-semibold text-[var(--light-black)] p-20-16">$29.00</p>
+                    <button type="button"
+                        class="whitespace-nowrap cursor-pointer w-fit px-4 md:px-7 py-1.5 md:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Add to Cart</button>
+                </div> -->
+
+
+                    <!-- <div
+                    class="relative grid grid-cols-1 md:grid-cols-[auto_3fr_1fr_1fr] gap-5 lg:gap-10 items-center border-b-1 border-b-[#EDEEF2] py-5">
+                    <button type="button" class=" absolute md:static top-[20px] right-0 md:block cursor-pointer">
+                        <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                            class="w-[22px] h-[22px]">
+
+                    </button>
+                    <div
+                        class=" grid grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-x-5 ">
+
+                        <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                            class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                        <div class="grid gap-y-1">
+
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Blue Flower Print Crop Top</p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Color <span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: Yellow</span></p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Quantity<span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: 1</span></p>
+                        </div>
+                    </div>
+                    <p class=" font-semibold text-[var(--light-black)] p-20-16">$29.00</p>
+                    <button type="button"
+                        class=" whitespace-nowrap cursor-pointer w-fit px-4 md:px-7 py-1.5 md:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Add to Cart</button>
+                </div> -->
+
+                    <!-- <div
+                    class="relative grid grid-cols-1 md:grid-cols-[auto_3fr_1fr_1fr] gap-5 lg:gap-10 items-center border-b-1 border-b-[#EDEEF2] py-5">
+                    <button type="button" class=" absolute md:static top-[20px] right-0 md:block cursor-pointer">
+                        <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                            class="w-[22px] h-[22px]">
+
+                    </button>
+                    <div
+                        class=" grid grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-x-5 ">
+
+                        <img src="/img/wishlist-1.png" alt="item 1" width="110" height="110"
+                            class="w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                        <div class="grid gap-y-1">
+
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Blue Flower Print Crop Top</p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Color <span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: Yellow</span></p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Quantity<span
+                                    class="text-[var(--light-black)] font-normal p-20-16">: 1</span></p>
+                        </div>
+                    </div>
+                    <p class=" font-semibold text-[var(--light-black)] p-20-16">$29.00</p>
+                    <button type="button"
+                        class="whitespace-nowrap cursor-pointer w-fit px-4 md:px-7 py-1.5 md:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Add to Cart</button>
+                </div> -->
+
+                </div>
+
+
+            </div>
+        </div>
+        <div data-tab-id="my-info" id="account-content-three" class="account-content">
+            <div class="pb-10">
+                <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold">My Info</p>
+                <p class=" pb-10 text-[22px] text-[var(--dark-black)] font-semibold">Contact Deatils</p>
+
+                <p class="min-[450px]:grid grid-cols-[1fr_auto] border-b-1 border-b-[var(--light-border)] py-3 w-full">
+                    <span class="text-[var(--light-black)] text-lg font-medium">Your Name</span>
+                    <input type="text" name="fname" id="fname" placeholder="Jhanvi Shah"
+                        class="row-start-2 text-[var(--dark-black)] placeholder:font-normal font-medium text-lg focus:outline-0">
+                    <label for="fname"
+                        class="row-start-2 col-start-2 text-[var(--dark-black)] text-lg font-medium">Change</label>
+                </p>
+
+                <p class="min-[450px]:grid grid-cols-[1fr_auto] border-b-1 border-b-[var(--light-border)] py-3 w-full">
+                    <span class="text-[var(--light-black)] text-lg font-medium">Email Address</span>
+                    <input type="email" name="email" id="email" placeholder="Jhanvi@gmail.com"
+                        class="row-start-2 text-[var(--dark-black)] placeholder:font-normal font-medium text-lg focus:outline-0">
+                    <label for="email"
+                        class="row-start-2 col-start-2 text-[var(--dark-black)] text-lg font-medium">Change</label>
+                </p>
+
+                <p class="min-[450px]:grid grid-cols-[1fr_auto] border-b-1 border-b-[var(--light-border)] py-3 w-full">
+                    <span class="text-[var(--light-black)] text-lg font-medium">Phone Number</span>
+                    <input type="tel" name="phone" id="phone" placeholder="0987567888"
+                        class="row-start-2 text-[var(--dark-black)] placeholder:font-normal font-medium text-lg focus:outline-0">
+                    <label for="phone"
+                        class="row-start-2 col-start-2 text-[var(--dark-black)] text-lg font-medium">Change</label>
+                </p>
+
+                <p class="min-[450px]:grid grid-cols-[1fr_auto] border-b-1 border-b-[var(--light-border)] py-3 w-full">
+                    <span class="text-[var(--light-black)] text-lg font-medium  ">Password</span>
+                    <input type="password" name="pass" id="pass" placeholder="Jhanvi Shah"
+                        class="row-start-2 text-[var(--dark-black)] placeholder:font-normal font-medium text-lg focus:outline-0">
+                    <label for="pass"
+                        class="row-start-2 col-start-2 text-[var(--dark-black)] text-lg font-medium">Change</label>
+                </p>
+
+                <p class=" py-5 text-[22px] text-[var(--dark-black)] font-semibold w-full flex justify-between">Address
+                    <span class="text-[var(--dark-black)] text-lg font-medium" onclick="addNewAddress()">Add New</span>
+                </p>
+
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+                    <div class="flex flex-col gap-y-5 py-5 px-5 sm:px-10 bg-[var(--light-bg-colour)] rounded-xl">
+                        <p class="text-xl text-[var(--dark-black)] font-medium">Jhanvi Shah</p>
+                        <p class="text-[var(--light-black)]">0987654323</p>
+                        <p class="text-[var(--light-black)]">1/4 Pragatinagar Flats, opp. jain derasar , near Jain
+                            derasar, Vijaynagar road </p>
+                        <span class="flex flex-wrap gap-4">
+
+                            <button type="button"
+                                class="border-1 rounded-lg px-5 py-1.5 text-[var(--light-black)] cursor-pointer">Home</button>
+                            <button type="button"
+                                class="border-1 rounded-lg px-5 py-1.5 text-[var(--light-black)] cursor-pointer">Default
+                                billing address</button>
+                        </span>
+                        <span>
+
+                            <strong class="border-r-1 pr-2.5 text-[var(--dark-black)] cursor-pointer">Remove</strong>
+                            <strong class="pl-2.5 text-[var(--dark-black)] cursor-pointer">Edit</strong>
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col gap-y-5 py-5 px-10 bg-[var(--light-bg-colour)] rounded-xl">
+                        <p class="text-xl text-[var(--dark-black)] font-medium">Jhanvi Shah</p>
+                        <p class="text-[var(--light-black)]">0987654323</p>
+                        <p class="text-[var(--light-black)]">1/4 Pragatinagar Flats, opp. jain derasar , near Jain
+                            derasar, Vijaynagar road </p>
+                        <span class="flex flex-wrap gap-4">
+
+                            <button type="button"
+                                class="border-1 rounded-lg px-5 py-1.5 text-[var(--light-black)] cursor-pointer">Home</button>
+                            <button type="button"
+                                class="border-1 rounded-lg px-5 py-1.5 text-[var(--light-black)] cursor-pointer">Default
+                                billing address</button>
+                        </span>
+                        <span>
+
+                            <strong class="border-r-1 pr-2.5 text-[var(--dark-black)] cursor-pointer">Remove</strong>
+                            <strong class="pl-2.5 text-[var(--dark-black)] cursor-pointer">Edit</strong>
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col gap-y-5 py-5 px-10 bg-[var(--light-bg-colour)] rounded-xl">
+                        <p class="text-xl text-[var(--dark-black)] font-medium">Jhanvi Shah</p>
+                        <p class="text-[var(--light-black)]">0987654323</p>
+                        <p class="text-[var(--light-black)]">1/4 Pragatinagar Flats, opp. jain derasar , near Jain
+                            derasar, Vijaynagar road </p>
+                        <span class="flex flex-wrap gap-4">
+
+                            <button type="button"
+                                class="border-1 rounded-lg px-5 py-1.5 text-[var(--light-black)] cursor-pointer">Office</button>
+                        </span>
+                        <span>
+
+                            <strong class="border-r-1 pr-2.5 text-[var(--dark-black)] cursor-pointer">Remove</strong>
+                            <strong class="px-2.5 text-[var(--dark-black)] cursor-pointer">Edit</strong>
+                            <strong class="border-l-1 pl-2.5 text-[var(--dark-black)] cursor-pointer">Set as
+                                default</strong>
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col gap-y-5 py-5 px-10 bg-[var(--light-bg-colour)] rounded-xl">
+                        <p class="text-xl text-[var(--dark-black)] font-medium">Jhanvi Shah</p>
+                        <p class="text-[var(--light-black)]">0987654323</p>
+                        <p class="text-[var(--light-black)]">1/4 Pragatinagar Flats, opp. jain derasar , near Jain
+                            derasar, Vijaynagar road </p>
+                        <span class="flex  gap-4">
+
+                            <button type="button"
+                                class="border-1 rounded-lg px-5 py-1.5 text-[var(--light-black)] cursor-pointer">Home2</button>
+                        </span>
+                        <span>
+
+                            <strong class="border-r-1 pr-2.5 text-[var(--dark-black)] cursor-pointer">Remove</strong>
+                            <strong class="px-2.5 text-[var(--dark-black)] cursor-pointer">Edit</strong>
+                            <strong class="border-l-1 pl-2.5 text-[var(--dark-black)] cursor-pointer">Set as
+                                default</strong>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div data-tab-id="sign-out-tab" id="account-content-four" class="account-content">
+
+            <div class=" px-[10px] m-auto flex flex-col justify-center items-center gap-5">
+
+                <p class="p-34-25 pb-2 sm:pb-0  font-semibold text-[var(--dark-black)] ">Are your sure you want to Sign
+                    Out?</p>
+                <span class="flex justify-center gap-5">
+
+                    <a href="#"
+                        class=" bg-[var(--purple-color)] text-white text-lg font-medium rounded-lg py-1.5 px-[48px] w-fit cursor-pointer">Yes</a>
+                    <a href="#"
+                        class=" bg-[var(--purple-color)] text-white text-lg font-medium rounded-lg py-1.5 px-[48px] w-fit cursor-pointer">No</a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section Starts -->
+    <section class="text-[var(--light-bg-colour)] bg-[var(--dark-black)] pt-[59px]">
+
+        <div class=" px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-y-[30px]  gap-x-[80px]">
+
+                <ul>
+                    <p class="p-28-20 font-bold">Need Help</p>
+                    <li class="p-18-16 font-medium">Contact Us</li>
+                    <li class="p-18-16 font-medium">Track Order</li>
+                    <li class="p-18-16 font-medium">Returns & Refunds</li>
+                    <li class="p-18-16 font-medium">FAQ's</li>
+                    <li class="p-18-16 font-medium">Career</li>
+                </ul>
+
+                <ul>
+                    <p class="p-28-20 font-bold">Company</p>
+                    <li class="p-18-16 font-medium">About Us</li>
+                    <li class="p-18-16 font-medium">Euphoria Blog</li>
+                    <li class="p-18-16 font-medium">Euphorisation</li>
+                    <li class="p-18-16 font-medium">Collaboration</li>
+                    <li class="p-18-16 font-medium">Media</li>
+                </ul>
+
+                <ul>
+                    <p class="p-28-20 font-bold">More Info</p>
+                    <li class="p-18-16 font-medium">Terms and Condition</li>
+                    <li class="p-18-16 font-medium">Privacy Policy</li>
+                    <li class="p-18-16 font-medium">Shipping Policy</li>
+                    <li class="p-18-16 font-medium">Sitemap</li>
+                </ul>
+
+                <ul>
+                    <p class="p-28-20 font-bold">Location</p>
+                    <li class="p-18-16 font-medium"><a href="mailto:support@euphoria.in">support@euphoria.in</a>
+                    </li>
+                    <li class="p-18-16 font-medium">Eklingpura Chouraha, Ahmedabad Main Road</li>
+                    <li class="p-18-16 font-medium">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
+                </ul>
+            </div>
+
+            <div
+                class="flex flex-col items-start gap-y-5  md:flex-row  justify-between lg:items-end border-b-1 border-b-[var(--light-border)] pt-10  pb-10">
+
+                <div class="flex gap-[10px]">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
+                        fill="none">
+                        <rect width="37.024" height="37.024" rx="10.68" fill="var(--light-bg-colour)" />
+                        <path
+                            d="M22.4367 19.2686L22.9311 16.0472H19.84V13.9568C19.84 13.0755 20.2718 12.2164 21.6562 12.2164H23.0614V9.47374C23.0614 9.47374 21.7862 9.2561 20.567 9.2561C18.0215 9.2561 16.3576 10.799 16.3576 13.5921V16.0472H13.528V19.2686H16.3576V27.0561H19.84V19.2686H22.4367Z"
+                            fill="#2A2F2F" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <rect x="-0.00799561" y="0.000244141" width="37.024" height="37.024" rx="10.68"
+                            fill="var(--light-bg-colour)" />
+                        <path
+                            d="M18.4656 14.4757C16.2545 14.4757 14.4711 16.2592 14.4711 18.4703C14.4711 20.6814 16.2545 22.4649 18.4656 22.4649C20.6767 22.4649 22.4602 20.6814 22.4602 18.4703C22.4602 16.2592 20.6767 14.4757 18.4656 14.4757ZM18.4656 21.0673C17.0368 21.0673 15.8686 19.9026 15.8686 18.4703C15.8686 17.0379 17.0333 15.8733 18.4656 15.8733C19.898 15.8733 21.0626 17.0379 21.0626 18.4703C21.0626 19.9026 19.8945 21.0673 18.4656 21.0673ZM23.5553 14.3123C23.5553 14.8303 23.1381 15.244 22.6236 15.244C22.1056 15.244 21.6919 14.8268 21.6919 14.3123C21.6919 13.7978 22.1091 13.3806 22.6236 13.3806C23.1381 13.3806 23.5553 13.7978 23.5553 14.3123ZM26.201 15.2579C26.1419 14.0099 25.8568 12.9043 24.9425 11.9934C24.0316 11.0826 22.9261 10.7975 21.678 10.7349C20.3917 10.6619 16.5362 10.6619 15.2498 10.7349C14.0052 10.794 12.8997 11.0791 11.9853 11.99C11.071 12.9008 10.7894 14.0064 10.7268 15.2545C10.6538 16.5408 10.6538 20.3963 10.7268 21.6826C10.7859 22.9307 11.071 24.0363 11.9853 24.9471C12.8997 25.858 14.0017 26.1431 15.2498 26.2056C16.5362 26.2786 20.3917 26.2786 21.678 26.2056C22.9261 26.1465 24.0316 25.8615 24.9425 24.9471C25.8533 24.0363 26.1384 22.9307 26.201 21.6826C26.274 20.3963 26.274 16.5443 26.201 15.2579ZM24.5392 23.0628C24.268 23.7442 23.7431 24.2692 23.0582 24.5438C22.0326 24.9506 19.599 24.8567 18.4656 24.8567C17.3323 24.8567 14.8952 24.9471 13.8731 24.5438C13.1917 24.2727 12.6667 23.7477 12.3921 23.0628C11.9853 22.0372 12.0792 19.6036 12.0792 18.4703C12.0792 17.3369 11.9888 14.8999 12.3921 13.8777C12.6633 13.1963 13.1882 12.6714 13.8731 12.3967C14.8987 11.99 17.3323 12.0838 18.4656 12.0838C19.599 12.0838 22.0361 11.9934 23.0582 12.3967C23.7396 12.6679 24.2645 13.1929 24.5392 13.8777C24.946 14.9033 24.8521 17.3369 24.8521 18.4703C24.8521 19.6036 24.946 22.0407 24.5392 23.0628Z"
+                            fill="#2A2F2F" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <rect x="0.984009" y="0.000244141" width="37.024" height="37.024" rx="10.68"
+                            fill="var(--light-bg-colour)" />
+                        <path
+                            d="M28.3464 14.995C28.3577 15.1531 28.3577 15.3113 28.3577 15.4694C28.3577 20.2921 24.6871 25.8489 17.9782 25.8489C15.9113 25.8489 13.9912 25.2503 12.3761 24.2113C12.6698 24.2451 12.9521 24.2564 13.2571 24.2564C14.9625 24.2564 16.5325 23.6804 17.7861 22.6978C16.1823 22.6639 14.8383 21.6135 14.3752 20.1678C14.6011 20.2017 14.827 20.2243 15.0642 20.2243C15.3917 20.2243 15.7193 20.1791 16.0242 20.1001C14.3527 19.7612 13.0989 18.293 13.0989 16.5197V16.4746C13.5846 16.7456 14.1493 16.9151 14.7479 16.9376C13.7653 16.2825 13.1215 15.1644 13.1215 13.8994C13.1215 13.2218 13.3022 12.6006 13.6185 12.0584C15.4143 14.2721 18.1137 15.7178 21.1405 15.876C21.0841 15.6049 21.0502 15.3226 21.0502 15.0402C21.0502 13.0298 22.6766 11.3921 24.6983 11.3921C25.7487 11.3921 26.6974 11.8326 27.3638 12.5441C28.1882 12.386 28.9788 12.081 29.6791 11.6632C29.408 12.5103 28.832 13.2218 28.0753 13.6735C28.8095 13.5945 29.521 13.3912 30.1761 13.1089C29.6792 13.8317 29.058 14.4754 28.3464 14.995Z"
+                            fill="#2A2F2F" />
+                    </svg>
+
+                    <p
+                        class="bg-[var(--light-bg-colour)] rounded-[10.68px] w-[37px] h-[37px] flex justify-center items-center">
+                        <span class="text-[#2A2F2F] text-[17px] font-bold">in</span>
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-x-5">
+
+                    <p class="font-bold p-28-20 col-span-full pb-[20px]">Download The App</p>
+                    <button type="button" class="">
+                        <img src="/img/google-pay.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
+                    </button>
+
+                    <button type="button">
+                        <img src="/img/app-store.jpg" alt="" width="153" height="50" class="rounded-[10.68px]">
+                    </button>
+                </div>
+
+            </div>
+
+            <details class="bg-transparent z-10 border-b-1 border-b-[var(--light-border)] py-7 relative group ">
+                <summary
+                    class="font-bold p-28-20 block after:absolute after:z-[-1] after:content-[url('/img/arrow-down.png')] after:top-[50%] after:transform after:translate-y-[-50%] after:right-0 after:transition-[0.2s] group-open:after:rotate-[180deg]">
+                    Popular Categories</summary>
+                <p>content here</p>
+            </details>
+
+            <p class="text-[18px] font-bold text-center pt-10 pb-[60px]">Copyright © 2023 Euphoria Folks Pvt Ltd.
+                All rights reserved.</p>
+        </div>
+
+    </section>
+    <!-- Footer Section Ends -->
+
+    <script src="script.js"></script>
+    <script>
+
+        // window.addEventListener('DOMContentLoaded', function () {
+
+        const url = new URL(window.location)
+        console.log(url.hash)
+
+
+        // console.log(dataset.tabId, "tabid")
+        const accountTabButtons = document.querySelectorAll(".account-tab-btn");
+        const accountContents = document.querySelectorAll(".account-content");
+
+
+        accountTabButtons.forEach((btn) => {
+            // const element = document.getElementById('account-tab-one')
+            // console.log(element , "element")
+            // element.classList.add('account-tab-active')
+            btn.classList.remove('account-tab-active')
+        })
+
+        accountContents.forEach((content) => {
+            //   const firstContent = document.getElementById('account-content-one')
+            // console.log(element , "element")
+            // firstContent.classList.add('account-content-active')
+            content.classList.remove('account-content-active')
+        })
+
+        // const currentBtnId = event.currentTarget.id
+        // console.log(currentBtnId, "currentBtnId")
+
+        // const contentId = currentBtnId.replace('account-tab-', "account-content-")
+        // console.log(contentId, "contentId")
+        // const currentContent = document.getElementById(contentId)
+        // console.log(currentContent)
+
+        // currentContent.classList.add('account-content-active')
+
+
+
+        const allUl = document.querySelector('.allListItems')
+        console.log(allUl, "all ul ")
+        const allLi = allUl.querySelectorAll('li')
+
+        allLi.forEach((li) => {
+            console.log(li, "lis")
+            const tabDataId = li.dataset.tabId
+            console.log(tabDataId, "tabDataId")
+
+            console.log(url.hash, "hash value")
+            // url.hash = btn.dataset.tabId
+            const urlHash = url.hash.replace('#', "")
+
+            accountContents.forEach((content) => {
+
+                const contentId = content.dataset.tabId
+                console.log(contentId, "contentId")
+
+                if (urlHash == contentId) {
+                    content.classList.add('account-content-active')
+                }
+            })
+
+
+            if (urlHash == tabDataId) {
+                console.log("got matching")
+                li.classList.add('account-tab-active')
+            }
+
+            window.onhashchange = function(){
+                window.location.reload()
+            }
+        })
+
+        // console.log(url.hash, "current hash value")
+
+
+        // const accountTabButtons = document.querySelectorAll(".account-tab-btn");
+        // const accountContents = document.querySelectorAll(".account-content");
+
+        console.log(accountTabButtons, "accountTabButtons")
+        console.log(accountContents, "accountContents")
+
+        accountTabButtons.forEach((btn) => {
+
+            btn.addEventListener('click', function (event) {
+                // const url = new URL(window.location)
+                // console.log(url , "url")
+                // url.hash = ""
+
+                accountTabButtons.forEach((btn) => {
+                    btn.classList.remove('account-tab-active')
+                })
+
+                btn.classList.add('account-tab-active')
+
+
+
+
+                accountContents.forEach((content) => {
+                    content.classList.remove('account-content-active')
+                })
+
+                console.log(btn, "btn current")
+
+                const currentBtnId = event.currentTarget.id
+                console.log(currentBtnId, "currentBtnId")
+
+                const contentId = currentBtnId.replace('account-tab-', "account-content-")
+                console.log(contentId, "contentId")
+                const currentContent = document.getElementById(contentId)
+                console.log(currentContent)
+
+                currentContent.classList.add('account-content-active')
+
+            })
+        })
+        // })
+
+
+        function viewDetails(event) {
+            console.log(event.currentTarget, "currentElement");
+
+            // window.location.href = `my-account.html?tab=order-details`;
+
+            // const urlParams = new URLSearchParams(window.location.search);
+            // console.log(urlParams.get('search') , "urlparams")
+            // // const searchTerm = urlParams.get("search")?.toLowerCase() || "";
+            // console.log(urlParams , "urlParams")
+
+            // if()
+
+            // window.location.href = `my-order.html?tab=order-details`;
+
+            const currentElement = event.currentTarget;
+            const parentDiv = currentElement.closest("div").parentElement;
+            console.log(parentDiv, "parentDiv");
+
+              const allOrderConatiner = document.querySelector('.main-order-detail-container')
+              console.log(allOrderConatiner , "allOrderConatiner")
+
+              allOrderConatiner.innerHTML = `
+
+                <div class="pb-10 flex  flex-col gap-5">
+                        <a href="/my-account.html">
+                            <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold flex items-center"><img
+                                    src="/img/left-chevron.svg" alt="left chevron icon" width="10" height="10"
+                                    class="w-[20px] h-[20px] mr-3">Order Details</p>
+                        </a>
+
+                        <div
+                            class="grid gap-y-1 sm:gap-y-0 sm:grid-cols-[1fr_auto] items-center bg-[var(--light-bg-colour)] py-5 sm:py-7 px-5 md:px-12 rounded-lg">
+                            <strong class="text-xl font-semibold text-[var(--dark-black)]">Order no: <span
+                                    class=" text-xl text-[var(--dark-black)]">#123456789</span></strong>
+                            <p class="text-[var(--light-black)] text-lg font-medium row-span-2">Total : <span
+                                    class="text-lg text-[var(--dark-black)]"> $143.00 </span></p>
+                            <p class="text-[var(--light-black)] text-base font-medium ">Placed On 2 June 2023 2:40 PM </p>
+
+                        </div>
+
+                        <div>
+                            <p class="hidden md:block w-[95%] m-auto h-[3px] bg-[var(--light-border)] relative">
+                                <span
+                                    class="w-[20px] h-[20px] bg-[var(--dark-black)] absolute left-0 top-[50%] transform translate-y-[-50%] rounded-full"></span>
+                                <span
+                                    class="z-10 w-[20px] h-[20px] bg-[var(--dark-black)]  absolute left-[32%] top-[50%] transform translate-y-[-50%] rounded-full before:w-[12px] before:h-[12px] before:bg-[var(--light-border)] before:transform before:translate-y-[-50%] before:absolute before:rounded-full before:top-[50%] before:left-[50%] before:translate-x-[-50%]"></span>
+                                <span
+                                    class="w-[14px] h-[14px] bg-[var(--dark-black)] absolute left-[66%] top-[50%] transform translate-y-[-50%] rounded-full"></span>
+                                <span
+                                    class="w-[14px] h-[14px] bg-[var(--dark-black)] absolute left-[100%] top-[50%] transform translate-y-[-50%] rounded-full"></span>
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="hidden md:flex mt-[50px] bg-[var(--light-bg-colour)] py-4 lg:py-7 px-5 md:px-12 rounded-lg lg:w-[50vw] m-auto  gap-10 border-[0.5px] border-[rgba(128,_125,_126,_0.20)] relative
+
+            before:absolute before:w-[50px] before:h-[50px] before:top-[-49px] before:left-[110px] before:border-l-[25px] before:border-r-[25px] before:border-r-transparent before:border-l-transparent before:border-b-[24px] before:border-b-[var(--light-bg-colour)]
+
+            after:absolute after:w-[50px] after:h-[50px]  after:top-[-49px] after:left-[108px] after:border-l-[27px] after:border-r-[27px] after:border-r-transparent after:border-l-transparent after:border-b-[26px] after:border-b-[rgba(128,_125,_126,_0.20)] after:z-[-1]">
+                            <p class="text-[var(--light-black)] text-base font-medium ">8 June 2023 3:40 PM </p>
+                            <p class="text-base font-medium text-[var(--dark-black)]">Your order has been successfully verified.</p>
+
+                        </div>
+
+                        <div class="bg-[var(--light-bg-colour)] py-7 px-5 md:px-12  md:py-12 rounded-lg grid gap-6">
+
+                            <div class="relative grid gap-5 border-b-1 lg:gap-10 items-start pb-6 ">
+                                <div class=" grid grid-cols-[auto_1fr] gap-2 lg:gap-5 items-start">
+
+                                    <img src="/img/my-order-1.png" alt="item 1" width="110" height="110"
+                                        class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                                    <div
+                                        class="relative flex flex-col xl:grid xl:grid-cols-[auto_1fr_1fr_1fr] justify-items-end  gap-y-1 pr-5">
+
+                                        <p class=" font-semibold text-[var(--dark-black)] p-20-16">Blue Flower Print Crop Top
+                                        </p>
+                                        <p class="justify-self-start row-start-2 font-semibold text-[var(--dark-black)] p-20-16">
+                                            Color <span class="text-[var(--light-black)] font-normal p-20-16">: Yellow</span></p>
+                                        <p class=" font-semibold text-[var(--dark-black)] p-20-16">Qty : <span
+                                                class="text-[var(--light-black)]  font-normal">1</span></p>
+                                        <p class=" font-semibold text-[var(--light-black)] p-20-16">$29.00</p>
+                                        <button type="button" class=" absolute xl:static top-[5px] right-0 md:block cursor-pointer">
+                                            <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                                                class="w-[22px] h-[22px]">
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" grid grid-cols-[auto_1fr] gap-2 lg:gap-5 items-start">
+
+                                <img src="/img/my-order-2.png" alt="item 1" width="110" height="110"
+                                    class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover">
+                                <div
+                                    class="relative flex flex-col xl:grid xl:grid-cols-[auto_1fr_1fr_1fr] justify-items-end  gap-y-1 pr-5">
+
+                                    <p class=" font-semibold text-[var(--dark-black)] p-20-16">Blue Flower Print Crop Top
+                                    </p>
+                                    <p class="justify-self-start row-start-2 font-semibold text-[var(--dark-black)] p-20-16">Color
+                                        <span class="text-[var(--light-black)] font-normal p-20-16">: Yellow</span></p>
+                                    <p class=" font-semibold text-[var(--dark-black)] p-20-16">Qty : <span
+                                            class="text-[var(--light-black)]  font-normal">1</span></p>
+                                    <p class=" font-semibold text-[var(--light-black)] p-20-16">$29.00</p>
+                                    <button type="button" class=" absolute xl:static top-[5px] right-0 md:block cursor-pointer">
+                                        <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                                            class="w-[22px] h-[22px]">
+
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+              `
+
+            // const
+        }
+
+        // console.log(window.location.search, "window.location");
+
+        // const urlParams = new URLSearchParams(window.location.search);
+        // // console.log(urlParams.get("tab"), "urlparams");
+        // const currentTab = urlParams.get("tab")?.toLowerCase() || "";
+        // console.log(currentTab);
+
+        // if (currentTab == "order-details") {
+        //     console.log("order details");
+        // }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const cartContainer = document.querySelector('.wish-cart-container');
+            const wishCart = JSON.parse(localStorage.getItem('wish')) || [];
+
+            console.log(wishCart, "wish")
+
+            // localStorage.setItem('wishList', JSON.stringify(wishList));
+
+            const mainContainer = document.querySelector('.main-wish-list-container')
+
+            if (wishCart.length === 0) {
+                mainContainer.innerHTML = `
+   <div class="flex flex-col justify-center items-center text-center">
+
+            <div class="w-[80%] py-[40px] md:py-[80px] px-[20px] md:px-[40px] flex flex-col justify-center items-center gap-1 rounded-sm shadow-[-2px_-2px_4px_0px_rgba(0,_0,_0,_0.05),_2px_2px_4px_0px_rgba(0,_0,_0,_0.05)]">
+
+                <img src="/img/gren-heart-icon.png" alt="green heart" width="200" height="200" class="w-[70px] h-[70px] sm:w-[170px] sm:h-[170px] ">
+                <p class="text-[var(--dark-black)] p-34-28 font-semibold mt-10">Your wishlist is empty.</p>
+                <p class="text-center text-[var(--light-black)]">You don’t have any products in the wishlist yet. You will find a lot
+                    of interesting products on our Shop page.</p>
+                    <a href="products.html">
+                        <button type="button" 
+                        class=" mt-10 w-fit px-3 md:px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white  cursor-pointer">
+                        Continue Shopping</button>
+                        </a>
+                    
+                </div>
+        </div>
+    
+    `
+
+
+
+                // window.location.href = '/empty-wishlist.html';
+
+                return;
+            }
+
+            wishCart.forEach((item) => {
+                const cartItemDisplay = `
+
+
+             <div
+                    class="wishlist-item relative grid grid-cols-1 md:grid-cols-[auto_3fr_1fr_1fr] gap-5 lg:gap-10 items-center border-b-1 border-b-[#EDEEF2] py-5" id="${item.liked}">
+                    <button  type="button" class="delete-wishlist-item absolute md:static top-[20px] right-0 md:block cursor-pointer">
+                        <img src="/img/close-cross.svg" alt="close icon" width="22" height="22"
+                            class="w-[22px] h-[22px]">
+
+                    </button>
+                    <div
+                        class=" grid grid-cols-[auto_1fr_auto] items-start pr-5  lg:items-center justify-center gap-x-5 ">
+
+                        <img src="${item.image}" alt="item 1" width="110" height="110"
+                            class=" w-[80px] md:w-[110px] h-[80px] md:h-[110px] object-cover rounded-[4px]">
+                        <div class="grid gap-y-1">
+
+                            <p class="productName font-semibold text-[var(--dark-black)] p-20-16">${item.name}</p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Brand : <span
+                                    class="productBrand text-[var(--light-black)] font-normal p-20-16"> ${item.brand}</span></p>
+                            <p class=" font-semibold text-[var(--dark-black)] p-20-16">Quantity : <span
+                                    class="text-[var(--light-black)] font-normal p-20-16"> 1</span></p>
+                        </div>
+                    </div>
+                    <p class="productPrice font-semibold text-[var(--light-black)] p-20-16">${item.price}</p>
+                    <button type="button"
+                        class="add-to-cart-btn whitespace-nowrap cursor-pointer w-fit px-4 md:px-7 py-1.5 md:py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Add to Cart</button>
+                </div>
+    `;
+                cartContainer.innerHTML += cartItemDisplay;
+            });
+
+        })
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
+
+            addToCartBtn.forEach((btn) => {
+
+                btn.addEventListener('click', (btn) => {
+                    console.log(btn.currentTarget, "btn is here")
+
+                    currentElement = btn.currentTarget
+
+
+                    const closestDiv = currentElement.closest('div')
+                    console.log(closestDiv, "closestDiv")
+
+                    const productImage = closestDiv.querySelector('div>img').src
+                    console.log(productImage)
+
+                    const productName = closestDiv.querySelector('.productName').textContent.trim()
+                    console.log(productName)
+
+                    const productBrand = closestDiv.querySelector('.productBrand').textContent.trim()
+                    console.log(productBrand)
+
+                    const productPrice = closestDiv.querySelector('.productPrice').textContent.trim()
+                    console.log(productPrice)
+
+                    const productId = closestDiv.id
+                    console.log(productId, "productId")
+
+                    const wishList = {
+                        liked: productId,
+                        name: productName,
+                        image: productImage,
+                        brand: productBrand,
+                        price: productPrice,
+                    };
+
+
+                    console.log(wishList, "wishlist")
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                    console.log(cart, " cart")
+
+                    cart.push(wishList);
+
+                    console.log(cart, "cart now")
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                });
+
+            })
+
+            deleteWishListItem()
+        })
+
+
+
+        function deleteWishListItem() {
+            document.querySelectorAll('.delete-wishlist-item').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const cartItemDiv = btn.closest('.wishlist-item');
+
+                    console.log(cartItemDiv, "cartItemDiv")
+
+                    const itemId = cartItemDiv.id
+                    console.log(itemId, "itemId")
+
+                    // const name = cartItemDiv.querySelector('.product-name').textContent.trim();
+                    // console.log(name, "cartItemNAme")
+                    // const size = cartItemDiv.querySelector('.product-size').textContent.replace('Size :', '').trim();
+                    // console.log(size, "cartItemSize")
+
+                    // const color = cartItemDiv.querySelector('.product-color').textContent.replace('Color :', '').trim();
+                    // console.log(color, "cartOtemColor")
+
+                    // const id = cartItemDiv.id
+                    // console.log(id, "cart item id for deleet")
+
+                    let wish = JSON.parse(localStorage.getItem('wish')) || [];
+
+                    wishlist = wish.filter(item =>
+                        !(item.liked === itemId)
+                    );
+
+
+
+                    console.log(wishlist, "wishlist item for delete")
+
+                    localStorage.setItem('wish', JSON.stringify(wishlist));
+
+                    cartItemDiv.remove();
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -73,7 +73,7 @@ ordeButtons.forEach((btn) => {
 //     space += `
 
 //   <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
+
 //                 <img src="${i.img}" alt="" width="200" height="200"
 //                 class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 //                 <a href="single-product.html">
@@ -98,7 +98,6 @@ ordeButtons.forEach((btn) => {
 //                     </svg>
 //                 </div>
 
-
 //                  `;
 
 //     // console.log(space)
@@ -112,35 +111,30 @@ const searchProduct = document.querySelectorAll(".search-cloth");
 
 searchProduct.forEach((input) => {
   input.addEventListener("keydown", function (e) {
-    
     if (e.key === "Enter") {
       e.preventDefault();
-  const inputValue = e.target.value.trim();
-  if (inputValue) {
-    window.location.href = `searched-product-page.html?search=${inputValue}`;
-  }
-}
-})})
+      const inputValue = e.target.value.trim();
+      if (inputValue) {
+        window.location.href = `searched-product-page.html?search=${inputValue}`;
+      }
+    }
+  });
+});
 
-const saveAddressCheckout = document.getElementById('saveAddressCheckout')
-saveAddressCheckout.addEventListener('click' , function(){
 
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const saveAddressCheckout = document.getElementById("saveAddressCheckout");
+saveAddressCheckout.addEventListener("click", function () {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-            if (cart.length === 0) {
+  if (cart.length === 0) {
     window.location.href = `empty-cart.html`;
 
-                alert("Your Cart is Empty!")
-                return;
-            }
+    alert("Your Cart is Empty!");
+    return;
+  }
 
-
-    window.location.href = `order-confirmed.html`;
-
-})
-
-
-
+  window.location.href = `order-confirmed.html`;
+});
 
 // working below
 
@@ -192,7 +186,7 @@ saveAddressCheckout.addEventListener('click' , function(){
 //   //     space += `
 
 //   // <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
+
 //   //               <img src="${i.img}" alt="" width="200" height="200"
 //   //               class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 //   //               <a href="single-product.html">
@@ -216,7 +210,6 @@ saveAddressCheckout.addEventListener('click' , function(){
 //   //                           stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round" />
 //   //                   </svg>
 //   //               </div>
-
 
 //   //                `;
 
@@ -243,7 +236,7 @@ saveAddressCheckout.addEventListener('click' , function(){
 //       space += `
 
 //   <div class="relative w-full flex flex-col gap-y-2.5 md:gap-y-6">
-                
+
 //                 <img src="${i.img}" alt="" width="200" height="200"
 //                 class="w-[282px] min-w-[100%] object-cover object-top  h-[170px] md:h-[370px] rounded-[12px]">
 //                 <a href="single-product.html">
@@ -268,11 +261,10 @@ saveAddressCheckout.addEventListener('click' , function(){
 //                     </svg>
 //                 </div>
 
-
 //                  `;
 
 //       // console.log(space)
-      
+
 //       // const element = document.getElementById('text')
 //       // console.log(element)
 //     });
@@ -288,7 +280,6 @@ saveAddressCheckout.addEventListener('click' , function(){
 // })
 
 // working above
-
 
 // async function inputVal() {
 //   try {
@@ -479,4 +470,3 @@ function unHidePassword() {
     password.type = "password";
   }
 }
-

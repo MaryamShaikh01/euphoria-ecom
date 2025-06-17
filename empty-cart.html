@@ -60,6 +60,9 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </button>
+
+                    <a href="/my-account.html#my-order">
+
                     <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path class=" group-hover:stroke-white"
@@ -67,6 +70,10 @@
                                 stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </button>
+                    </a>
+
+                    <a href="/cart.html">
+
                     <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path class=" group-hover:stroke-white"
@@ -74,6 +81,9 @@
                                 stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </button>
+
+                    </a>
+                    
                 </div>
         </div>
 
@@ -105,9 +115,11 @@
 
         <p class="text-[16px] text-[var(--light-black)]">Add something to make it happy!</p>
 
-        <button type="button" 
-                        class="continueShoppingBtn cursor-pointer mt-10 w-fit px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+        <a href="products.html">
+                        <button type="button" 
+                        class=" mt-10 w-fit px-3 md:px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white  cursor-pointer">
                         Continue Shopping</button>
+                        </a>
         </section>
 
 
@@ -219,14 +231,7 @@
     <script src="script.js"></script>
 
 <script>
-        const continueShoppingBtn = document.querySelector('.continueShoppingBtn')
-        continueShoppingBtn.addEventListener('click' , function(){
-          
-     
-
-    window.location.href = `products.html`;
-
-        })
+  
 </script>
     
     <script>
