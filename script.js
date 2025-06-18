@@ -1,3 +1,119 @@
+// to add item to wishlist 
+
+  let wishList = []
+        // console.log(wishList , "wishList")
+        const wishListBtn = document.querySelectorAll('.addToWishlist');
+        wishListBtn.forEach((heartBtn) => {
+
+            heartBtn.addEventListener('click', function (event) {
+                console.log(event, "event.currentTarget")
+                // wishListBtn.forEach((btn)=>{
+                console.log(heartBtn, "wishListBtn")
+                //     // btn.classList.remove('selected-heart-btn');
+
+                // })
+                heartBtn.classList.toggle('selected-heart-btn');
+                closestDiv = heartBtn.closest('div')
+                id = closestDiv.id
+                console.log(id, "id")
+                const wish = JSON.parse(localStorage.getItem('wish')) || [];
+
+
+
+                wishList.push(id)
+                updateWishList(heartBtn);
+
+            })
+
+
+            function updateWishList(heartBtn) {
+                if (wishList) {
+                    closestDiv = heartBtn.closest('div')
+                    console.log(closestDiv, "closestDiv")
+
+                    // const productName = closestDiv.querySelector('.limelight-product-name')
+                    const productName = closestDiv.querySelector('.limelight-product-name').textContent.trim()
+                    console.log(productName, "productName")
+                    const productImage = closestDiv.querySelector('div>img').src
+                    console.log(productImage, "productImage")
+                    // console.log(image)
+                    const productBrand = closestDiv.querySelector('.brand').textContent.trim();
+
+                    console.log(productBrand, "productBrand")
+
+                    const productPrice = closestDiv.querySelector('.price').textContent.trim();
+
+                    console.log(productPrice, "productPrice")
+
+                    // const productId = document.query
+                    const wishList = {
+                        liked: id,
+                        name: productName,
+                        image: productImage,
+                        brand: productBrand,
+                        price: productPrice,
+                        quantity: 1
+
+                    };
+
+
+                    // const wish = localStorage.setItem('wishList', JSON.stringify(wishList));
+                    // wish.push(wishList)
+
+                    // console.log("liked:", wishList);
+
+
+                    const wish = JSON.parse(localStorage.getItem('wish')) || [];
+
+                    // //   const existingIndex = cart.findIndex(item =>
+                    // //     item.size === cartItem.size &&
+                    // //     item.color === cartItem.color
+                    // //   );
+
+                    // //   if (existingIndex !== -1) {
+                    // //     cart[existingIndex].quantity += 1;
+                    // //   } else {
+                    // wish.push(wishList);
+                    // //   }
+
+
+                    const existingIndex = wish.findIndex(item =>
+
+                        item.liked === wishList.liked
+                    );
+                    console.log(existingIndex, "existingIndex")
+                    if (existingIndex !== -1) {
+                        wish[existingIndex].quantity += 1;
+                    } else {
+                        // cart.push(wishList);
+                        wish.push(wishList);
+                    }
+
+
+                    localStorage.setItem('wish', JSON.stringify(wish));
+                }
+            }
+
+        })
+
+
+                    const wishListItem = JSON.parse(localStorage.getItem('wish')) || [];
+                    console.log(wishListItem.length , "wishListItem")
+
+                    const wishListItems = document.querySelector('.wishListItems')
+                    wishListItems.textContent = wishListItem.length
+                    console.log(wishListItems , "wishListItems")
+
+
+             const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+                    console.log(cartItems.length , "cartItems")
+
+                    const cartTotalItems = document.querySelector('.cartTotalItems')
+                    cartTotalItems.textContent = cartItems.length
+                    console.log(cartTotalItems , "cartTotalItems")
+
+
+
 // import axios from "axios";
 
 const buttons = document.querySelectorAll(".tab-btn");
@@ -107,20 +223,77 @@ ordeButtons.forEach((btn) => {
 
 // axiosFunct();
 
-const searchProduct = document.querySelectorAll(".search-cloth");
+// const searchProduct = document.querySelectorAll(".search-cloth");
 
-searchProduct.forEach((input) => {
-  input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      const inputValue = e.target.value.trim();
-      if (inputValue) {
-        window.location.href = `searched-product-page.html?search=${inputValue}`;
-      }
-    }
-  });
-});
+// searchProduct.forEach((input) => {
+//   input.addEventListener("keydown", function (e) {
+//     if (e.key === "Enter") {
+//       e.preventDefault();
+//       const inputValue = e.target.value.trim();
+//       if (inputValue) {
+//         window.location.href = `searched-product-page.html?search=${inputValue}`;
+//       }
+//     }
+//   });
+// });
 
+// function searchInput(){
+
+const search = document.querySelectorAll('.search-cloth')
+
+search.forEach((btn)=>{
+
+btn.addEventListener("keydown", function (e) {
+          console.log(e.target, "here");
+          const inputValue = e.target.value;
+          console.log(inputValue);
+          if (e.key === "Enter") {
+            e.preventDefault();
+            const inputValue = e.target.value;
+  
+            console.log(inputValue, "here");
+            if (inputValue) {
+              window.location.href = `searched-product-page.html?search=${inputValue}`;
+            }
+          }
+        });
+
+
+})
+
+  // document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+  //         console.log(e.target, "here");
+  //         const inputValue = e.target.value;
+  //         console.log(inputValue);
+  //         if (e.key === "Enter") {
+  //           e.preventDefault();
+  //           const inputValue = e.target.value;
+  
+  //           console.log(inputValue, "here");
+  //           if (inputValue) {
+  //             window.location.href = `searched-product-page.html?search=${inputValue}`;
+  //           }
+  //         }
+  //       });
+// }
+
+
+
+
+    // document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+    //         console.log(e.target, "here");
+    //         const inputValue = e.target.value;
+    //         console.log(inputValue);
+    //         if (e.key === "Enter") {
+    //           e.preventDefault();
+    //           const inputValue = e.target.value;
+
+    //           console.log(inputValue, "here");
+    //           if (inputValue) {
+    //             window.location.href = `searched-product-page.html?search=${inputValue}`;
+    //           }
+    //         }
+    //       });
 
 const saveAddressCheckout = document.getElementById("saveAddressCheckout");
 saveAddressCheckout.addEventListener("click", function () {
@@ -351,19 +524,26 @@ closeBtn.addEventListener("click", closeNav);
 backdropNav.addEventListener("click", closeNav);
 
 // User Side Nav
-const clickBtn = document.getElementById("userNavBtn");
-const userNav = document.getElementById("userNav");
-const closeUserBtn = document.getElementById("close-btn");
-closeUserBtn.addEventListener("click", closeUserNav);
-clickBtn.addEventListener("click", openNav);
 
-function openNav() {
-  userNav.classList.toggle("user-nav");
+function userNav(){
+  
+  const clickBtn = document.getElementById("userNavBtn");
+  const userNav = document.getElementById("userNav");
+  const closeUserBtn = document.getElementById("close-btn");
+  closeUserBtn.addEventListener("click", closeUserNav);
+  clickBtn.addEventListener("click", openNav);
+  
+  function openNav() {
+    userNav.classList.toggle("user-nav");
+  }
+  
+  function closeUserNav() {
+    userNav.classList.remove("user-nav");
+  }
+
 }
 
-function closeUserNav() {
-  userNav.classList.remove("user-nav");
-}
+
 
 // Banner Swiper
 
@@ -455,18 +635,26 @@ var swiper7 = new Swiper(".singleProductSwiper2", {
 // unhide password
 
 function unHidePassword() {
-  const unhide = document.getElementById("unhide");
-  const password = document.getElementById("pass1");
-  console.log(password, "pass1");
-  console.log(unhide, "unhide");
-  const img = unhide.querySelector("img");
-  console.log(img, "img");
-  if (img.src.includes("/img/hide.svg")) {
-    console.log("hjg");
-    img.src = "/img/search.svg";
-    password.type = "text";
-  } else {
-    img.src = "/img/hide.svg";
-    password.type = "password";
-  }
-}
+
+const unhideBtn = document.querySelectorAll(".unhide")
+
+unhideBtn.forEach((unhide)=>{
+  
+  
+  const unhidePass = document.querySelectorAll('.unhidePass')
+  unhidePass.forEach((btn)=>{
+  
+    const img = unhide.querySelector("img");
+    console.log(img, "img");
+    if (img.src.includes("/img/hide.svg")) {
+      console.log("hjg");
+      img.src = "/img/search.svg";
+      btn.type = "text";
+    } else {
+      img.src = "/img/hide.svg";
+      btn.type = "password";
+    }
+  })
+  
+  })}
+

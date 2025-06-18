@@ -17,7 +17,7 @@
     <!-- Navbar Section Starts -->
     <!-- <div id="backdrop" class="bg-gray-400 absolute w-[100vw] h-[100vh] z-10 opacity-[0.6]" onclick="close()"></div> -->
 
-    <div id="backdrop" class="hidden fixed top-0 left-0 w-full h-full bg-black opacity-50 z-5"></div>
+    <div id="backdrop" class="hidden fixed top-0 left-0 w-full h-full bg-black opacity-50 z-5" onclick="closeNav()"></div>
 
     <header class="py-[15px] lg:py-[30px] border-b-1 border-b-[var(--light-border)]">
         <div class="flex justify-between gap-x-3.5 items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
@@ -37,8 +37,8 @@
 
 
             <ul id="side-nav" class="hidden p-10 lg:p-0 lg:flex lg:gap-10 text-[22px] text-[var(--light-black)]">
-                <li class=" lg:hidden absolute right-20"><img src="/img/close-icon.svg" alt="" width="50" height="50"
-                        class="w-[50px] h-[50px]" id="close-nav"></li>
+                <li class=" lg:hidden absolute right-20 cursor-pointer"><img src="/img/close-icon.svg" alt="" width="50" height="50"
+                        class="w-[50px] h-[50px]" id="close-nav" onclick="closeNav()"></li>
                 <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Shop</a></li>
                 <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="#">Men</a></li>
                 <li class="p-22-18 hover:text-[var(--dark-black)]"><a href="products.html">Women</a></li>
@@ -52,13 +52,14 @@
 
            <div class="flex gap-3">
 
-                    <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                    <button type="button" class="relative p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                             <path class=" group-hover:stroke-white" fill-rule="evenodd" clip-rule="evenodd"
                                 d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z"
                                 stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                        </svg>
+                            </svg>
+                            <span class="wishListItems absolute top-[-20%] right-[-20%] bg-yellow-400 min-w-[25px] h-[25px] rounded-full w-fit text-center"></span>
                     </button>
 
                     <a href="/my-account.html#my-order">
@@ -75,12 +76,13 @@
 
                     <a href="/cart.html">
 
-                    <button type="button" class="p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
+                    <button type="button" class="relative p-3 bg-[var(--light-bg-colour)] rounded-lg group hover:bg-[var(--purple-color)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path class=" group-hover:stroke-white"
                                 d="M2.5 3.33334H3.00526C3.85578 3.33334 4.56986 3.97376 4.6621 4.81926L5.3379 11.0141C5.43014 11.8596 6.14422 12.5 6.99474 12.5H14.205C14.9669 12.5 15.6317 11.9834 15.82 11.2452L16.9699 6.73593C17.2387 5.68213 16.4425 4.65742 15.355 4.65742H5.5M5.52063 15.5208H6.14563M5.52063 16.1458H6.14563M14.6873 15.5208H15.3123M14.6873 16.1458H15.3123M6.66667 15.8333C6.66667 16.2936 6.29357 16.6667 5.83333 16.6667C5.3731 16.6667 5 16.2936 5 15.8333C5 15.3731 5.3731 15 5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333ZM15.8333 15.8333C15.8333 16.2936 15.4602 16.6667 15 16.6667C14.5398 16.6667 14.1667 16.2936 14.1667 15.8333C14.1667 15.3731 14.5398 15 15 15C15.4602 15 15.8333 15.3731 15.8333 15.8333Z"
                                 stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
+                         <span class="cartTotalItems absolute top-[-20%] right-[-20%] bg-yellow-400 min-w-[25px] h-[25px] rounded-full w-fit text-center">0</span>
                     </button>
 
                     </a>
