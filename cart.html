@@ -24,16 +24,18 @@
     <header class="py-[15px] lg:py-[30px] ">
         <div class="flex justify-between gap-x-3.5 items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
 
-            <span class="lg:hidden" id="hamburger" onclick="sideNav()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
-                </svg>
-            </span>
+             <span class="lg:hidden" id="hamburger" onclick="sideNav()">
+                    <svg class="w-[30px] h-[30px]" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 24 24" fill="none">
+                        <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
+                    </svg>
+                </span>
 
-            <a href="euphoria.html">
+                 <a href="euphoria.html">
 
-                <img src="/img/logo.png" alt="euphoria logo" width="100" height="100" class="w-[100%]">
-            </a>
+                    <img src="/img/logo.png" alt="euphoria logo" width="100" height="100"
+                        class="w-[100%] min-w-[80px] ">
+                </a>
 
 
 
@@ -334,15 +336,24 @@
     <section class="flex lg:flex-col pb-[60px]">
 
 
-        <div class="bg-[var(--dark-black)] shrink-0 hidden sm:flex ">
+        <div class="bg-[var(--purple-color)] lg:bg-[var(--dark-black)] shrink-0  sm:flex sticky top-0 ">
             <div
-                class="px-[10px] lg:py-[20px] lg:place-items-center m-auto w-fit lg:w-[85vw] 2xl:w-[80vw]   h-full grid grid-cols-1 grid-rows-[4fr_1fr_1fr_1fr_1fr_1fr] lg:grid lg:grid-rows-1 lg:grid-cols-[4fr_1fr_1fr_1fr_1fr_1fr] justify-items-start gap-3">
+                class=" px-[10px] lg:py-[20px] place-items-center m-auto w-fit lg:w-[85vw] 2xl:w-[80vw] h-full hidden md:grid grid-cols-1 grid-rows-[4fr_1fr_1fr_1fr_1fr_1fr] lg:grid lg:grid-rows-1 lg:grid-cols-[4fr_1fr_1fr_1fr_1fr_1fr] justify-items-start gap-3">
                 <p class="uppercase text-white font-semibold text-lg justify-self-start">product Details</p>
                 <p class="uppercase text-white font-semibold text-lg">Price</p>
                 <p class="uppercase text-white font-semibold text-lg">Quantity</p>
                 <p class="uppercase text-white font-semibold text-lg">Shipping</p>
                 <p class="uppercase text-white font-semibold text-lg">Subtotal</p>
                 <p class="uppercase text-white font-semibold text-lg">Action</p>
+            </div>
+
+            <div class="px-[10px] lg:py-[20px] lg:place-items-center m-auto w-fit lg:w-[85vw] 2xl:w-[80vw]   h-full grid md:hidden grid-cols-1 grid-rows-[4fr_1fr_1fr_1fr_1fr_1fr] ">
+                <img src="/img/icons8-product-30.png" alt="" width="30" height="30" class="w-[30px] h-[100%] object-contain ">
+                <img src="/img/icons8-price-30.png" alt="" width="30" height="30" class="w-[30px] h-[100%] object-contain ">
+                <img src="/img/icons8-numbers-30.png" alt="" width="30" height="30" class="w-[30px] h-[100%] object-contain ">
+                <img src="/img/icons8-delivery-30.png" alt="" width="30" height="30" class="w-[30px] h-[100%] object-contain ">
+                <img src="/img/icons8-cost-30.png" alt="" width="30" height="30" class="w-[30px] h-[100%] object-contain ">
+                <img src="/img/icons8-delete-button-30.png" alt="" width="30" height="30" class="w-[30px] h-[100%] object-contain ">
             </div>
 
         </div>
@@ -619,8 +630,8 @@
 
  <div class="cart-item w-[300px] lg:w-[100%] px-[20px] lg:px-0 lg:py-[30px] grid grid-rows-[4fr_1fr_1fr_1fr_1fr_1fr]  lg:grid lg:grid-rows-1 lg:grid-cols-[4fr_1fr_1fr_1fr_1fr_1fr]  gap-3 justify-items-center items-center border-r-1 border-r-[var(--light-border)] lg:border-r-0 lg:border-b-1 lg:border-b-[var(--light-border)]"
                     id="${item.liked}">
-                    <div class="flex flex-col lg:grid lg:grid-cols-[auto_1fr] gap-x-5 justify-self-start self-start">
-                        <img class="min-w-[105px] min-h-[120px] row-span-4" src="${item.image}"
+                    <div class="flex flex-col lg:grid lg:grid-cols-[auto_1fr] gap-x-5 justify-self-center items-center h-full max-[1022px]:text-center lg:justify-self-start  lg:self-start">
+                        <img class="min-w-[105px] min-h-[120px] w-[105px] h-[120px] object-top row-span-4 object-cover rounded-[12px]"  src="${item.image}"
                             alt="cart product" width="100" height="100">
                         <p class="product-name text-[var(--dark-black)] text-lg font-semibold">${item.name}</p>
                         <span class="product-color text-[var(--light-black)] text-sm">Color : ${item.color}</span>

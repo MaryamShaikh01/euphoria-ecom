@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <title>Product Three</title>
+    <title>Product One</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <style>
+
+/*     
 .slider {
   padding: 32px;
   color: #fff;
@@ -108,7 +110,7 @@
     height: auto;
     width: 32px;
   }
-}
+} */
 
 </style>
 
@@ -125,16 +127,17 @@
 
     <header class="py-[15px] lg:py-[30px] border-b-1 border-b-[var(--light-border)]">
         <div class="flex justify-between gap-x-3.5 items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
+<span class="lg:hidden" id="hamburger" onclick="sideNav()">
+                    <svg class="w-[30px] h-[30px]" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 24 24" fill="none">
+                        <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
+                    </svg>
+                </span>
 
-            <span class="lg:hidden" id="hamburger" onclick="sideNav()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
-                </svg>
-            </span>
+                 <a href="euphoria.html">
 
-            <a href="euphoria.html">
-
-                    <img src="/img/logo.png" alt="euphoria logo" width="100" height="100" class="w-[100%]">
+                    <img src="/img/logo.png" alt="euphoria logo" width="100" height="100"
+                        class="w-[100%] min-w-[80px] ">
                 </a>
 
 
@@ -167,7 +170,7 @@
                             stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
-                    <span class="cartTotalItems absolute top-[-20%] right-[-20%] bg-yellow-400 min-w-[25px] h-[25px] rounded-full w-fit text-center">0</span>
+                    <span class="wishListItems absolute top-[-20%] right-[-20%] bg-yellow-400 min-w-[25px] h-[25px] rounded-full w-fit text-center">0</span>
                 </button>
 </a>
                     <a href="/my-account.html#my-order">
@@ -192,7 +195,7 @@
                             stroke="var(--light-black)" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
 
-                               <span class="wishListItems absolute top-[-20%] right-[-20%] bg-yellow-400 min-w-[25px] h-[25px] rounded-full w-fit text-center"></span>
+                               <span class=" cartTotalItems absolute top-[-20%] right-[-20%] bg-yellow-400 min-w-[25px] h-[25px] rounded-full w-fit text-center"></span>
 
                 </button>
 
@@ -232,86 +235,86 @@
     <!-- Single Product Section Starts -->
 
     <section class=" flex flex-col lg:grid lg:grid-cols-2">
+<div class="bg-[var(--light-bg-colour)] sm:flex sm:flex-row-reverse pt-[20px] lg:pt-0  sm:h-[85vh] sm:gap-5"> 
 
-        <div class="px-[10px] grid grid-cols-3 pt-[20px] lg:pt-0 items-center">
 
-            <div thumbsSlider="" class="swiper mySwiper thumbSwiper">
-                <div class="swiper-wrapper ">
-                    <div class="swiper-slide">
-                        <img id="singleProductImage" src="img/product-1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img  src="img/product-2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-5.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-6.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-7.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-8.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-2.png" />
-                    </div>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+            class="swiper mySwiper2 singleProductSwiper2">
+            <div class="swiper-wrapper" class="h-[500px] ">
+                <div class="swiper-slide">
+                    <img id="singleProductImage" src="img/product-1.png" width="400" height="400" class=""/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-2.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-3.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-4.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-5.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-6.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-7.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-8.png" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" width="400" height="400"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" width="400" height="400"/>
                 </div>
             </div>
-
-            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                class="swiper mySwiper2 singleProductSwiper2 col-span-2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/product-1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-5.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-6.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-7.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-8.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/product-2.png" />
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-            <!-- <div> -->
-
-            <!-- </div> -->
-
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
+        <div class="sm:pr-5 sm:pl-10  sm:pt-10  lg:pl-20 py-2 rounded-[10px] ">
+
+        <div thumbsSlider="" class="swiper mySwiper thumbSwiper">
+            <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/product-1.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-3.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-4.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-5.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-6.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-7.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product-8.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </div>
+            </div>
+        </div>
+        </div>
+
+</div>
+
 
 
 
@@ -429,7 +432,7 @@
             <div class="flex gap-6">
 
                 <button type="button" id="add-to-cart-btn"
-                    class="flex justify-center items-center gap-2 px-5 sm:px-10 py-3 rounded-lg bg-[var(--purple-colour)] text-white">
+                    class="cursor-pointer  flex justify-center items-center gap-2 px-5 sm:px-10 py-3 rounded-lg bg-[var(--purple-colour)] text-white">
                     <img src="/img/shopping cart.svg" alt="" >Add to cart</button>
                 <span class=" px-5 py-3 border-2 rounded-lg text-[var(--dark-black)]">$63.00</span>
             </div>
@@ -957,15 +960,44 @@
     <script src="script.js"></script>
 
     <script>
-        var swiper9 = new Swiper(".thumbSwiper", {
+  
+        var swiper = new Swiper(".thumbSwiper", {
             loop: true,
             spaceBetween: 10,
-            slidesPerView: 4,
+            slidesPerView: 3,
             freeMode: true,
             watchSlidesProgress: true,
+            breakpoints: {
+                400:{
+            direction: "horizontal",
+            slidesPerView: 5,
+
+                },
+          640: {
+            slidesPerView: 6,
+
+            // direction: "vertical",
             direction: "vertical",
+
+
+          },
+          768: {
+            slidesPerView: 6,
+
+            // direction: "vertical",
+            direction: "vertical",
+
+
+          },
+          1024: {
+            slidesPerView: 6,
+
+            direction: "vertical",
+          },
+        },
+
         });
-        var swiper7 = new Swiper(".singleProductSwiper2", {
+        var swiper2 = new Swiper(".singleProductSwiper2", {
             loop: true,
             spaceBetween: 10,
             navigation: {
@@ -973,7 +1005,7 @@
                 prevEl: ".swiper-button-prev",
             },
             thumbs: {
-                swiper: swiper9,
+                swiper: swiper,
             },
         });
 
@@ -1005,61 +1037,6 @@
         });
 
 
-        // Инициализация превью слайдера
-const sliderThumbs = new Swiper(".slider__thumbs .swiper-container", {
-  // ищем слайдер превью по селектору
-  // задаем параметры
-  direction: "vertical", // вертикальная прокрутка
-  slidesPerView: 3, // показывать по 3 превью
-  spaceBetween: 24, // расстояние между слайдами
-  navigation: {
-    // задаем кнопки навигации
-    nextEl: ".slider__next", // кнопка Next
-    prevEl: ".slider__prev" // кнопка Prev
-  },
-  freeMode: true, // при перетаскивании превью ведет себя как при скролле
-  breakpoints: {
-    // условия для разных размеров окна браузера
-    0: {
-      // при 0px и выше
-      direction: "horizontal" // горизонтальная прокрутка
-    },
-    768: {
-      // при 768px и выше
-      direction: "vertical" // вертикальная прокрутка
-    }
-  }
-});
-// Инициализация слайдера изображений
-const sliderImages = new Swiper(".slider__images .swiper-container", {
-  // ищем слайдер превью по селектору
-  // задаем параметры
-  direction: "vertical", // вертикальная прокрутка
-  slidesPerView: 1, // показывать по 1 изображению
-  spaceBetween: 32, // расстояние между слайдами
-  mousewheel: true, // можно прокручивать изображения колёсиком мыши
-  navigation: {
-    // задаем кнопки навигации
-    nextEl: ".slider__next", // кнопка Next
-    prevEl: ".slider__prev" // кнопка Prev
-  },
-  grabCursor: true, // менять иконку курсора
-  thumbs: {
-    // указываем на превью слайдер
-    swiper: sliderThumbs // указываем имя превью слайдера
-  },
-  breakpoints: {
-    // условия для разных размеров окна браузера
-    0: {
-      // при 0px и выше
-      direction: "horizontal" // горизонтальная прокрутка
-    },
-    768: {
-      // при 768px и выше
-      direction: "vertical" // вертикальная прокрутка
-    }
-  }
-});
 
 // const sizeBtn = document.querySelectorAll('.size-btn')
 // sizeBtn.forEach((curretSizeBtn)=>{

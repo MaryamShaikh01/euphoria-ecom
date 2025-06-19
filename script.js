@@ -1,118 +1,132 @@
-// to add item to wishlist 
+// to add item to wishlist
 
-  let wishList = []
-        // console.log(wishList , "wishList")
-        const wishListBtn = document.querySelectorAll('.addToWishlist');
-        wishListBtn.forEach((heartBtn) => {
+let wishList = [];
+// console.log(wishList , "wishList")
+const wishListBtn = document.querySelectorAll(".addToWishlist");
+wishListBtn.forEach((heartBtn) => {
+  heartBtn.addEventListener("click", function (event) {
+    console.log(event, "event.currentTarget");
+    event.preventDefault();
 
-            heartBtn.addEventListener('click', function (event) {
-                console.log(event, "event.currentTarget")
-                // wishListBtn.forEach((btn)=>{
-                console.log(heartBtn, "wishListBtn")
-                //     // btn.classList.remove('selected-heart-btn');
+    // wishListBtn.forEach((btn)=>{
+    console.log(heartBtn, "wishListBtn");
+    //     // btn.classList.remove('selected-heart-btn');
 
-                // })
-                heartBtn.classList.toggle('selected-heart-btn');
-                closestDiv = heartBtn.closest('div')
-                id = closestDiv.id
-                console.log(id, "id")
-                const wish = JSON.parse(localStorage.getItem('wish')) || [];
+    // })
+    heartBtn.classList.toggle("selected-heart-btn");
+    closestDiv = heartBtn.closest("div");
+    id = closestDiv.id;
+    console.log(id, "id");
+    const wish = JSON.parse(localStorage.getItem("wish")) || [];
 
+    wishList.push(id);
+    updateWishList(heartBtn);
+  });
 
+  function updateWishList(heartBtn) {
+    if (wishList) {
+      closestDiv = heartBtn.closest("div");
+      console.log(closestDiv, "closestDiv");
 
-                wishList.push(id)
-                updateWishList(heartBtn);
+      // const productName = closestDiv.querySelector('.limelight-product-name')
+      const productName = closestDiv
+        .querySelector(".limelight-product-name")
+        .textContent.trim();
+      console.log(productName, "productName");
+      const productImage = closestDiv.querySelector("div>img").src;
+      console.log(productImage, "productImage");
+      // console.log(image)
+      const productBrand = closestDiv
+        .querySelector(".brand")
+        .textContent.trim();
 
-            })
+      console.log(productBrand, "productBrand");
 
+      const productPrice = closestDiv
+        .querySelector(".price")
+        .textContent.trim();
 
-            function updateWishList(heartBtn) {
-                if (wishList) {
-                    closestDiv = heartBtn.closest('div')
-                    console.log(closestDiv, "closestDiv")
+      console.log(productPrice, "productPrice");
 
-                    // const productName = closestDiv.querySelector('.limelight-product-name')
-                    const productName = closestDiv.querySelector('.limelight-product-name').textContent.trim()
-                    console.log(productName, "productName")
-                    const productImage = closestDiv.querySelector('div>img').src
-                    console.log(productImage, "productImage")
-                    // console.log(image)
-                    const productBrand = closestDiv.querySelector('.brand').textContent.trim();
+      // const productId = document.query
+      const wishList = {
+        liked: id,
+        name: productName,
+        image: productImage,
+        brand: productBrand,
+        price: productPrice,
+        quantity: 1,
+      };
 
-                    console.log(productBrand, "productBrand")
+      // const wish = localStorage.setItem('wishList', JSON.stringify(wishList));
+      // wish.push(wishList)
 
-                    const productPrice = closestDiv.querySelector('.price').textContent.trim();
+      // console.log("liked:", wishList);
 
-                    console.log(productPrice, "productPrice")
+      const wish = JSON.parse(localStorage.getItem("wish")) || [];
 
-                    // const productId = document.query
-                    const wishList = {
-                        liked: id,
-                        name: productName,
-                        image: productImage,
-                        brand: productBrand,
-                        price: productPrice,
-                        quantity: 1
+      // //   const existingIndex = cart.findIndex(item =>
+      // //     item.size === cartItem.size &&
+      // //     item.color === cartItem.color
+      // //   );
 
-                    };
+      // //   if (existingIndex !== -1) {
+      // //     cart[existingIndex].quantity += 1;
+      // //   } else {
+      // wish.push(wishList);
+      // //   }
 
+      const existingIndex = wish.findIndex(
+        (item) => item.liked === wishList.liked
+      );
+      console.log(existingIndex, "existingIndex");
+      if (existingIndex !== -1) {
+        wish[existingIndex].quantity += 1;
+      } else {
+        // cart.push(wishList);
+        wish.push(wishList);
+      }
 
-                    // const wish = localStorage.setItem('wishList', JSON.stringify(wishList));
-                    // wish.push(wishList)
-
-                    // console.log("liked:", wishList);
-
-
-                    const wish = JSON.parse(localStorage.getItem('wish')) || [];
-
-                    // //   const existingIndex = cart.findIndex(item =>
-                    // //     item.size === cartItem.size &&
-                    // //     item.color === cartItem.color
-                    // //   );
-
-                    // //   if (existingIndex !== -1) {
-                    // //     cart[existingIndex].quantity += 1;
-                    // //   } else {
-                    // wish.push(wishList);
-                    // //   }
-
-
-                    const existingIndex = wish.findIndex(item =>
-
-                        item.liked === wishList.liked
-                    );
-                    console.log(existingIndex, "existingIndex")
-                    if (existingIndex !== -1) {
-                        wish[existingIndex].quantity += 1;
-                    } else {
-                        // cart.push(wishList);
-                        wish.push(wishList);
-                    }
-
-
-                    localStorage.setItem('wish', JSON.stringify(wish));
-                }
-            }
-
-        })
+      localStorage.setItem("wish", JSON.stringify(wish));
+    }
+  }
+});
 
 
-                    const wishListItem = JSON.parse(localStorage.getItem('wish')) || [];
-                    console.log(wishListItem.length , "wishListItem")
+let wishlist = JSON.parse(localStorage.getItem("wish")) || [];
 
-                    const wishListItems = document.querySelector('.wishListItems')
-                    wishListItems.textContent = wishListItem.length
-                    console.log(wishListItems , "wishListItems")
+const wishListBtns = document.querySelectorAll(".addToWishlist");
 
 
-             const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-                    console.log(cartItems.length , "cartItems")
+function updateWishListUI() {
+  wishListBtns.forEach((heartBtn) => {
+    const closestDiv = heartBtn.closest("div");
+    const id = closestDiv?.id;
 
-                    const cartTotalItems = document.querySelector('.cartTotalItems')
-                    cartTotalItems.textContent = cartItems.length
-                    console.log(cartTotalItems , "cartTotalItems")
+    if (id && wishlist.some((item) => item.liked === id)) {
+      heartBtn.classList.add("selected-heart-btn");
+    }
+  });
+}
+
+updateWishListUI();
 
 
+
+
+const wishListItem = JSON.parse(localStorage.getItem("wish")) || [];
+console.log(wishListItem.length, "wishListItem");
+
+const wishListItems = document.querySelector(".wishListItems");
+wishListItems.textContent = wishListItem.length;
+console.log(wishListItems, "wishListItems");
+
+const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+console.log(cartItems.length, "cartItems");
+
+const cartTotalItems = document.querySelector(".cartTotalItems");
+cartTotalItems.textContent = cartItems.length;
+console.log(cartTotalItems, "cartTotalItems");
 
 // import axios from "axios";
 
@@ -239,61 +253,55 @@ ordeButtons.forEach((btn) => {
 
 // function searchInput(){
 
-const search = document.querySelectorAll('.search-cloth')
+const search = document.querySelectorAll(".search-cloth");
 
-search.forEach((btn)=>{
+search.forEach((btn) => {
+  btn.addEventListener("keydown", function (e) {
+    console.log(e.target, "here");
+    const inputValue = e.target.value;
+    console.log(inputValue);
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const inputValue = e.target.value;
 
-btn.addEventListener("keydown", function (e) {
-          console.log(e.target, "here");
-          const inputValue = e.target.value;
-          console.log(inputValue);
-          if (e.key === "Enter") {
-            e.preventDefault();
-            const inputValue = e.target.value;
-  
-            console.log(inputValue, "here");
-            if (inputValue) {
-              window.location.href = `searched-product-page.html?search=${inputValue}`;
-            }
-          }
-        });
+      console.log(inputValue, "here");
+      if (inputValue) {
+        window.location.href = `searched-product-page.html?search=${inputValue}`;
+      }
+    }
+  });
+});
 
+// document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+//         console.log(e.target, "here");
+//         const inputValue = e.target.value;
+//         console.log(inputValue);
+//         if (e.key === "Enter") {
+//           e.preventDefault();
+//           const inputValue = e.target.value;
 
-})
-
-  // document.getElementById("search-cloth").addEventListener("keydown", function (e) {
-  //         console.log(e.target, "here");
-  //         const inputValue = e.target.value;
-  //         console.log(inputValue);
-  //         if (e.key === "Enter") {
-  //           e.preventDefault();
-  //           const inputValue = e.target.value;
-  
-  //           console.log(inputValue, "here");
-  //           if (inputValue) {
-  //             window.location.href = `searched-product-page.html?search=${inputValue}`;
-  //           }
-  //         }
-  //       });
+//           console.log(inputValue, "here");
+//           if (inputValue) {
+//             window.location.href = `searched-product-page.html?search=${inputValue}`;
+//           }
+//         }
+//       });
 // }
 
+// document.getElementById("search-cloth").addEventListener("keydown", function (e) {
+//         console.log(e.target, "here");
+//         const inputValue = e.target.value;
+//         console.log(inputValue);
+//         if (e.key === "Enter") {
+//           e.preventDefault();
+//           const inputValue = e.target.value;
 
-
-
-    // document.getElementById("search-cloth").addEventListener("keydown", function (e) {
-    //         console.log(e.target, "here");
-    //         const inputValue = e.target.value;
-    //         console.log(inputValue);
-    //         if (e.key === "Enter") {
-    //           e.preventDefault();
-    //           const inputValue = e.target.value;
-
-    //           console.log(inputValue, "here");
-    //           if (inputValue) {
-    //             window.location.href = `searched-product-page.html?search=${inputValue}`;
-    //           }
-    //         }
-    //       });
+//           console.log(inputValue, "here");
+//           if (inputValue) {
+//             window.location.href = `searched-product-page.html?search=${inputValue}`;
+//           }
+//         }
+//       });
 
 const saveAddressCheckout = document.getElementById("saveAddressCheckout");
 saveAddressCheckout.addEventListener("click", function () {
@@ -525,25 +533,21 @@ backdropNav.addEventListener("click", closeNav);
 
 // User Side Nav
 
-function userNav(){
-  
+function userNav() {
   const clickBtn = document.getElementById("userNavBtn");
   const userNav = document.getElementById("userNav");
   const closeUserBtn = document.getElementById("close-btn");
   closeUserBtn.addEventListener("click", closeUserNav);
   clickBtn.addEventListener("click", openNav);
-  
+
   function openNav() {
     userNav.classList.toggle("user-nav");
   }
-  
+
   function closeUserNav() {
     userNav.classList.remove("user-nav");
   }
-
 }
-
-
 
 // Banner Swiper
 
@@ -615,46 +619,43 @@ var swiper2 = new Swiper(".feedbackSwiper", {
 
 // For Swiper Single Product
 
-var swiper9 = new Swiper(".thumbSwiper", {
-  // spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var swiper7 = new Swiper(".singleProductSwiper2", {
-  spaceBetween: 0,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-    swiper10: swiper9,
-  },
-});
+// var swiper9 = new Swiper(".thumbSwiper", {
+//   // spaceBetween: 10,
+//   slidesPerView: 4,
+//   freeMode: true,
+//   watchSlidesProgress: true,
+// });
+// var swiper7 = new Swiper(".singleProductSwiper2", {
+//   spaceBetween: 0,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   thumbs: {
+//     swiper10: swiper9,
+//   },
+// });
 
 // unhide password
 
 function unHidePassword() {
+  const unhideBtn = document.querySelectorAll(".unhide");
 
-const unhideBtn = document.querySelectorAll(".unhide")
-
-unhideBtn.forEach((unhide)=>{
-  
-  
-  const unhidePass = document.querySelectorAll('.unhidePass')
-  unhidePass.forEach((btn)=>{
-  
-    const img = unhide.querySelector("img");
-    console.log(img, "img");
-    if (img.src.includes("/img/hide.svg")) {
-      console.log("hjg");
-      img.src = "/img/search.svg";
-      btn.type = "text";
-    } else {
-      img.src = "/img/hide.svg";
-      btn.type = "password";
-    }
-  })
-  
-  })}
-
+  unhideBtn.forEach((unhide) => {
+    const unhidePass = document.querySelectorAll(".unhidePass");
+    unhidePass.forEach((btn) => {
+      const img = unhide.querySelector("img");
+      console.log(img, "img");
+      if (img.src.includes("/img/hide.svg")) {
+        console.log("hjg");
+        img.src = "img/eye-closeup-svgrepo-com.svg";
+        img.width  = 20;
+        // img.height =;
+        btn.type = "text";
+      } else {
+        img.src = "/img/hide.svg";
+        btn.type = "password";
+      }
+    });
+  });
+}
