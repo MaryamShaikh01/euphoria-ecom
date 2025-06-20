@@ -1,118 +1,195 @@
+// window.addEventListener("load", () => {
+//   const path = window.location.pathname;
+//   console.log(path , "path")
+
+//   const validPaths = ["/euphoria.html",  "/searched-product-page.html?search=one" , "/products.html", "/my-account.html", "add-address.html" , "cart.html" , "check-email.html" , "checkout-page.html" , "contact-details.html" , "empty-cart.html" , "empty-wishlist.html" , "new-password.html" , "order-confirmed.html" , "order-details.html" , "/product-one.html" , 'product-two.html' , ];
+
+//   if (path.endsWith("/error-page.html")) return;
+
+//   if (!validPaths.includes(path)) {
+//     window.location.href = "/error-page.html";
+//   }
+// });
+
 // to add item to wishlist
 
-let wishList = [];
-// console.log(wishList , "wishList")
-const wishListBtn = document.querySelectorAll(".addToWishlist");
-wishListBtn.forEach((heartBtn) => {
-  heartBtn.addEventListener("click", function (event) {
-    console.log(event, "event.currentTarget");
-    event.preventDefault();
 
-    // wishListBtn.forEach((btn)=>{
-    console.log(heartBtn, "wishListBtn");
-    //     // btn.classList.remove('selected-heart-btn');
+// from here my code
 
-    // })
-    heartBtn.classList.toggle("selected-heart-btn");
-    closestDiv = heartBtn.closest("div");
-    id = closestDiv.id;
-    console.log(id, "id");
-    const wish = JSON.parse(localStorage.getItem("wish")) || [];
+// let wishList = [];
+// // console.log(wishList , "wishList")
+// const wishListBtn = document.querySelectorAll(".addToWishlist");
+// wishListBtn.forEach((heartBtn) => {
+//   heartBtn.addEventListener("click", function (event) {
+//     console.log(event, "event.currentTarget");
+//     event.preventDefault();
 
-    wishList.push(id);
-    updateWishList(heartBtn);
-  });
+//     // wishListBtn.forEach((btn)=>{
+//     console.log(heartBtn, "wishListBtn");
+//     // btn.classList.remove('selected-heart-btn');
 
-  function updateWishList(heartBtn) {
-    if (wishList) {
-      closestDiv = heartBtn.closest("div");
-      console.log(closestDiv, "closestDiv");
+//     // })
+//     heartBtn.classList.toggle("selected-heart-btn");
+//     closestDiv = heartBtn.closest("div");
+//     id = closestDiv.id;
+//     console.log(id, "id");
+//     const wish = JSON.parse(localStorage.getItem("wish")) || [];
 
-      // const productName = closestDiv.querySelector('.limelight-product-name')
-      const productName = closestDiv
-        .querySelector(".limelight-product-name")
-        .textContent.trim();
-      console.log(productName, "productName");
-      const productImage = closestDiv.querySelector("div>img").src;
-      console.log(productImage, "productImage");
-      // console.log(image)
-      const productBrand = closestDiv
-        .querySelector(".brand")
-        .textContent.trim();
+//     wishList.push(id);
+//     updateWishList(heartBtn);
+//   });
 
-      console.log(productBrand, "productBrand");
+//   function updateWishList(heartBtn) {
+//     if (wishList) {
+//       closestDiv = heartBtn.closest("div");
+//       console.log(closestDiv, "closestDiv");
 
-      const productPrice = closestDiv
-        .querySelector(".price")
-        .textContent.trim();
+//       // const productName = closestDiv.querySelector('.limelight-product-name')
 
-      console.log(productPrice, "productPrice");
+//       const productName = closestDiv
+//       .querySelector(".limelight-product-name")
+//         .textContent.trim();
 
-      // const productId = document.query
-      const wishList = {
-        liked: id,
-        name: productName,
-        image: productImage,
-        brand: productBrand,
-        price: productPrice,
-        quantity: 1,
-      };
+//       console.log(productName, "productName");
+//       const productImage = closestDiv.querySelector("div>img").src;
+//       console.log(productImage, "productImage");
+//       // console.log(image)
+//       const productBrand = closestDiv
+//         .querySelector(".brand")
+//         .textContent.trim();
 
-      // const wish = localStorage.setItem('wishList', JSON.stringify(wishList));
-      // wish.push(wishList)
+//       console.log(productBrand, "productBrand");
 
-      // console.log("liked:", wishList);
+//       const productPrice = closestDiv
+//         .querySelector(".price")
+//         .textContent.trim();
 
-      const wish = JSON.parse(localStorage.getItem("wish")) || [];
+//       console.log(productPrice, "productPrice");
 
-      // //   const existingIndex = cart.findIndex(item =>
-      // //     item.size === cartItem.size &&
-      // //     item.color === cartItem.color
-      // //   );
+//       // const productId = document.query
+//       const wishList = {
+//         liked: id,
+//         name: productName,
+//         image: productImage,
+//         brand: productBrand,
+//         price: productPrice,
+//         quantity: 1,
+//       };
 
-      // //   if (existingIndex !== -1) {
-      // //     cart[existingIndex].quantity += 1;
-      // //   } else {
-      // wish.push(wishList);
-      // //   }
+//       // const wish = localStorage.setItem('wishList', JSON.stringify(wishList));
+//       // wish.push(wishList)
 
-      const existingIndex = wish.findIndex(
-        (item) => item.liked === wishList.liked
-      );
-      console.log(existingIndex, "existingIndex");
-      if (existingIndex !== -1) {
-        wish[existingIndex].quantity += 1;
+//       // console.log("liked:", wishList);
+
+//       const wish = JSON.parse(localStorage.getItem("wish")) || [];
+
+//       // //   const existingIndex = cart.findIndex(item =>
+//       // //     item.size === cartItem.size &&
+//       // //     item.color === cartItem.color
+//       // //   );
+
+//       // //   if (existingIndex !== -1) {
+//       // //     cart[existingIndex].quantity += 1;
+//       // //   } else {
+//       // wish.push(wishList);
+//       // //   }
+
+//       const existingIndex = wish.findIndex(
+//         (item) => item.liked === wishList.liked
+//       );
+//       console.log(existingIndex, "existingIndex");
+//       if (existingIndex !== -1) {
+//         wish[existingIndex].quantity += 1;
+//       } else {
+//         // cart.push(wishList);
+//         wish.push(wishList);
+//       }
+
+//       localStorage.setItem("wish", JSON.stringify(wish));
+//     }
+//   }
+// });
+
+// let wishlist = JSON.parse(localStorage.getItem("wish")) || [];
+
+// const wishListBtns = document.querySelectorAll(".addToWishlist");
+
+// function updateWishListUI() {
+//   wishListBtns.forEach((heartBtn) => {
+//     const closestDiv = heartBtn.closest("div");
+//     const id = closestDiv?.id;
+
+//     if (id && wishlist.some((item) => item.liked === id)) {
+//       heartBtn.classList.add("selected-heart-btn");
+//     }
+//     else{
+//       heartBtn.classList.remove("selected-heart-btn");
+//     }
+//   });
+// }
+
+// updateWishListUI();
+
+// till here code above
+
+document.addEventListener("DOMContentLoaded", () => {
+  const wishListBtns = document.querySelectorAll(".addToWishlist");
+  let wishlist = JSON.parse(localStorage.getItem("wish")) || [];
+
+  function updateWishListInStorage() {
+    localStorage.setItem("wish", JSON.stringify(wishlist));
+  }
+
+  function updateWishListUI() {
+    wishListBtns.forEach((heartBtn) => {
+      const closestDiv = heartBtn.closest("div");
+      const id = closestDiv?.id;
+
+      if (id && wishlist.some((item) => item.liked === id)) {
+        heartBtn.classList.add("selected-heart-btn");
       } else {
-        // cart.push(wishList);
-        wish.push(wishList);
+        heartBtn.classList.remove("selected-heart-btn");
+      }
+    });
+  }
+
+  wishListBtns.forEach((heartBtn) => {
+    heartBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      const closestDiv = heartBtn.closest("div");
+      const id = closestDiv.id;
+
+      const productName = closestDiv.querySelector(".limelight-product-name")?.textContent.trim();
+      const productImage = closestDiv.querySelector("div>img").src;
+      const productBrand = closestDiv.querySelector(".brand")?.textContent.trim();
+      const productPrice = closestDiv.querySelector(".price")?.textContent.trim();
+
+      const itemIndex = wishlist.findIndex((item) => item.liked === id);
+
+      if (itemIndex === -1) {
+        wishlist.push({
+          liked: id,
+          name: productName,
+          image: productImage,
+          brand: productBrand,
+          price: productPrice,
+          quantity: 1,
+        });
+        heartBtn.classList.add("selected-heart-btn");
+      } else {
+        wishlist.splice(itemIndex, 1);
+        heartBtn.classList.remove("selected-heart-btn");
       }
 
-      localStorage.setItem("wish", JSON.stringify(wish));
-    }
-  }
+      updateWishListInStorage();
+      updateWishListUI();
+    });
+  });
+
+  updateWishListUI();
 });
 
-
-let wishlist = JSON.parse(localStorage.getItem("wish")) || [];
-
-const wishListBtns = document.querySelectorAll(".addToWishlist");
-
-
-function updateWishListUI() {
-  wishListBtns.forEach((heartBtn) => {
-    const closestDiv = heartBtn.closest("div");
-    const id = closestDiv?.id;
-
-    if (id && wishlist.some((item) => item.liked === id)) {
-      heartBtn.classList.add("selected-heart-btn");
-    }
-  });
-}
-
-updateWishListUI();
-
-
-
+// above
 
 const wishListItem = JSON.parse(localStorage.getItem("wish")) || [];
 console.log(wishListItem.length, "wishListItem");
@@ -303,19 +380,22 @@ search.forEach((btn) => {
 //         }
 //       });
 
-const saveAddressCheckout = document.getElementById("saveAddressCheckout");
-saveAddressCheckout.addEventListener("click", function () {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+// function saveAddressCheckout(){
 
-  if (cart.length === 0) {
-    window.location.href = `empty-cart.html`;
+//   const saveAddressCheckout = document.getElementById("saveAddressCheckout");
+//   saveAddressCheckout.addEventListener("click", function () {
+//     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    alert("Your Cart is Empty!");
-    return;
-  }
+//     if (cart.length === 0) {
+//       window.location.href = `empty-cart.html`;
 
-  window.location.href = `order-confirmed.html`;
-});
+//       alert("Your Cart is Empty!");
+//       return;
+//     }
+
+//     window.location.href = `order-confirmed.html`;
+//   });
+// }
 
 // working below
 
@@ -649,7 +729,7 @@ function unHidePassword() {
       if (img.src.includes("/img/hide.svg")) {
         console.log("hjg");
         img.src = "img/eye-closeup-svgrepo-com.svg";
-        img.width  = 20;
+        img.width = 20;
         // img.height =;
         btn.type = "text";
       } else {

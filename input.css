@@ -202,16 +202,33 @@
 
 
     .bannerSwiper .swiper-pagination-bullet {
-        width: 60px !important;
-        height: 12px !important;
+        width: 63px !important;
+        height: 10px !important;
         border-radius: 0px !important;
     }
 
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-        margin: 0px;
-        border-radius: 100px;
+    .bannerSwiper .swiper-pagination-bullet:nth-child(1) {
+        border-top-left-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
     }
+
+.bannerSwiper .swiper-pagination-bullet{
+    background-color: white !important;
+}
+
+ .bannerSwiper .swiper-pagination-bullet:nth-child(2) {
+        border-top-right-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+    }
+
+   .bannerSwiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+   .bannerSwiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0px !important;
+        /* border-top-right-radius: 20px !important; */
+    }
+
+
+
 
     /* For Arrival Swiper */
 
@@ -457,7 +474,7 @@
 
     }
 
-    .swiper .mySwiper.thumbSwiper{
+    .swiper .mySwiper.thumbSwiper {
         /* height: 70vh !important; */
     }
 

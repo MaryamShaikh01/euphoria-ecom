@@ -156,10 +156,10 @@
             <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold">My Info</p>
             <p class=" pb-10 text-[22px] text-[var(--dark-black)] font-semibold">Add Address</p>
 
-            <form action="#" method="post" class="flex flex-col min-[450px]:grid min-[450px]:grid-cols-2 gap-x-10 gap-y-5 sm:gap-y-6">
+            <form action="" method="post" class="flex flex-col min-[450px]:grid min-[450px]:grid-cols-2 gap-x-10 gap-y-5 sm:gap-y-6">
 
                 <label for="fname" class="text-lg text-[var(--dark-black)]  font-semibold">First Name*
-                    <input type="text" placeholder="First Name" id="fname"
+                    <input type="text" placeholder="First Name" id="fname" required
                         class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
                 </label>
 
@@ -246,7 +246,7 @@
                 </div>
 
                 <div class="flex gap-8">
-                     <button type="button" id="saveAddressCheckout"
+                     <button type="submit" id="saveAddressCheckout"
                         class=" w-fit mt-5 px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white cursor-pointer">
                         Save</button>
 

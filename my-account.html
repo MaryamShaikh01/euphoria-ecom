@@ -57,18 +57,17 @@
 
     <header class="py-[15px] lg:py-[30px] border-b-1 border-b-[var(--light-border)]">
         <div class="flex justify-between gap-x-3.5 items-center px-[10px] m-auto lg:w-[90vw] 2xl:w-[80vw]">
-<span class="lg:hidden" id="hamburger" onclick="sideNav()">
-                    <svg class="w-[30px] h-[30px]" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                        viewBox="0 0 24 24" fill="none">
-                        <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
-                    </svg>
-                </span>
+            <span class="lg:hidden" id="hamburger" onclick="sideNav()">
+                <svg class="w-[30px] h-[30px]" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                    viewBox="0 0 24 24" fill="none">
+                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C" />
+                </svg>
+            </span>
 
-                 <a href="euphoria.html">
+            <a href="euphoria.html">
 
-                    <img src="/img/logo.png" alt="euphoria logo" width="100" height="100"
-                        class="w-[100%] min-w-[80px] ">
-                </a>
+                <img src="/img/logo.png" alt="euphoria logo" width="100" height="100" class="w-[100%] min-w-[80px] ">
+            </a>
 
 
 
@@ -542,7 +541,8 @@
                 </p>
 
                 <p class=" py-5 text-[22px] text-[var(--dark-black)] font-semibold w-full flex justify-between">Address
-                    <span class="text-[var(--dark-black)] text-lg font-medium" onclick="addNewAddress()">Add New</span>
+                    <span class="text-[var(--dark-black)] text-lg font-medium" onclick="addNewAddress(event)">Add
+                        New</span>
                 </p>
 
                 <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
@@ -654,7 +654,7 @@
                 <ul>
                     <p class="p-28-20 font-bold">Need Help</p>
                     <li class="p-18-16 font-medium">Contact Us</li>
-                    <li class="p-18-16 font-medium">Track Order</li>
+                    <li class="p-18-16 font-medium"><a href="my-account.html#my-order">Track Order</a></li>
                     <li class="p-18-16 font-medium">Returns & Refunds</li>
                     <li class="p-18-16 font-medium">FAQ's</li>
                     <li class="p-18-16 font-medium">Career</li>
@@ -904,17 +904,6 @@
         function viewDetails(event) {
             console.log(event.currentTarget, "currentElement");
 
-            // window.location.href = `my-account.html?tab=order-details`;
-
-            // const urlParams = new URLSearchParams(window.location.search);
-            // console.log(urlParams.get('search') , "urlparams")
-            // // const searchTerm = urlParams.get("search")?.toLowerCase() || "";
-            // console.log(urlParams , "urlParams")
-
-            // if()
-
-            // window.location.href = `my-order.html?tab=order-details`;
-
 
 
             const currentElement = event.currentTarget;
@@ -1025,6 +1014,130 @@
             // const
         }
 
+
+        function addNewAddress(event) {
+
+            console.log(event.currentTarget, " event.currentTarget add address")
+            const currentElement = event.currentTarget
+            const contentDiv = currentElement.closest('div')
+            const mainDiv = contentDiv.parentNode
+
+            mainDiv.innerHTML = `
+            <div class="pb-10">
+            <p class="pb-2.5 text-[28px] text-[var(--dark-black)] font-semibold">My Info</p>
+            <p class=" pb-10 text-[22px] text-[var(--dark-black)] font-semibold">Add Address</p>
+
+            <form action="#" method="post" class="flex flex-col min-[450px]:grid min-[450px]:grid-cols-2 gap-x-10 gap-y-5 sm:gap-y-6">
+
+                <label for="fname" class="text-lg text-[var(--dark-black)]  font-semibold">First Name*
+                    <input type="text" placeholder="First Name" id="fname" required
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+                </label>
+
+                <label for="lname" class="text-lg text-[var(--dark-black)]  font-semibold">Last Name*
+                    <input type="text" placeholder="Last Name" id="lname" required
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+
+                </label>
+
+
+                <label for="country" class="text-lg text-[var(--dark-black)]  font-semibold">Country / Region*
+                    <input type="text" placeholder="Country / Region" id="country" required
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+
+                </label>
+
+
+                <label for="companyName" class="text-lg text-[var(--dark-black)]  font-semibold">Company Name
+                    <input type="text" placeholder="Company(optional)" id="companyName"
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+
+                </label>
+
+                <label for="address" class="text-lg text-[var(--dark-black)]  font-semibold">Street Address*
+                    <input type="text" placeholder="House number and street name" id="address" required
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+
+                </label>
+
+                <label for="apartment" class="text-lg text-[var(--dark-black)] font-semibold">App, suite,
+                    unit
+
+                    <input type="text" placeholder="apartment, suite, unit, etc. (optional)" id="apartment"
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+
+                </label>
+
+                <label for="city" class="text-lg text-[var(--dark-black)]  font-semibold">City*
+                    <input type="text" placeholder="Town / City" id="city" required
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+                </label>
+
+                <label for="state" class="text-lg text-[var(--dark-black)]  font-semibold">State*
+                    <select name="state" id="state" required
+                        class="font-normal text-base     w-[100%] rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 ">
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Karnataka">Karnataka</option>
+                    </select>
+                </label>
+
+                <label for="phoneNo" class="text-lg text-[var(--dark-black)]  font-semibold">Phone*
+                    <input type="tel" name="" id="phoneNo" placeholder="Phone" required
+                        class="w-[100%]  font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+
+                </label>
+
+                <label for="city" class="text-lg text-[var(--dark-black)] font-semibold">Postal Code*
+                    <input type="text" placeholder="Postal Code" id="city" required
+                        class="w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base">
+                </label>
+
+                <label for="city"
+                    class="col-span-full text-lg text-[var(--dark-black)]  font-semibold ">Delivery Instruction
+                    <textarea name="instructions" id="instructions" cols="20" rows="3"
+                        placeholder="Delivery Instructions"
+                        class="resize-none w-[100%] font-normal text-base rounded-lg mt-1 sm:mt-2 px-5 py-4 bg-[var(--light-bg-colour)] focus:outline-0 placeholder:font-normal placeholder:text-base"></textarea>
+                </label>
+
+                <div class="col-span-full flex flex-col gap-2">
+
+                    <label for="shippingAddress"
+                    class="text-wrap flex gap-2 items-center cursor-pointer text-lg text-[var(--light-black)] font-normal ">
+                    <input type="checkbox" id="shippingAddress" name="shippingAddress"
+                    class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-xs relative checked:before:absolute checked:before:top-[40%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[url('/img/check-box.svg')] checked:before:w-[18px] checked:before:h-[18px]  checked:before:bg-white p-18-14">
+                    Set as deafult shipping address</label>
+                    
+                    <label for="billingAddress"
+                    class=" text-wrap flex gap-2 items-center cursor-pointer text-lg text-[var(--light-black)] font-normal">
+                    <input type="checkbox" id="billingAddress" name="billingAddress"
+                    class="appearance-none w-[18px] h-[18px] border-1 border-[var-(--dark-black)]] rounded-xs relative checked:before:absolute checked:before:top-[40%] checked:before:left-[50%] checked:before:transform checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:content-[url('/img/check-box.svg')] checked:before:w-[18px] checked:before:h-[18px]  checked:before:bg-white p-18-14">
+                    Set as deafult billing address</label>
+                </div>
+
+                <div class="flex gap-8">
+                     <button type="submit" id="saveAddressCheckout" onclick="saveAddressAndCheckout()"
+                        class=" w-fit mt-5 px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white cursor-pointer">
+                        Save</button>
+
+                         <button type="button"
+                        class="w-fit mt-5 px-8 py-3 font-medium rounded-lg bg-[var(--purple-colour)] text-white">
+                        Cancel</button>
+                </div>
+
+
+            </form>
+        </div>
+
+`
+
+            console.log(contentDiv, "contentDiv")
+            console.log(mainDiv, "mainDiv")
+
+
+        }
+
         // console.log(window.location.search, "window.location");
 
         // const urlParams = new URLSearchParams(window.location.search);
@@ -1111,98 +1224,71 @@
         })
 
 
+        function saveAddressAndCheckout() {
+
+
+            const saveAddressCheckout = document.getElementById("saveAddressCheckout");
+            saveAddressCheckout.textContent = "Saved"
+
+            // saveAddressCheckout.addEventListener('click' , function(){
+            // })
+
+
+            //   saveAddressCheckout.addEventListener("click", function () {
+            //     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            //     if (cart.length === 0) {
+            //       window.location.href = `empty-cart.html`;
+
+            //       alert("Your Cart is Empty!");
+            //       return;
+            //     }
+
+            //     window.location.href = `order-confirmed.html`;
+            //   });
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
 
             const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
 
             addToCartBtn.forEach((btn) => {
-                
+
                 const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
                 console.log(btn, "each btn")
-                    const closestDiv = btn.closest('div')
-console.log(closestDiv , "closestDiv")
+                const closestDiv = btn.closest('div')
+                console.log(closestDiv, "closestDiv")
 
-const productId = closestDiv.id
+                const productId = closestDiv.id
 
-console.log(productId , "productId")
-
-
-cartItems.forEach((item)=>{
-
-    if(item.liked == productId){
-        console.log(item.liked , "item")
-btn.textContent = "Item Added"
-    }
-    else{
-        return
-    }
-})
-
-                // // const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
-                // addToCartBtn.forEach((btn) => {
+                console.log(productId, "productId")
 
 
-                //     console.log(btn, "each btn")
-                //     const closestDiv = btn.closest('div')
+                cartItems.forEach((item) => {
 
-                //     const productId = closestDiv.id
+                    if (item.liked == productId) {
+                        console.log(item.liked, "item")
+                        btn.textContent = "Item Added"
+                    }
+                    else {
+                        return
+                    }
 
-                //     console.log(productId, "productId to add added text")
-
-                //     cartItems.forEach((item) => { 
-                //         console.log(item , "all item")
-                //         item.liked === id
-                //         console.log( "yess")
-                    
-                //     })
-
-
-                //     if (id ) {
-
-                //         btn.textContent = "Added"
-                //     }
-
-
-
-                // })
-
-                
+                    return
+                })
 
                 btn.addEventListener('click', (btn) => {
+
+                    let currentElement = btn.currentTarget;
+
+                    if (currentElement.textContent === "Item Added") {
+                        return;
+                    }
 
 
                     console.log(btn.currentTarget, "btn is here")
 
                     currentElement = btn.currentTarget
-
-                    // from here
-
-                    // let wishlist = JSON.parse(localStorage.getItem("wish")) || [];
-
-                    // const wishListBtns = document.querySelectorAll(".addToWishlist");
-
-
-                    // function updateWishListUI() {
-                    //     wishListBtns.forEach((heartBtn) => {
-                    //         const closestDiv = heartBtn.closest("div");
-                    //         const id = closestDiv?.id;
-
-                    //         if (id && wishlist.some((item) => item.liked === id)) {
-                    //             heartBtn.classList.add("selected-heart-btn");
-                    //         }
-                    //     });
-                    // }
-
-                    // updateWishListUI();
-
-
-
-                    // to here
-
-
-
-
-
 
                     currentElement.textContent = "Item Added"
 
@@ -1250,8 +1336,6 @@ btn.textContent = "Item Added"
 
             deleteWishListItem()
         })
-
-
 
         function deleteWishListItem() {
             document.querySelectorAll('.delete-wishlist-item').forEach(btn => {
